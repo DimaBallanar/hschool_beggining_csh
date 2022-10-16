@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "task0/1.0.0": {
+      "hschoole_beggining_csh/1.0.0": {
         "runtime": {
-          "task0.dll": {}
+          "hschoole_beggining_csh.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "task0/1.0.0": {
+    "hschoole_beggining_csh/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

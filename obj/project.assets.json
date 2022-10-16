@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\task0\\task0.csproj",
-      "projectName": "task0",
-      "projectPath": "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\task0\\task0.csproj",
+      "projectUniqueName": "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\hschool_beggining_csh\\hschoole_beggining_csh.csproj",
+      "projectName": "hschoole_beggining_csh",
+      "projectPath": "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\hschool_beggining_csh\\hschoole_beggining_csh.csproj",
       "packagesPath": "C:\\Users\\37525\\.nuget\\packages\\",
-      "outputPath": "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\task0\\obj\\",
+      "outputPath": "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\hschool_beggining_csh\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\37525\\AppData\\Roaming\\NuGet\\NuGet.Config"
