@@ -3,8 +3,8 @@ Console.WriteLine("Привет, напиши своё имя: "); // прошу
 var textFromReadLine = Console.ReadLine(); // команда на считывание введенной инфы ,которая потом используется где пропишу textFromReadLine
 Console.WriteLine($"Привет, {textFromReadLine}!");  // на основе введенный инфы пишется ответ
 Thread.Sleep(1000);  //задается задержка между сообщениями в милисекундах(1000 милисекунд-1 секунда)
-Console.WriteLine("У тебя есть лишних пару минут(есть= 1 нет времени= 2)?");
-String otvet = Console.ReadLine();
+Console.WriteLine("У тебя есть лишних пару минут(есть= да нет времени= напиши)?");
+var otvet = Console.ReadLine();
 Thread.Sleep(1500);
 if (otvet == "да")
     {
@@ -27,7 +27,7 @@ Thread.Sleep(2000);
 Console.WriteLine("я умею хорошо считать в уме. могу сложить,вычесть,умножить или разделить 2 любых числа");
 Thread.Sleep(3000);
 Console.WriteLine("проверь меня) назови какую операцию мне надо будет сделать: сложение,вычитание,умножение или деление");
-string oper = Console.ReadLine();
+var oper = Console.ReadLine();
 Console.WriteLine("Задавай первое число");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("а теперь второе число");
