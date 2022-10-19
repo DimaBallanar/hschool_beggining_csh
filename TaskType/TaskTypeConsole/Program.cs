@@ -73,3 +73,16 @@ Console.WriteLine($"с нашего перечня чисел максималь
 double min = Math.Min(a9,Math.Min(b9,Math.Min(c9,Math.Min(d9,Math.Min(e9,Math.Min(f9,g9))))));  // Math.Min() помогает выбрать с 2 значений меньшее
 Console.WriteLine($"с нашего перечня чисел минимальное - {min}");
 //Написать программу ,которая вычисляет обьем куба и площаль поверхности ,зная длину ребра
+Console.WriteLine("введи длину ребра куба");
+int rebroKuba = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Объём куба будет равен {Math.Pow(rebroKuba,3)}");
+Console.WriteLine($"Площадь его полной поверхности будет равна {6*Math.Pow(rebroKuba,2)}");
+// Напишите программу, в которой вычисляется сумма, разность, произведение двух целых чисел,которые введут с клавиатуры
+Console.WriteLine("Введите первое число");
+int a11 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число");
+int b11 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"сумма этих двух чисел будет равна {a11+b11}");
+Console.WriteLine($"разность этих двух чисел будет равна {a11-b11}");
+Console.WriteLine($"произведение этих двух чисел будет равно {a11*b11}");
+// написать программу для пересчета временных интервалов ,заданных в минутах , в величину,выраженную в часах и минутах
