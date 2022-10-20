@@ -4,3 +4,6 @@
 /TaskTypeContinue/*.sln
 /hardcoreconsole
 /*.sln
+/TaskTypeContinue/consoleApp/obj
+/TaskTypeContinue/consoleApp/.vscode
+/TaskTypeContinue/consoleApp/bin
