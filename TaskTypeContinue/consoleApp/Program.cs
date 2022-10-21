@@ -98,3 +98,21 @@
 }
 
 
+// 5.Пользователь вводит с клавиатуры число. Найдите корень введенного числа 
+//(если же результат – число с плавающей точкой, то округлить то целых)
+
+{
+    Console.WriteLine("введите число с клавиатуры: ");
+    string? chisloStasa = Console.ReadLine();
+    double ciferka = Convert.ToInt32(chisloStasa);
+    if (ciferka <= 0)
+    {
+        Console.WriteLine("ERROR");
+    }
+    else
+    {
+        double koren = Math.Sqrt(ciferka);
+        int krygliKoren = (int)koren;
+        Console.WriteLine(krygliKoren);
+    }
+}
