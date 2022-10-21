@@ -99,7 +99,7 @@
 
 
 // 5.Пользователь вводит с клавиатуры число. Найдите корень введенного числа 
-//(если же результат – число с плавающей точкой, то округлить то целых)
+//(если же результат – число с плавающей точкой, то округлить до целых)
 
 {
     Console.WriteLine("введите число с клавиатуры: ");
@@ -116,3 +116,39 @@
         Console.WriteLine(krygliKoren);
     }
 }
+
+//6.Даны три числа a, b, c. Напишите программу, которая находит корни квадратного уравнения 
+//ax^2 + bx + c = 0
+//Если уравнение имеет два корня, то следует вывести их в порядке возрастания.
+
+{
+    Console.WriteLine("введите любое число a: ");
+    int chisloA = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("введите любое число b: ");
+    int chisloB = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("введите любое число c: ");
+   int chisloC = Convert.ToInt32(Console.ReadLine());
+    Double Discriminant = chisloB*chisloB - 4*chisloA*chisloC;
+    if(Discriminant>0)
+    {
+        int koren1 = Convert.ToInt32((-chisloB-Math.Sqrt(Discriminant))/(2*chisloA));
+        int koren2 = Convert.ToInt32((-chisloB+Math.Sqrt(Discriminant))/(2*chisloA));
+        double maxKoren = Math.Max(koren1,koren2);
+        double minKoren = Math.Min(koren1,koren2);
+        Console.WriteLine($"{minKoren} , {maxKoren}");
+    }
+    else if(Discriminant==0)
+    {
+       int koren1 = Convert.ToInt32(-chisloB-Math.Sqrt(Discriminant))/(2*chisloA); 
+       Console.WriteLine(koren1);
+    }
+    else
+    {
+        Console.WriteLine("Нет корней");
+    }
+}
+
+//7. Пользователь вводит число от 1 до 9999 (сумму выдачи в банкомате). Необходимо 
+// вывести на экран словами введенную сумму и в конце написать название валюты 
+// с правильным окончанием. Например: 7431 – семь тысяч четыреста тридцать один 
+// доллар, 2149 – две тысячи сто сорок девять долларов, 15 – пятнадцать долларов, 3 – три доллара.
