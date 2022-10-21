@@ -152,3 +152,68 @@
 // вывести на экран словами введенную сумму и в конце написать название валюты 
 // с правильным окончанием. Например: 7431 – семь тысяч четыреста тридцать один 
 // доллар, 2149 – две тысячи сто сорок девять долларов, 15 – пятнадцать долларов, 3 – три доллара.
+
+{
+    Console.WriteLine("ВВедите число от 1 до 9999");
+    int denegki = Convert.ToInt32(Console.ReadLine());
+
+}
+
+
+//8.Пользователь вводит порядковый номер пальца руки. Необходимо показать его название на экран
+{
+    
+    Console.WriteLine("Выберите руку : левая или правая");
+    var ruka = Console.ReadLine();
+    Console.WriteLine("ВВедите порядковый номер пальца руки слева-направо");
+    int palec = Convert.ToInt32(Console.ReadLine());
+    if(ruka=="правая")
+    {
+    if(palec==1)
+    {
+        Console.WriteLine("БОЛЬШОЙ");
+    }
+    else if(palec==2)
+    {
+        Console.WriteLine("Указательный");
+    }
+     else if(palec==3)
+    {
+        Console.WriteLine("Средний");
+    }
+ else if(palec==4)
+    {
+        Console.WriteLine("Безымянный");
+    }
+     else
+    {
+        Console.WriteLine("Мезинец");
+    }
+}
+
+else
+{
+    if(palec==1)
+    {
+        Console.WriteLine("мезинец");
+    }
+    else if(palec==2)
+    {
+        Console.WriteLine("безымянный");
+    }
+     else if(palec==3)
+    {
+        Console.WriteLine("Средний");
+    }
+ else if(palec==4)
+    {
+        Console.WriteLine("указательный");
+    }
+     else
+    {
+        Console.WriteLine("большой");
+    }
+}
+}
+
+//
