@@ -216,4 +216,26 @@ else
 }
 }
 
-//
+//9.Необходимо написать программу, которая проверяет пользователя на знание таблицы умножения. Пользователь сам вводит два целых однозначных числа. 
+//Программа задаёт вопрос: результат умножения первого числа на второе. Пользователь должен ввести ответ и увидеть на экране правильно он 
+//ответил или нет. Если нет – показать еще и правильный результат.
+
+{
+    Console.WriteLine("давай проверим на сколько хорошо ты знаешь таблицу умножения");
+    Thread.Sleep(2000);  
+    Console.WriteLine("введи первое число :");
+    int pervoeChislo=Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("введи второе число :");
+    int vtoroeChislo=Convert.ToInt32(Console.ReadLine());
+    int Reshenie=pervoeChislo*vtoroeChislo;
+    Console.WriteLine("какой результат умножения первого числа на второе?");
+    int otvetUsera=Convert.ToInt32(Console.ReadLine());
+    if("Reshenie"=="otvetUsera")
+    {
+    Console.WriteLine("все верно");
+    }
+else
+{
+Console.WriteLine($"не верно! правильный ответ: {Reshenie}");
+}
+}
