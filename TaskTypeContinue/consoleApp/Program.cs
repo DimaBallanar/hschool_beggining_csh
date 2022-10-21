@@ -247,6 +247,107 @@ Console.WriteLine($"не верно! правильный ответ: {Reshenie}
 //необходимо найти остаток от делания большего на меньшее, если второе меньше 
 //0 найти модуль целой часть от деления первого числа на второе, если первое и 
 //второе числа чётные найти логическое битовое И для двух чисел, в противном 
-//случае логическое битовое ИЛИ. Для полученного результата произвести 
-//битовый сдвиг который укажет пользователь, если сдвиг четный, то сдвиг вправо, 
-//если нечетный влево. Полученный результат вывести на экра
+//случае логическое битовое ИЛИ. 
+//Для полученного результата произвести битовый сдвиг который укажет пользователь, если сдвиг четный, то сдвиг вправо, 
+//если нечетный влево. Полученный результат вывести на экран
+
+{
+
+Console.WriteLine("Введите первое число");
+int pervoeChislo=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число");
+int vtoroeChislo=Convert.ToInt32(Console.ReadLine());
+if(pervoeChislo==0|vtoroeChislo==0)
+{
+    if(pervoeChislo==0)
+    {
+        int inversiaVtorogoChisla=~vtoroeChislo;
+        Console.WriteLine("введите битовый сдвиг");
+        int sdvig=Convert.ToInt32(Console.ReadLine());
+        if(sdvig%2==0)
+        {
+        int rezult=inversiaVtorogoChisla>>sdvig;
+        Console.WriteLine(rezult);
+        }
+        else
+        {
+        int rezult=inversiaVtorogoChisla<<sdvig;
+        Console.WriteLine(rezult);  
+        }
+    }
+    else
+    {
+ int inversiapervogoChisla=~pervoeChislo;
+        Console.WriteLine("введите битовый сдвиг");
+        int sdvig=Convert.ToInt32(Console.ReadLine());
+        if(sdvig%2==0)
+        {
+        int rezult=inversiapervogoChisla>>sdvig;
+        Console.WriteLine(rezult);
+        }
+        else
+        {
+        int rezult=inversiapervogoChisla<<sdvig;
+        Console.WriteLine(rezult);  
+        }
+    }
+}
+else if(pervoeChislo>20)
+{
+    int ostatokDelenia=Math.Max(pervoeChislo,vtoroeChislo)%Math.Min(pervoeChislo,vtoroeChislo);
+    int p=Convert.ToInt32(pervoeChislo % 2);
+    int v=Convert.ToInt32(vtoroeChislo % 2);
+    if(p==0&v==0)
+    {
+    char bitovoeI=Convert.ToChar(p&v);
+     Console.WriteLine("введите битовый сдвиг");
+        int sdvig=Convert.ToInt32(Console.ReadLine());
+        if(sdvig%2==0)
+        {
+        int rezult=bitovoeI>>sdvig;
+        Console.WriteLine(rezult);
+        }
+        else
+        {
+        int rezult=bitovoeI<<sdvig;
+        Console.WriteLine(rezult);  
+    }
+    }
+    else
+    {
+        char bitovoeIli=Convert.ToChar(p^v);
+         Console.WriteLine("введите битовый сдвиг");
+        int sdvig=Convert.ToInt32(Console.ReadLine());
+        if(sdvig%2==0)
+        {
+        int rezult=bitovoeIli>>sdvig;
+        Console.WriteLine(rezult);
+        }
+        else
+        {
+        int rezult=bitovoeIli<<sdvig;
+        Console.WriteLine(rezult);  
+    }
+}
+}
+else if(vtoroeChislo<0)
+{
+    int modulCelayaChast=Math.Abs(pervoeChislo/vtoroeChislo);
+     Console.WriteLine("введите битовый сдвиг");
+        int sdvig=Convert.ToInt32(Console.ReadLine());
+        if(sdvig%2==0)
+        {
+        int rezult=modulCelayaChast>>sdvig;
+        Console.WriteLine(rezult);
+        }
+        else
+        {
+        int rezult=modulCelayaChast<<sdvig;
+        Console.WriteLine(rezult);  
+}
+}
+}
+
+
+
+
