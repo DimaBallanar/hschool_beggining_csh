@@ -131,15 +131,15 @@
     Double Discriminant = chisloB * chisloB - 4 * chisloA * chisloC;
     if (Discriminant > 0)
     {
-        int koren1 = Convert.ToInt32((-chisloB - Math.Sqrt(Discriminant)) / (2 * chisloA));
-        int koren2 = Convert.ToInt32((-chisloB + Math.Sqrt(Discriminant)) / (2 * chisloA));
+        double koren1 = (-chisloB - Math.Sqrt(Discriminant)) / (2 * chisloA);
+        double koren2 = (-chisloB + Math.Sqrt(Discriminant)) / (2 * chisloA);
         double maxKoren = Math.Max(koren1, koren2);
         double minKoren = Math.Min(koren1, koren2);
         Console.WriteLine($"{minKoren} , {maxKoren}");
     }
     else if (Discriminant == 0)
     {
-        int koren1 = Convert.ToInt32(-chisloB - Math.Sqrt(Discriminant)) / (2 * chisloA);
+        double koren1 = -chisloB - Math.Sqrt(Discriminant) / (2 * chisloA);
         Console.WriteLine(koren1);
     }
     else
