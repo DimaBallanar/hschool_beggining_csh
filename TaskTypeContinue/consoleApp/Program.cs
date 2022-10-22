@@ -139,7 +139,7 @@
     }
     else if (Discriminant == 0)
     {
-        double koren1 = -chisloB - Math.Sqrt(Discriminant) / (2 * chisloA);
+        double koren1 = (-chisloB - Math.Sqrt(Discriminant)) / (2 * chisloA);
         Console.WriteLine(koren1);
     }
     else
