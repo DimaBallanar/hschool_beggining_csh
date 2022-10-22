@@ -127,20 +127,20 @@
     Console.WriteLine("введите любое число b: ");
     int chisloB = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("введите любое число c: ");
-   int chisloC = Convert.ToInt32(Console.ReadLine());
-    Double Discriminant = chisloB*chisloB - 4*chisloA*chisloC;
-    if(Discriminant>0)
+    int chisloC = Convert.ToInt32(Console.ReadLine());
+    Double Discriminant = chisloB * chisloB - 4 * chisloA * chisloC;
+    if (Discriminant > 0)
     {
-        int koren1 = Convert.ToInt32((-chisloB-Math.Sqrt(Discriminant))/(2*chisloA));
-        int koren2 = Convert.ToInt32((-chisloB+Math.Sqrt(Discriminant))/(2*chisloA));
-        double maxKoren = Math.Max(koren1,koren2);
-        double minKoren = Math.Min(koren1,koren2);
+        int koren1 = Convert.ToInt32((-chisloB - Math.Sqrt(Discriminant)) / (2 * chisloA));
+        int koren2 = Convert.ToInt32((-chisloB + Math.Sqrt(Discriminant)) / (2 * chisloA));
+        double maxKoren = Math.Max(koren1, koren2);
+        double minKoren = Math.Min(koren1, koren2);
         Console.WriteLine($"{minKoren} , {maxKoren}");
     }
-    else if(Discriminant==0)
+    else if (Discriminant == 0)
     {
-       int koren1 = Convert.ToInt32(-chisloB-Math.Sqrt(Discriminant))/(2*chisloA); 
-       Console.WriteLine(koren1);
+        int koren1 = Convert.ToInt32(-chisloB - Math.Sqrt(Discriminant)) / (2 * chisloA);
+        Console.WriteLine(koren1);
     }
     else
     {
@@ -156,23 +156,23 @@
 {
     Console.WriteLine("ВВедите число от 1 до 9999");
     int denegki = Convert.ToInt32(Console.ReadLine());
-    int edinica=denegki%1;
-    int desiatka=denegki%10;
-    int sotka=denegki%100;
-    int tisiacha=denegki%1000;
-    if(tisiacha>0)
+    int edinica = denegki % 1;
+    int desiatka = denegki % 10;
+    int sotka = denegki % 100;
+    int tisiacha = denegki % 1000;
+    if (tisiacha > 0)
     {
-        int ostatokTisiachi=denegki-tisiacha;
-        int beremSotki=ostatokTisiachi%100;
-        if(beremSotki>0)
+        int ostatokTisiachi = denegki - tisiacha;
+        int beremSotki = ostatokTisiachi % 100;
+        if (beremSotki > 0)
         {
-            int ostatokSotki=ostatokTisiachi-beremSotki;
-            int beremDesiatki=ostatokSotki%10;
-            if(beremDesiatki>0)
+            int ostatokSotki = ostatokTisiachi - beremSotki;
+            int beremDesiatki = ostatokSotki % 10;
+            if (beremDesiatki > 0)
             {
-                int ostatokDesiatki=ostatokSotki-beremDesiatki;
-                int beremEdinici=ostatokDesiatki%10
-                if(beremEdinici>0)
+                int ostatokDesiatki = ostatokSotki - beremDesiatki;
+                int beremEdinici = ostatokDesiatki % 10;
+                if (beremEdinici > 0)
                 {
                     int
                 }
@@ -185,58 +185,58 @@
 
 //8.Пользователь вводит порядковый номер пальца руки. Необходимо показать его название на экран
 {
-    
+
     Console.WriteLine("Выберите руку : левая или правая");
     var ruka = Console.ReadLine();
     Console.WriteLine("ВВедите порядковый номер пальца руки слева-направо");
     int palec = Convert.ToInt32(Console.ReadLine());
-    if(ruka=="правая")
+    if (ruka == "правая")
     {
-    if(palec==1)
-    {
-        Console.WriteLine("БОЛЬШОЙ");
+        if (palec == 1)
+        {
+            Console.WriteLine("БОЛЬШОЙ");
+        }
+        else if (palec == 2)
+        {
+            Console.WriteLine("Указательный");
+        }
+        else if (palec == 3)
+        {
+            Console.WriteLine("Средний");
+        }
+        else if (palec == 4)
+        {
+            Console.WriteLine("Безымянный");
+        }
+        else
+        {
+            Console.WriteLine("Мезинец");
+        }
     }
-    else if(palec==2)
-    {
-        Console.WriteLine("Указательный");
-    }
-     else if(palec==3)
-    {
-        Console.WriteLine("Средний");
-    }
- else if(palec==4)
-    {
-        Console.WriteLine("Безымянный");
-    }
-     else
-    {
-        Console.WriteLine("Мезинец");
-    }
-}
 
-else
-{
-    if(palec==1)
+    else
     {
-        Console.WriteLine("мезинец");
+        if (palec == 1)
+        {
+            Console.WriteLine("мезинец");
+        }
+        else if (palec == 2)
+        {
+            Console.WriteLine("безымянный");
+        }
+        else if (palec == 3)
+        {
+            Console.WriteLine("Средний");
+        }
+        else if (palec == 4)
+        {
+            Console.WriteLine("указательный");
+        }
+        else
+        {
+            Console.WriteLine("большой");
+        }
     }
-    else if(palec==2)
-    {
-        Console.WriteLine("безымянный");
-    }
-     else if(palec==3)
-    {
-        Console.WriteLine("Средний");
-    }
- else if(palec==4)
-    {
-        Console.WriteLine("указательный");
-    }
-     else
-    {
-        Console.WriteLine("большой");
-    }
-}
 }
 
 //9.Необходимо написать программу, которая проверяет пользователя на знание таблицы умножения. Пользователь сам вводит два целых однозначных числа. 
@@ -245,23 +245,23 @@ else
 
 {
     Console.WriteLine("давай проверим на сколько хорошо ты знаешь таблицу умножения");
-    Thread.Sleep(2000);  
+    Thread.Sleep(2000);
     Console.WriteLine("введи первое число :");
-    int pervoeChislo=Convert.ToInt32(Console.ReadLine());
+    int pervoeChislo = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("введи второе число :");
-    int vtoroeChislo=Convert.ToInt32(Console.ReadLine());
-    int Reshenie=pervoeChislo*vtoroeChislo;
+    int vtoroeChislo = Convert.ToInt32(Console.ReadLine());
+    int Reshenie = pervoeChislo * vtoroeChislo;
     Console.WriteLine("какой результат умножения первого числа на второе?");
-    int otvetUsera=Convert.ToInt32(Console.ReadLine());
-    if(Reshenie == otvetUsera)
+    int otvetUsera = Convert.ToInt32(Console.ReadLine());
+    if (Reshenie == otvetUsera)
     {
-        String boxer= Convert.ToString("все верно");
-    Console.WriteLine(boxer);
+        String boxer = Convert.ToString("все верно");
+        Console.WriteLine(boxer);
     }
-else
-{
-Console.WriteLine($"не верно! правильный ответ: {Reshenie}");
-}
+    else
+    {
+        Console.WriteLine($"не верно! правильный ответ: {Reshenie}");
+    }
 }
 
 
@@ -276,99 +276,99 @@ Console.WriteLine($"не верно! правильный ответ: {Reshenie}
 
 {
 
-Console.WriteLine("Введите первое число");
-int pervoeChislo=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите первое число");
-int vtoroeChislo=Convert.ToInt32(Console.ReadLine());
-if(pervoeChislo==0|vtoroeChislo==0)
-{
-    if(pervoeChislo==0)
+    Console.WriteLine("Введите первое число");
+    int pervoeChislo = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите первое число");
+    int vtoroeChislo = Convert.ToInt32(Console.ReadLine());
+    if (pervoeChislo == 0 | vtoroeChislo == 0)
     {
-        int inversiaVtorogoChisla=~vtoroeChislo;
+        if (pervoeChislo == 0)
+        {
+            int inversiaVtorogoChisla = ~vtoroeChislo;
+            Console.WriteLine("введите битовый сдвиг");
+            int sdvig = Convert.ToInt32(Console.ReadLine());
+            if (sdvig % 2 == 0)
+            {
+                int rezult = inversiaVtorogoChisla >> sdvig;
+                Console.WriteLine(rezult);
+            }
+            else
+            {
+                int rezult = inversiaVtorogoChisla << sdvig;
+                Console.WriteLine(rezult);
+            }
+        }
+        else
+        {
+            int inversiapervogoChisla = ~pervoeChislo;
+            Console.WriteLine("введите битовый сдвиг");
+            int sdvig = Convert.ToInt32(Console.ReadLine());
+            if (sdvig % 2 == 0)
+            {
+                int rezult = inversiapervogoChisla >> sdvig;
+                Console.WriteLine(rezult);
+            }
+            else
+            {
+                int rezult = inversiapervogoChisla << sdvig;
+                Console.WriteLine(rezult);
+            }
+        }
+    }
+    else if (pervoeChislo > 20)
+    {
+        int ostatokDelenia = Math.Max(pervoeChislo, vtoroeChislo) % Math.Min(pervoeChislo, vtoroeChislo);
+        int p = Convert.ToInt32(pervoeChislo % 2);
+        int v = Convert.ToInt32(vtoroeChislo % 2);
+        if (p == 0 & v == 0)
+        {
+            char bitovoeI = Convert.ToChar(p & v);
+            Console.WriteLine("введите битовый сдвиг");
+            int sdvig = Convert.ToInt32(Console.ReadLine());
+            if (sdvig % 2 == 0)
+            {
+                int rezult = bitovoeI >> sdvig;
+                Console.WriteLine(rezult);
+            }
+            else
+            {
+                int rezult = bitovoeI << sdvig;
+                Console.WriteLine(rezult);
+            }
+        }
+        else
+        {
+            char bitovoeIli = Convert.ToChar(p ^ v);
+            Console.WriteLine("введите битовый сдвиг");
+            int sdvig = Convert.ToInt32(Console.ReadLine());
+            if (sdvig % 2 == 0)
+            {
+                int rezult = bitovoeIli >> sdvig;
+                Console.WriteLine(rezult);
+            }
+            else
+            {
+                int rezult = bitovoeIli << sdvig;
+                Console.WriteLine(rezult);
+            }
+        }
+    }
+    else if (vtoroeChislo < 0)
+    {
+        int modulCelayaChast = Math.Abs(pervoeChislo / vtoroeChislo);
         Console.WriteLine("введите битовый сдвиг");
-        int sdvig=Convert.ToInt32(Console.ReadLine());
-        if(sdvig%2==0)
+        int sdvig = Convert.ToInt32(Console.ReadLine());
+        if (sdvig % 2 == 0)
         {
-        int rezult=inversiaVtorogoChisla>>sdvig;
-        Console.WriteLine(rezult);
+            int rezult = modulCelayaChast >> sdvig;
+            Console.WriteLine(rezult);
         }
         else
         {
-        int rezult=inversiaVtorogoChisla<<sdvig;
-        Console.WriteLine(rezult);  
+            int rezult = modulCelayaChast << sdvig;
+            Console.WriteLine(rezult);
         }
     }
-    else
-    {
- int inversiapervogoChisla=~pervoeChislo;
-        Console.WriteLine("введите битовый сдвиг");
-        int sdvig=Convert.ToInt32(Console.ReadLine());
-        if(sdvig%2==0)
-        {
-        int rezult=inversiapervogoChisla>>sdvig;
-        Console.WriteLine(rezult);
-        }
-        else
-        {
-        int rezult=inversiapervogoChisla<<sdvig;
-        Console.WriteLine(rezult);  
-        }
-    }
-}
-else if(pervoeChislo>20)
-{
-    int ostatokDelenia=Math.Max(pervoeChislo,vtoroeChislo)%Math.Min(pervoeChislo,vtoroeChislo);
-    int p=Convert.ToInt32(pervoeChislo % 2);
-    int v=Convert.ToInt32(vtoroeChislo % 2);
-    if(p==0&v==0)
-    {
-    char bitovoeI=Convert.ToChar(p&v);
-     Console.WriteLine("введите битовый сдвиг");
-        int sdvig=Convert.ToInt32(Console.ReadLine());
-        if(sdvig%2==0)
-        {
-        int rezult=bitovoeI>>sdvig;
-        Console.WriteLine(rezult);
-        }
-        else
-        {
-        int rezult=bitovoeI<<sdvig;
-        Console.WriteLine(rezult);  
-    }
-    }
-    else
-    {
-        char bitovoeIli=Convert.ToChar(p^v);
-         Console.WriteLine("введите битовый сдвиг");
-        int sdvig=Convert.ToInt32(Console.ReadLine());
-        if(sdvig%2==0)
-        {
-        int rezult=bitovoeIli>>sdvig;
-        Console.WriteLine(rezult);
-        }
-        else
-        {
-        int rezult=bitovoeIli<<sdvig;
-        Console.WriteLine(rezult);  
-    }
-}
-}
-else if(vtoroeChislo<0)
-{
-    int modulCelayaChast=Math.Abs(pervoeChislo/vtoroeChislo);
-     Console.WriteLine("введите битовый сдвиг");
-        int sdvig=Convert.ToInt32(Console.ReadLine());
-        if(sdvig%2==0)
-        {
-        int rezult=modulCelayaChast>>sdvig;
-        Console.WriteLine(rezult);
-        }
-        else
-        {
-        int rezult=modulCelayaChast<<sdvig;
-        Console.WriteLine(rezult);  
-}
-}
 }
 
 
