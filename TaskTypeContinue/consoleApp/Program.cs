@@ -156,6 +156,29 @@
 {
     Console.WriteLine("ВВедите число от 1 до 9999");
     int denegki = Convert.ToInt32(Console.ReadLine());
+    int edinica=denegki%1;
+    int desiatka=denegki%10;
+    int sotka=denegki%100;
+    int tisiacha=denegki%1000;
+    if(tisiacha>0)
+    {
+        int ostatokTisiachi=denegki-tisiacha;
+        int beremSotki=ostatokTisiachi%100;
+        if(beremSotki>0)
+        {
+            int ostatokSotki=ostatokTisiachi-beremSotki;
+            int beremDesiatki=ostatokSotki%10;
+            if(beremDesiatki>0)
+            {
+                int ostatokDesiatki=ostatokSotki-beremDesiatki;
+                int beremEdinici=ostatokDesiatki%10
+                if(beremEdinici>0)
+                {
+                    int
+                }
+            }
+        }
+    }
 
 }
 
