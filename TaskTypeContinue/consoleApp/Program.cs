@@ -152,7 +152,7 @@
 // вывести на экран словами введенную сумму и в конце написать название валюты 
 // с правильным окончанием. Например: 7431 – семь тысяч четыреста тридцать один 
 // доллар, 2149 – две тысячи сто сорок девять долларов, 15 – пятнадцать долларов, 3 – три доллара.
-
+// string result = $"{number} - "
 {
     Console.WriteLine("ВВедите число от 1 до 9999");
     int denegki = Convert.ToInt32(Console.ReadLine());
@@ -161,14 +161,119 @@
     int sotka = denegki % 100;
     int tisiacha = denegki % 1000;
     if (tisiacha > 0)
-    {
+    
+        if(tisiacha == 1)
+        {
+            Console.WriteLine("одна тысяча");
+        }
+        if(tisiacha == 2)
+        {
+            Console.WriteLine("две тысячи");
+        }
+        if(tisiacha == 3)
+        {
+            Console.WriteLine("три тысячи");
+        }
+        if(tisiacha == 4)
+        {
+            Console.WriteLine("четыре тысячи");
+        }
+        if(tisiacha == 5)
+        {
+            Console.WriteLine("пять тысяч");
+        }
+        if(tisiacha == 6)
+        {
+            Console.WriteLine("шесть тысяч");
+        }
+        if(tisiacha == 7)
+        {
+            Console.WriteLine("семь тысяч");
+        }
+        if(tisiacha == 8)
+        {
+            Console.WriteLine("восемь тысяч");
+        }
+        if(tisiacha == 9)
+        {
+            Console.WriteLine("девять тысяч");
+        
         int ostatokTisiachi = denegki - tisiacha;
         int beremSotki = ostatokTisiachi % 100;
-        if (beremSotki > 0)
+        if(beremSotki == 1)
         {
+            Console.WriteLine("сто");
+        }
+        if(beremSotki == 2)
+        {
+            Console.WriteLine("двести");
+        }
+        if(beremSotki == 3)
+        {
+            Console.WriteLine("триста");
+        }
+        if(beremSotki == 4)
+        {
+            Console.WriteLine("четыреста");
+        }
+        if(beremSotki == 5)
+        {
+            Console.WriteLine("пятьсот");
+        }
+        if(beremSotki == 6)
+        {
+            Console.WriteLine("шестьсот");
+        }
+        if(beremSotki == 7)
+        {
+            Console.WriteLine("семьсот");
+        }
+        if(beremSotki == 8)
+        {
+            Console.WriteLine("восемьсот");
+        }
+        if(beremSotki == 9)
+        {
+            Console.WriteLine("девятьсот");
+        }
+      
             int ostatokSotki = ostatokTisiachi - beremSotki;
             int beremDesiatki = ostatokSotki % 10;
-            if (beremDesiatki > 0)
+            if(beremDesiatki == 1)
+        {
+            Console.WriteLine("сто");
+        }
+        if(beremDesiatki == 2)
+        {
+            Console.WriteLine("двести");
+        }
+        if(beremDesiatki == 3)
+        {
+            Console.WriteLine("триста");
+        }
+        if(beremDesiatki == 4)
+        {
+            Console.WriteLine("четыреста");
+        }
+        if(beremDesiatki == 5)
+        {
+            Console.WriteLine("пятьсот");
+        }
+        if(beremDesiatki == 6)
+        {
+            Console.WriteLine("шестьсот");
+        }
+        if(beremDesiatki == 7)
+        {
+            Console.WriteLine("семьсот");
+        }
+        if(beremDesiatki == 8)
+        {
+            Console.WriteLine("восемьсот");
+        }
+        if(beremDesiatki == 9)
+        {
+            Console.WriteLine("девятьсот");
             {
                 int ostatokDesiatki = ostatokSotki - beremDesiatki;
                 int beremEdinici = ostatokDesiatki % 10;
@@ -177,7 +282,7 @@
                     int
                 }
             }
-        }
+        
     }
 
 }
