@@ -123,11 +123,11 @@
 
 {
     Console.WriteLine("введите любое число a: ");
-    int chisloA = Convert.ToInt32(Console.ReadLine());
+    double chisloA = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("введите любое число b: ");
-    int chisloB = Convert.ToInt32(Console.ReadLine());
+    double chisloB = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("введите любое число c: ");
-    int chisloC = Convert.ToInt32(Console.ReadLine());
+    double chisloC = Convert.ToInt32(Console.ReadLine());
     Double Discriminant = chisloB * chisloB - 4 * chisloA * chisloC;
     if (Discriminant > 0)
     {
