@@ -199,6 +199,10 @@ else if (tisiacha == 9)
 } 
 int ostatokTisiachi = money - tisiacha*1000; 
 int beremSotki = ostatokTisiachi / 100; 
+if (beremSotki == 0) 
+{ 
+    result+=" ";
+}
 if (beremSotki == 1) 
 { 
     result+="сто "; 
@@ -238,9 +242,15 @@ else if (beremSotki == 9)
  
 int ostatokSotki = ostatokTisiachi - beremSotki*100; 
 int beremDesiatki = ostatokSotki / 10; 
+if (beremDesiatki == 0) 
+{ 
+    result+=" "; 
+} 
 if (beremDesiatki == 1) 
 { 
-    result+="десять долларов "; 
+    int chisloOstatka = ostatokSotki - beremDesiatki*10; 
+    if(chisloOstatka<0)
+    result+="десять "; 
 } 
 else if (beremDesiatki == 2) 
 { 
@@ -277,41 +287,81 @@ else if (beremDesiatki == 9)
  
 int ostatokDesiatki = ostatokSotki - beremDesiatki*10; 
 int beremEdinici = ostatokDesiatki; 
-if (beremEdinici == 1) 
+if (beremEdinici == 0) 
+{ 
+    result+="долларов"; 
+} 
+if (beremEdinici == 1 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="один доллар"; 
 } 
-else if (beremEdinici == 2) 
+else if(beremEdinici == 1 && beremDesiatki ==1) 
+{ 
+    result+="одиннадцать долларов"; 
+} 
+else if (beremEdinici == 2 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="два доллара"; 
 } 
-else if (beremEdinici == 3) 
+else if(beremEdinici == 2&& beremDesiatki ==1) 
+{ 
+    result+="двеннадцать долларов"; 
+} 
+else if (beremEdinici == 3 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="три доллара"; 
 } 
-else if (beremEdinici == 4) 
+else if(beremEdinici == 3&& beremDesiatki ==1) 
+{ 
+    result+="триннадцать долларов"; 
+} 
+else if (beremEdinici == 4 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="четыре доллара"; 
 } 
-else if (beremEdinici == 5) 
+else if(beremEdinici == 4 && beremDesiatki ==1) 
+{ 
+    result+="четырнадцать долларов"; 
+} 
+else if (beremEdinici == 5 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="пять долларов"; 
 } 
-else if (beremEdinici == 6) 
+else if(beremEdinici == 5 && beremDesiatki ==1) 
+{ 
+    result+="пятнадцать долларов"; 
+} 
+else if (beremEdinici == 6 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="шесть долларов"; 
 } 
-else if (beremEdinici == 7) 
+else if(beremEdinici == 6 && beremDesiatki ==1) 
+{ 
+    result+="шестнадцать долларов"; 
+} 
+else if (beremEdinici == 7 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="семь долларов"; 
 } 
-else if (beremEdinici == 8) 
+else if(beremEdinici == 7 && beremDesiatki ==1) 
+{ 
+    result+="семнадцать долларов"; 
+} 
+else if (beremEdinici == 8 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="восемь долларов"; 
 } 
-else if (beremEdinici == 9) 
+else if(beremEdinici == 8 && beremDesiatki ==1) 
+{ 
+    result+="восемнадцать долларов"; 
+} 
+else if (beremEdinici == 9 && beremDesiatki >1 || beremEdinici == 1 && beremDesiatki <1) 
 { 
     result+="девять долларов"; 
+} 
+else if(beremEdinici == 9 && beremDesiatki ==1) 
+{ 
+    result+="девятнадцать долларов"; 
 } 
  
 Console.WriteLine($"{result}");
