@@ -163,26 +163,44 @@
 // };
 // Console.WriteLine(poraGoda);
 
-// 9.Пользователь вводит число: 1, 2, 3 или 4. Если это значение ‘2', то вывести в
-// консоль 'зима близко', ‘3' – зима, ‘4' – всё' . Решите задачу через switch-case. 
+// // 9.Пользователь вводит число: 1, 2, 3 или 4. Если это значение ‘2', то вывести в
+// // консоль 'зима близко', ‘3' – зима, ‘4' – всё' . Решите задачу через switch-case. 
+
+// {
+//     Console.WriteLine("Введи 1,2,3 или 4");
+//     int cifraClienta=Convert.ToInt32(Console.ReadLine());
+//     switch(cifraClienta)
+//     {
+//         case 1:
+//         System.Console.WriteLine("");
+//         break;
+// case 2:
+//         System.Console.WriteLine("Зима близко");
+//         break;
+//         case 3:
+//         System.Console.WriteLine("Зима");
+//         break;
+//         case 4:
+//         System.Console.WriteLine("Всё");
+//         break;
+//     }
+
+// }
+
+//10. Пользователь вводит одно число. Необходимо вывести обратное ему (число
+// является обратным при 1/x). Если при этом введённое с клавиатуры число – ноль,
+// то вывести «Обратного числа не существует». 
 
 {
-    Console.WriteLine("Введи 1,2,3 или 4");
-    int cifraClienta=Convert.ToInt32(Console.ReadLine());
-    switch(cifraClienta)
-    {
-        case 1:
-        System.Console.WriteLine("");
-        break;
-case 2:
-        System.Console.WriteLine("Зима близко");
-        break;
-        case 3:
-        System.Console.WriteLine("Зима");
-        break;
-        case 4:
-        System.Console.WriteLine("Всё");
-        break;
-    }
-
+    Console.WriteLine("Введите число:");
+double chisloUsera=Convert.ToInt32(Console.ReadLine());
+if(chisloUsera==0)
+{
+    Console.WriteLine("Обратного числа не существует");
+}
+else
+{
+    double obratnoeChislo=Convert.ToDouble(1/chisloUsera);
+    Console.WriteLine(obratnoeChislo);
+}
 }
