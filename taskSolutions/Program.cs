@@ -146,7 +146,7 @@
 int nomerMesiaca=Convert.ToInt32(Console.ReadLine());
 string poraGoda= nomerMesiaca switch
 {
-    0 or >7 or <0 =>"попробуй еще раз",
+    0 or >12 or <0 =>"попробуй еще раз",
     1=> "зима",
     2=> "зима",
     3=>"весна",
