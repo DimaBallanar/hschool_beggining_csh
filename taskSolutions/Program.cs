@@ -53,3 +53,46 @@
 //     };
 //     System.Console.WriteLine(den);
 // }
+
+//4. Есть строка в 3 символа. Написать проверку если число, вывести true, в
+// противном случае false (Char.IsDigit(str2, position))
+
+// {
+//     Console.WriteLine("введите любых три символа");
+//     var nabor = "0.456";
+//     var tip=nabor.GetType();
+//     if(tip=System.Int32)
+//     //System.Console.WriteLine(nabor.GetType());
+
+
+// }
+// 5. Пользователь вводит число с клавиатуры. Нужно вывести на экран сколько в этом
+// числе цифр, а также положительное оно или отрицательное. Например, "Число " +
+// num + " однозначное положительное". (Length) string characters = "abc\u0000def";Console.WriteLine(characters.Length); // Displays 7
+{
+    Console.WriteLine("Введите любое число");
+    double chisloUsera = Convert.ToDouble(Console.ReadLine());
+    string result = $"{chisloUsera} - ";
+    if (chisloUsera / 10 < 1)
+    {
+       result +="однозначное ";
+    }
+    else if (chisloUsera / 10 >= 1 && chisloUsera / 10 < 10)
+    {
+        result +="двухзначное ";
+    }
+    else
+    {
+        result +="трехзначное ";
+    }
+    if (chisloUsera > 0)
+    {
+        result += "положительное";
+    }
+    else
+    {
+        result += "отрицательное";
+    }
+    Console.WriteLine($"{result}");
+
+}
