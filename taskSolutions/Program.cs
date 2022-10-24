@@ -187,20 +187,29 @@
 
 // }
 
-//10. Пользователь вводит одно число. Необходимо вывести обратное ему (число
-// является обратным при 1/x). Если при этом введённое с клавиатуры число – ноль,
-// то вывести «Обратного числа не существует». 
+// //10. Пользователь вводит одно число. Необходимо вывести обратное ему (число
+// // является обратным при 1/x). Если при этом введённое с клавиатуры число – ноль,
+// // то вывести «Обратного числа не существует». 
+
+// {
+//     Console.WriteLine("Введите число:");
+// double chisloUsera=Convert.ToInt32(Console.ReadLine());
+// if(chisloUsera==0)
+// {
+//     Console.WriteLine("Обратного числа не существует");
+// }
+// else
+// {
+//     double obratnoeChislo=Convert.ToDouble(1/chisloUsera);
+//     Console.WriteLine(obratnoeChislo);
+// }
+// }
+
+//11.Напишите программу, которая находит полное число метров по заданному числу
+// сантиметров. Добавить проверку на ввод только чисел
 
 {
-    Console.WriteLine("Введите число:");
-double chisloUsera=Convert.ToInt32(Console.ReadLine());
-if(chisloUsera==0)
-{
-    Console.WriteLine("Обратного числа не существует");
-}
-else
-{
-    double obratnoeChislo=Convert.ToDouble(1/chisloUsera);
-    Console.WriteLine(obratnoeChislo);
-}
+    Console.WriteLine("введите количество сантиметров");
+    int santimetri=Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine($" в {santimetri} см  {santimetri/100}м");
 }
