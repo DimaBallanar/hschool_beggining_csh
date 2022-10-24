@@ -141,24 +141,48 @@
 //     Console.WriteLine("пора года - осень");
 // }
 
-// 2 способ
- Console.WriteLine("Введите порядковый номер месяца в году(1-12):");
-int nomerMesiaca=Convert.ToInt32(Console.ReadLine());
-string poraGoda= nomerMesiaca switch
-{
-    0 or >12 or <0 =>"попробуй еще раз",
-    1=> "зима",
-    2=> "зима",
-    3=>"весна",
-    4=>"весна",
-    5=>"весна",
-    6=>"лето",
-    7=>"лето",
-    8=>"лето",
-    9=>"осень",
-    10=>"осень",
-    11=>"осень",
-    12=>"зима"
+// // 2 способ
+//  Console.WriteLine("Введите порядковый номер месяца в году(1-12):");
+// int nomerMesiaca=Convert.ToInt32(Console.ReadLine());
+// string poraGoda= nomerMesiaca switch
+// {
+//     0 or >12 or <0 =>"попробуй еще раз",
+//     1=> "зима",
+//     2=> "зима",
+//     3=>"весна",
+//     4=>"весна",
+//     5=>"весна",
+//     6=>"лето",
+//     7=>"лето",
+//     8=>"лето",
+//     9=>"осень",
+//     10=>"осень",
+//     11=>"осень",
+//     12=>"зима"
 
-};
-Console.WriteLine(poraGoda);
+// };
+// Console.WriteLine(poraGoda);
+
+// 9.Пользователь вводит число: 1, 2, 3 или 4. Если это значение ‘2', то вывести в
+// консоль 'зима близко', ‘3' – зима, ‘4' – всё' . Решите задачу через switch-case. 
+
+{
+    Console.WriteLine("Введи 1,2,3 или 4");
+    int cifraClienta=Convert.ToInt32(Console.ReadLine());
+    switch(cifraClienta)
+    {
+        case 1:
+        System.Console.WriteLine("");
+        break;
+case 2:
+        System.Console.WriteLine("Зима близко");
+        break;
+        case 3:
+        System.Console.WriteLine("Зима");
+        break;
+        case 4:
+        System.Console.WriteLine("Всё");
+        break;
+    }
+
+}
