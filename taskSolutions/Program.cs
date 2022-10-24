@@ -69,30 +69,51 @@
 // 5. Пользователь вводит число с клавиатуры. Нужно вывести на экран сколько в этом
 // числе цифр, а также положительное оно или отрицательное. Например, "Число " +
 // num + " однозначное положительное". (Length) string characters = "abc\u0000def";Console.WriteLine(characters.Length); // Displays 7
-{
-    Console.WriteLine("Введите любое число");
-    double chisloUsera = Convert.ToDouble(Console.ReadLine());
-    string result = $"{chisloUsera} - ";
-    if (chisloUsera / 10 < 1)
-    {
-       result +="однозначное ";
-    }
-    else if (chisloUsera / 10 >= 1 && chisloUsera / 10 < 10)
-    {
-        result +="двухзначное ";
-    }
-    else
-    {
-        result +="трехзначное ";
-    }
-    if (chisloUsera > 0)
-    {
-        result += "положительное";
-    }
-    else
-    {
-        result += "отрицательное";
-    }
-    Console.WriteLine($"{result}");
+// {
+//     Console.WriteLine("Введите любое число");
+//     double chisloUsera = Convert.ToDouble(Console.ReadLine());
+//     string result = $"{chisloUsera} - ";
+//     if (chisloUsera / 10 < 1)
+//     {
+//        result +="однозначное ";
+//     }
+//     else if (chisloUsera / 10 >= 1 && chisloUsera / 10 < 10)
+//     {
+//         result +="двухзначное ";
+//     }
+//     else
+//     {
+//         result +="трехзначное ";
+//     }
+//     if (chisloUsera > 0)
+//     {
+//         result += "положительное";
+//     }
+//     else
+//     {
+//         result += "отрицательное";
+//     }
+//     Console.WriteLine($"{result}");
 
+// }
+
+// // 6. Найти квадратный корень числа. Если же число без плавающей точки, то просто вывести его. В противном случае необходимо округлить число до целых.
+// Добавить проверку на ввод только чисел
+// {
+
+// }
+
+// 7. Два автомобиля едут друг к другу с постоянными скоростями V1 и V2 км/ч.
+// Определите, через какое время автомобили встретятся, если расстояние между
+// ними равно S км. Добавить проверку на ввод только чисел
+
+{
+    Console.WriteLine("введите скорость первого автомобиля,км/ч:");
+    double vPervogoAvto=Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("введите скорость первого автомобиля,км/ч:");
+    double vVtorogoAvto=Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("введите расстояние между ними,км ");
+    double rasstoianieS=Convert.ToInt32(Console.ReadLine());
+    double vremia=rasstoianieS/(vPervogoAvto+vVtorogoAvto);
+    Console.WriteLine($"они встретятся через {vremia} часа");
 }
