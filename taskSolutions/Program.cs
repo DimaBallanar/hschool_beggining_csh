@@ -107,13 +107,36 @@
 // Определите, через какое время автомобили встретятся, если расстояние между
 // ними равно S км. Добавить проверку на ввод только чисел
 
+// {
+//     Console.WriteLine("введите скорость первого автомобиля,км/ч:");  // ???Дописать проверку на ввод только цифр???
+//     double vPervogoAvto=Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("введите скорость первого автомобиля,км/ч:");
+//     double vVtorogoAvto=Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("введите расстояние между ними,км ");
+//     double rasstoianieS=Convert.ToInt32(Console.ReadLine());
+//     double vremia=rasstoianieS/(vPervogoAvto+vVtorogoAvto);
+//     Console.WriteLine($"они встретятся через {vremia} часа");
+// }
+
+// 8. Пользователь вводит номер месяц. Необходимо вывести пору года по номеру
+// месяца (2 способа)
+
+// 1 способ
+Console.WriteLine("Введите порядковый номер месяца в году(1-12):");
+int nomerMesiaca=Convert.ToInt32(Console.ReadLine());
+if(nomerMesiaca<=2 || nomerMesiaca==12)
 {
-    Console.WriteLine("введите скорость первого автомобиля,км/ч:");
-    double vPervogoAvto=Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("введите скорость первого автомобиля,км/ч:");
-    double vVtorogoAvto=Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("введите расстояние между ними,км ");
-    double rasstoianieS=Convert.ToInt32(Console.ReadLine());
-    double vremia=rasstoianieS/(vPervogoAvto+vVtorogoAvto);
-    Console.WriteLine($"они встретятся через {vremia} часа");
+    Console.WriteLine("пора года - зима");
+}
+else if(nomerMesiaca>2 && nomerMesiaca<6)
+{
+    Console.WriteLine("пора года - весна");
+}
+else if(nomerMesiaca>6 && nomerMesiaca<9)
+{
+    Console.WriteLine("пора года - лето");
+}
+else
+{
+    Console.WriteLine("пора года - осень");
 }
