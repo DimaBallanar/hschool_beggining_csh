@@ -138,5 +138,73 @@
 //     }
 // }
 
-//8.8. Ввести два числа, если 1 число больше 2, то произвести деление 1 на 2, если 2 больше 1 вывести разность между 2 и 1,
-//  в противном случае вернуть 0.0 и результат увеличить на 10 (if-else, тернаный оператор)
+// //8. Ввести два числа, если 1 число больше 2, то произвести деление 1 на 2, если 2 больше 1 вывести разность между 2 и 1,
+// //  в противном случае вернуть 0.0 и результат увеличить на 10 (if-else, тернаный оператор)
+
+// {
+//     Console.WriteLine("Введите первое число:");
+//     int numberA=Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите второе число:");
+//     int numberB=Convert.ToInt32(Console.ReadLine());
+//     int answerA = numberA>2 ? numberA/numberB : numberA=numberA+10;
+//     int answerB= numberB>1 ? numberB-numberA : numberB=numberB+10;
+//     Console.WriteLine($"{answerA} {answerB}");
+
+// }
+// 9.9. Ввести две строки, если две строки числа то ввести арифметический оператор, 
+// b в зависисмоти от арфметического оператора произвести то действие в проитивных случаях произвести вывод сообщений. 
+// Сделать проверку на null оператора (if-else, switch, сокращенный switch)
+
+// IF-ELSE
+{
+    Console.WriteLine("Введите первую строку");
+    string? strokaOdin = Console.ReadLine();
+    Console.WriteLine("Введите вторую строку");
+    string? strokaDva = Console.ReadLine();
+    if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
+    {
+        Console.WriteLine("Введите операцию");
+        string? operacia = Console.ReadLine();
+        if (operacia?.Equals("+") ?? false) // ?? проверка оператора на null
+        {
+            Console.WriteLine(strokaA + strokaB);
+        }
+        else if (operacia?.Equals("-") ?? false)
+        {
+            Console.WriteLine(strokaA - strokaB);
+        }
+        else if (operacia?.Equals("*") ?? false)
+        {
+            Console.WriteLine(strokaA * strokaB);
+        }
+        else if(operacia?.Equals("/")??false)
+        {
+            Console.WriteLine(strokaA /strokaB);
+        }
+        else if(operacia?.Equals("%")??false)
+        {
+            Console.WriteLine(strokaA %strokaB);
+        }
+    }
+    else
+    {
+        Console.WriteLine($"{strokaOdin} {strokaDva}");
+    }
+}
+
+//SWITCH
+
+{
+    Console.WriteLine("Введите первую строку");
+    string? strokaOdin = Console.ReadLine();
+    Console.WriteLine("Введите вторую строку");
+    string? strokaDva = Console.ReadLine();
+    switch(int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
+    {
+        Console.WriteLine("Введите операцию");
+        string? operacia = Console.ReadLine();
+        case operacia?.Equals("+") ?? false :
+        System.Console.WriteLine($" {strokaA}+{strokaB}");
+        break;
+    }
+}
