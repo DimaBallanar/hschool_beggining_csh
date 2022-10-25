@@ -64,21 +64,54 @@
 
 // }
 
-// 4. Ввести два числа, произвести арифметические действия над числами и записать результат в первое число (+, -, /, *, %)
-{
-    Console.WriteLine("ВВедите число а: ");
-    int numberA=Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("ВВедите число b: ");
-    int numberB=Convert.ToInt32(Console.ReadLine());
-    numberA=numberA+numberB;
-    Console.WriteLine(numberA );
-    numberA=numberA-numberB;
-    Console.WriteLine(numberA );
-    numberA=numberA/numberB;
-    Console.WriteLine(numberA );
-    numberA=numberA*numberB;
-    Console.WriteLine(numberA );
-    numberA=numberA%numberB;
-    Console.WriteLine(numberA );
+// // 4. Ввести два числа, произвести арифметические действия над числами и записать результат в первое число (+, -, /, *, %)
+// {
+//     Console.WriteLine("ВВедите число а: ");
+//     int numberA=Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("ВВедите число b: ");
+//     int numberB=Convert.ToInt32(Console.ReadLine());
+//     numberA=numberA+numberB;
+//     Console.WriteLine(numberA );
+//     numberA=numberA-numberB;
+//     Console.WriteLine(numberA );
+//     numberA=numberA/numberB;
+//     Console.WriteLine(numberA );
+//     numberA=numberA*numberB;
+//     Console.WriteLine(numberA );
+//     numberA=numberA%numberB;
+//     Console.WriteLine(numberA );
 
-}
+// }
+
+// //5  Ввести число и увеличить его на 1 всеми доступными способами
+// {
+//     Console.WriteLine("VVedite chislo:");
+//     int number5=Convert.ToInt32(Console.ReadLine());
+//     number5=number5+1;
+//     Console.WriteLine(number5);
+//     number5+=1;
+//     Console.WriteLine(number5);
+//     ++number5;
+//     Console.WriteLine(number5);
+//     number5++;
+//     Console.WriteLine(number5); // вопрос -как вывести результат этого постфиксного инкремента,ВСПОМНИТЬ,ПОчитать
+//     // number5=number5+0;
+//     // Console.WriteLine(number5);
+// }
+
+// //6. Ввести строку, если строка число найти остаток от деления на 5, в противном случае вывести сообщение, что введено не число
+
+// {
+//     Console.WriteLine("VVedite stroky");
+//     string? stroka =Console.ReadLine();
+//     if(int.TryParse(stroka, out int number))
+//     {
+//         int ostatokDelenia=number%5;
+//         Console.WriteLine(ostatokDelenia);
+//     }
+// else{
+//     Console.WriteLine("vvedeno ne chislo");
+// }
+// }
+
+//7
