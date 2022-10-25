@@ -114,4 +114,29 @@
 // }
 // }
 
-//7
+// //7. Ввести две строки, если строки числа вывести их сумму, в противном случае вывести сообщение какие строки не являются числом
+// {
+//     Console.WriteLine("Введите первую строку");
+//     string? strokaOdin = Console.ReadLine();
+//     Console.WriteLine("Введите вторую строку");
+//     string? strokaDva = Console.ReadLine();
+//     if (int.TryParse(strokaOdin, out int strokaOdinChisla) && int.TryParse(strokaDva, out int strokaDvaChisla))
+//     {
+//         Console.WriteLine(strokaOdinChisla + strokaDvaChisla);
+//     }
+//     else if (int.TryParse(strokaOdin, out int chisloOdin))
+//     {
+//         Console.WriteLine("первая строка число,вторая не число");
+//     }
+//     else if (int.TryParse(strokaDva, out int chisloDva))
+//     {
+//         Console.WriteLine("вторая строка число,первая не число");
+//     }
+//     else
+//     {
+//         Console.WriteLine("первая и вторая строки не числа");
+//     }
+// }
+
+//8.8. Ввести два числа, если 1 число больше 2, то произвести деление 1 на 2, если 2 больше 1 вывести разность между 2 и 1,
+//  в противном случае вернуть 0.0 и результат увеличить на 10 (if-else, тернаный оператор)
