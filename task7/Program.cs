@@ -70,7 +70,15 @@
     int numberA=Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("ВВедите число b: ");
     int numberB=Convert.ToInt32(Console.ReadLine());
+    numberA=numberA+numberB;
+    Console.WriteLine(numberA );
     numberA=numberA-numberB;
-    Console.Write(numberA );
+    Console.WriteLine(numberA );
+    numberA=numberA/numberB;
+    Console.WriteLine(numberA );
+    numberA=numberA*numberB;
+    Console.WriteLine(numberA );
+    numberA=numberA%numberB;
+    Console.WriteLine(numberA );
 
 }
