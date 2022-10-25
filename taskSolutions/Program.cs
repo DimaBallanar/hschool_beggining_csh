@@ -40,7 +40,7 @@
 // {
 //     Console.WriteLine("Введите число от 1 до 7 :");
 //     int denNedeli=Convert.ToInt32(Console.ReadLine());
-//     string den= denNedeli switch
+//     string? den= denNedeli switch
 //     {
 //         0 or >7 or <0 => "я просил с 1 до 7",   // я бы тут добавил ссылку/возврат к 42 строке,чтобы юзер ввел заново число
 //         1 => "понедельник",
@@ -54,12 +54,13 @@
 //     System.Console.WriteLine(den);
 // }
 
-//4. Есть строка в 3 символа. Написать проверку если число, вывести true, в
+// 4. Есть строка в 3 символа. Написать проверку если число, вывести true, в
 // противном случае false (Char.IsDigit(str2, position))
 
 // {
 //     Console.WriteLine("введите любых три символа");
-//     var nabor = "0.456";
+//     string? nabor = Console.ReadLine();
+//     if(int.TryParse(nabor, out int number)
 //     var tip=nabor.GetType();
 //     if(tip=System.Int32)
 //     //System.Console.WriteLine(nabor.GetType());
@@ -69,33 +70,36 @@
 // 5. Пользователь вводит число с клавиатуры. Нужно вывести на экран сколько в этом
 // числе цифр, а также положительное оно или отрицательное. Например, "Число " +
 // num + " однозначное положительное". (Length) string characters = "abc\u0000def";Console.WriteLine(characters.Length); // Displays 7
-// {
-//     Console.WriteLine("Введите любое число");
-//     double chisloUsera = Convert.ToDouble(Console.ReadLine());
-//     string result = $"{chisloUsera} - ";
-//     if (chisloUsera / 10 < 1)
-//     {
-//        result +="однозначное ";
-//     }
-//     else if (chisloUsera / 10 >= 1 && chisloUsera / 10 < 10)
-//     {
-//         result +="двухзначное ";
-//     }
-//     else
-//     {
-//         result +="трехзначное ";
-//     }
-//     if (chisloUsera > 0)
-//     {
-//         result += "положительное";
-//     }
-//     else
-//     {
-//         result += "отрицательное";
-//     }
-//     Console.WriteLine($"{result}");
+{
+    Console.WriteLine("Введите любое число");
+    string? chisloUsera = Console.ReadLine();
+    // string? result = $"{chisloUsera} - ";
+    int length= chisloUsera?.Length ?? default;
+    Console.Write($"{chisloUsera} в нем {length} цифр ");
+    // if(int.TryParse(chisloUsera, out int perevod ))
+    // if (perevod / 10 < 1)
+    // {
+    //    result +="однозначное ";
+    // }
+    // else if (perevod / 10 >= 1 && perevod / 10 < 10)
+    // {
+    //     result +="двухзначное ";
+    // }
+    // else
+    // {
+    //     result +="трехзначное ";
+    // }
+    if (chisloUsera > 0)
+    {
+        Console.Write( "положительное");
+    }
+    else
+    {
+        Console.Write( "отрицательное");
+    }
+    
 
-// }
+}
 
 // // 6. Найти квадратный корень числа. Если же число без плавающей точки, то просто вывести его. В противном случае необходимо округлить число до целых.
 // Добавить проверку на ввод только чисел
@@ -163,27 +167,28 @@
 // };
 // Console.WriteLine(poraGoda);
 
-// // 9.Пользователь вводит число: 1, 2, 3 или 4. Если это значение ‘2', то вывести в
-// // консоль 'зима близко', ‘3' – зима, ‘4' – всё' . Решите задачу через switch-case. 
+// 9.Пользователь вводит число: 1, 2, 3 или 4. Если это значение ‘2', то вывести в
+// консоль 'зима близко', ‘3' – зима, ‘4' – всё' . Решите задачу через switch-case. 
 
 // {
 //     Console.WriteLine("Введи 1,2,3 или 4");
-//     int cifraClienta=Convert.ToInt32(Console.ReadLine());
-//     switch(cifraClienta)
+//     int cifraClienta = Convert.ToInt32(Console.ReadLine());
+//     switch (cifraClienta)
 //     {
 //         case 1:
-//         System.Console.WriteLine("");
-//         break;
-// case 2:
-//         System.Console.WriteLine("Зима близко");
-//         break;
+//             // System.Console.WriteLine("");
+//             // break;
+//         case 2:
+//             System.Console.WriteLine("Зима близко");
+//             break;
 //         case 3:
-//         System.Console.WriteLine("Зима");
-//         break;
+//             System.Console.WriteLine("Зима");
+//             break;
 //         case 4:
-//         System.Console.WriteLine("Всё");
-//         break;
+//             System.Console.WriteLine("Всё");
+//             break;
 //     }
+    
 
 // }
 
@@ -205,11 +210,35 @@
 // }
 // }
 
-//11.Напишите программу, которая находит полное число метров по заданному числу
-// сантиметров. Добавить проверку на ввод только чисел
+// //11.Напишите программу, которая находит полное число метров по заданному числу
+// // сантиметров. Добавить проверку на ввод только чисел
 
-{
-    Console.WriteLine("введите количество сантиметров");
-    int santimetri=Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine($" в {santimetri} см  {santimetri/100}м");
-}
+// {
+//     Console.WriteLine("введите количество сантиметров");  //надо сделать проверку на ввод чисел
+//     int santimetri=Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine($" в {santimetri} см  {santimetri/100}м");
+// }
+
+// 12.
+// {
+//     Console.WriteLine("Задача номер 15.");
+//     Console.WriteLine("Введите строку ");
+//     string? text = Console.ReadLine();
+//     if (!int.TryParse(text, out _)) // "_" игнорируем объявление переменной
+//     {
+//         string result = !string.IsNullOrEmpty(text)? $"Длинна строки {text.Length}" : "пустота";
+//         Console.WriteLine(result);
+//         // if (!string.IsNullOrEmpty(text)) //(text != null) "" // string.IsNullOrEmpty(text) првоеряет на пустое значение если пустое то true
+//         // {
+//         //     text =$"Длинна строки {text.Length}";
+//         // }
+//         //  else
+//         // {
+//         //     text = "пустота";
+//         // }
+//     }
+//     else
+//     {
+//         Console.WriteLine("ввели число");
+//     }
+// }
