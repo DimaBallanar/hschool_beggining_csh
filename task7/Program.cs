@@ -221,10 +221,12 @@
 {
     Console.WriteLine("введите первую строку");
     string? firstMessage = Console.ReadLine();
-    Console.WriteLine("введите первую строку");
+    Console.WriteLine("введите вторую строку");
     string? secondMessage = Console.ReadLine();
     string? newMessage = firstMessage + secondMessage;
+    Console.WriteLine(newMessage);
     firstMessage += secondMessage;
+    Console.WriteLine(firstMessage);
 
 }
 //11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно оно двум либо нет, 
@@ -263,3 +265,10 @@
 
 //12.Ввести две строки, произвести проврку на пустоту, если строки имеют символы то если первая строка больше второй
 // вывести сумму длин строк, в противном случае разность 2 от первой (if-else, тернаный оператор, *.Length, string.IsNullorEmpty)
+{
+    Console.WriteLine("Введите первую строку");
+    string? firstMessage = Convert.ToString(Console.ReadLine());
+    Console.WriteLine("Введите вторую строку");
+    string? secondMessage = Convert.ToString(Console.ReadLine());
+
+}
