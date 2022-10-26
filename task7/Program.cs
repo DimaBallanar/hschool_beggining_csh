@@ -270,5 +270,15 @@
     string? firstMessage = Convert.ToString(Console.ReadLine());
     Console.WriteLine("Введите вторую строку");
     string? secondMessage = Convert.ToString(Console.ReadLine());
-
+    if (string.IsNullOrEmpty(firstMessage) || string.IsNullOrEmpty(secondMessage))
+    {
+        Console.WriteLine(" одна из строк пустая");
+    }
+    else
+    {
+        int? firstNumber = firstMessage?.Length;
+        int? secondNumber = secondMessage?.Length;
+        int? answer = firstNumber > secondNumber ? firstNumber + secondNumber : secondNumber - firstNumber;
+        Console.WriteLine(answer);
+    }
 }
