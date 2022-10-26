@@ -56,11 +56,11 @@
 //3.Произвести все все комбинации явного преобразования (byte, int, long, float, double, decemel)
 {
     decimal decimaValue = 2;
-    double doubleValue = Convert.ToDouble(decimaValue);
-    float floatValue = Convert.ToSingle(doubleValue);
-    long longValue = Convert.ToInt64(floatValue);
-    int intValue = Convert.ToInt32(longValue);
-    byte byteValue = Convert.ToByte(intValue);
+    double doubleValue = (double)decimaValue;
+    float floatValue = (float)doubleValue;
+    long longValue = (long)floatValue;
+    int intValue = (int)longValue;
+    byte byteValue = (byte)intValue;
 
 }
 
@@ -70,7 +70,7 @@
     int numberA = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("ВВедите число b: ");
     int numberB = Convert.ToInt32(Console.ReadLine());
-    numberA = numberA + numberB;
+    numberA += numberB;
     Console.WriteLine(numberA);
     numberA = numberA - numberB;
     Console.WriteLine(numberA);
@@ -150,63 +150,116 @@
     int answerB = numberB > 1 ? numberB - numberA : numberB = numberB + 10;
     Console.WriteLine($"{answerA} {answerB}");
 
-    // }
-    // 9.9. Ввести две строки, если две строки числа то ввести арифметический оператор, 
-    // b в зависисмоти от арфметического оператора произвести то действие в проитивных случаях произвести вывод сообщений. 
-    // Сделать проверку на null оператора (if-else, switch, сокращенный switch)
+}
+// 9.9. Ввести две строки, если две строки числа то ввести арифметический оператор, 
+// b в зависисмоти от арфметического оператора произвести то действие в проитивных случаях произвести вывод сообщений. 
+// Сделать проверку на null оператора (if-else, switch, сокращенный switch)
 
-    // IF-ELSE
+// IF-ELSE
+{
+    Console.WriteLine("Введите первую строку");
+    string? strokaOdin = Console.ReadLine();
+    Console.WriteLine("Введите вторую строку");
+    string? strokaDva = Console.ReadLine();
+    if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
     {
-        Console.WriteLine("Введите первую строку");
-        string? strokaOdin = Console.ReadLine();
-        Console.WriteLine("Введите вторую строку");
-        string? strokaDva = Console.ReadLine();
-        if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
+        Console.WriteLine("Введите операцию");
+        string? operacia = Console.ReadLine();
+        if (operacia?.Equals("+") ?? false) // ?? проверка оператора на null
         {
-            Console.WriteLine("Введите операцию");
-            string? operacia = Console.ReadLine();
-            if (operacia?.Equals("+") ?? false) // ?? проверка оператора на null
-            {
-                Console.WriteLine(strokaA + strokaB);
-            }
-            else if (operacia?.Equals("-") ?? false)
-            {
-                Console.WriteLine(strokaA - strokaB);
-            }
-            else if (operacia?.Equals("*") ?? false)
-            {
-                Console.WriteLine(strokaA * strokaB);
-            }
-            else if (operacia?.Equals("/") ?? false)
-            {
-                Console.WriteLine(strokaA / strokaB);
-            }
-            else if (operacia?.Equals("%") ?? false)
-            {
-                Console.WriteLine(strokaA % strokaB);
-            }
+            Console.WriteLine(strokaA + strokaB);
+        }
+        else if (operacia?.Equals("-") ?? false)
+        {
+            Console.WriteLine(strokaA - strokaB);
+        }
+        else if (operacia?.Equals("*") ?? false)
+        {
+            Console.WriteLine(strokaA * strokaB);
+        }
+        else if (operacia?.Equals("/") ?? false)
+        {
+            Console.WriteLine(strokaA / strokaB);
+        }
+        else if (operacia?.Equals("%") ?? false)
+        {
+            Console.WriteLine(strokaA % strokaB);
+        }
+    }
+    else
+    {
+        Console.WriteLine($"{strokaOdin} {strokaDva}");
+    }
+}
+
+//SWITCH
+
+// {
+//     Console.WriteLine("Введите первую строку");
+//     string? strokaOdin = Console.ReadLine();
+//     Console.WriteLine("Введите вторую строку");
+//     string? strokaDva = Console.ReadLine();
+//     Console.WriteLine("Введите операцию");
+//     string? operacia = Console.ReadLine();
+//     switch (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
+//     {
+//         Console.WriteLine("Введите операцию");
+//         string? operacia = Console.ReadLine();
+//         switch(operacia)
+//         {
+//             case "+":
+//              System.Console.WriteLine($" {strokaA}+{strokaB}");
+//         }
+//         // case operacia?.Equals("+") ?? false:
+
+//             break;
+//     }
+// }
+
+//10.Ввести две строки и произвести сложение данных строк всеми известными способами
+
+// {
+// Console.WriteLine("введите первую строку");
+// string? firstMessage=Console.ReadLine();
+// Console.WriteLine("введите первую строку");
+// string? secondMessage=Console.ReadLine();
+// string? newMessage=firstMessage+secondMessage;
+// firstMessage+=secondMessage;
+
+// }
+//11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно оно двум либо нет, 
+//то есть 6352 => 6 крастно двум, 3 не кратно двум, 5  не кратно двум, 2  крастно двум (if-else, тернаный оператор)
+{
+    Console.WriteLine("введите строку до 5 символов");
+    string? stroka = Console.ReadLine();
+    int? dlina = stroka?.Length;
+    if (dlina <= 5)
+    {
+        if (int.TryParse(stroka, out int chisla))
+        {
+            int message5 = chisla / 10000;
+            string vivodPiatogo = message5 % 2 == 0 && chisla > 9999 ? $"{message5} кратно двум" : $"{message5} не кратно двум";
+            int message4 = (chisla - message5 * 10000) / 1000;
+            string vivodChetvertogo = message4 % 2 == 0 && (chisla - message5 * 10000) > 999 ? $"{message4} кратно двум" : $"{message4} не кратно двум";
+            int message3 = (chisla - message5 * 10000 - message4 * 1000) / 100;
+            string vivodTretego = message3 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} кратно двум" : $"{message3} не кратно двум";
+            int message2 = (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) / 10;
+            string vivodVtorogo = message2 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} кратно двум" : $"{message2} не кратно двум";
+            int message1 = chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10;
+            string vivodPervogo = message1 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} кратно двум" : $"{message1} не кратно двум";
+            Console.WriteLine($"{vivodPiatogo}   {vivodChetvertogo}  {vivodTretego}   {vivodVtorogo}  {vivodPervogo} ");
         }
         else
         {
-            Console.WriteLine($"{strokaOdin} {strokaDva}");
+            Console.WriteLine("Вы ввели не числа");
         }
     }
-
-    //SWITCH
-
+    else
     {
-        Console.WriteLine("Введите первую строку");
-        string? strokaOdin = Console.ReadLine();
-        Console.WriteLine("Введите вторую строку");
-        string? strokaDva = Console.ReadLine();
-        Console.WriteLine("Введите операцию");
-        string? operacia = Console.ReadLine();
-        switch (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
-        {
-            // Console.WriteLine("Введите операцию");
-            // string? operacia = Console.ReadLine();
-            case operacia?.Equals("+") ?? false:
-                System.Console.WriteLine($" {strokaA}+{strokaB}");
-                break;
-        }
+        Console.WriteLine("Вы ввели больше 5 символов");
     }
+
+}
+
+//12.Ввести две строки, произвести проврку на пустоту, если строки имеют символы то если первая строка больше второй
+// вывести сумму длин строк, в противном случае разность 2 от первой (if-else, тернаный оператор, *.Length, string.IsNullorEmpty)
