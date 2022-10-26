@@ -291,9 +291,9 @@
     }
     else
     {
-        int? firstNumber = firstMessage?.Length;
-        int? secondNumber = secondMessage?.Length;
-        int? answer = firstNumber > secondNumber ? firstNumber + secondNumber : secondNumber - firstNumber;
+        int firstNumber = firstMessage?.Length ?? default;
+        int secondNumber = secondMessage?.Length ?? default;
+        int answer = firstNumber > secondNumber ? firstNumber + secondNumber : secondNumber - firstNumber;
         Console.WriteLine(answer);
     }
 }
