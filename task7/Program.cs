@@ -194,27 +194,42 @@
 
 //SWITCH
 
-// {
-//     Console.WriteLine("Введите первую строку");
-//     string? strokaOdin = Console.ReadLine();
-//     Console.WriteLine("Введите вторую строку");
-//     string? strokaDva = Console.ReadLine();
-//     Console.WriteLine("Введите операцию");
-//     string? operacia = Console.ReadLine();
-//     switch (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
-//     {
-//         Console.WriteLine("Введите операцию");
-//         string? operacia = Console.ReadLine();
-//         switch(operacia)
-//         {
-//             case "+":
-//              System.Console.WriteLine($" {strokaA}+{strokaB}");
-//         }
-//         // case operacia?.Equals("+") ?? false:
+{
+    Console.WriteLine("Введите первую строку");
+    string? strokaOdin = Console.ReadLine();
+    Console.WriteLine("Введите вторую строку");
+    string? strokaDva = Console.ReadLine();
+    if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
+    {
+        Console.WriteLine("Введите операцию");
+        string? operacia = Console.ReadLine();
+        switch (operacia)
+        {
+            case "+":
+                System.Console.WriteLine($" {strokaA}+{strokaB}");
+                break;
+            case "-":
+                System.Console.WriteLine($" {strokaA}-{strokaB}");
+                break;
+            case "*":
+                System.Console.WriteLine($" {strokaA}*{strokaB}");
+                break;
+            case "/":
+                System.Console.WriteLine($" {strokaA}/{strokaB}");
+                break;
+            case "%":
+                System.Console.WriteLine($" {strokaA}%{strokaB}");
+                break;
+        }
+    }
+    else
+    {
+        Console.WriteLine("вы не ввели арифметическое действие");
+    }
 
-//             break;
-//     }
-// }
+
+}
+
 
 //10.Ввести две строки и произвести сложение данных строк всеми известными способами
 
