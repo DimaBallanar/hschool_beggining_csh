@@ -219,12 +219,12 @@
 //10.Ввести две строки и произвести сложение данных строк всеми известными способами
 
 {
-Console.WriteLine("введите первую строку");
-string? firstMessage=Console.ReadLine();
-Console.WriteLine("введите первую строку");
-string? secondMessage=Console.ReadLine();
-string? newMessage=firstMessage+secondMessage;
-firstMessage+=secondMessage;
+    Console.WriteLine("введите первую строку");
+    string? firstMessage = Console.ReadLine();
+    Console.WriteLine("введите первую строку");
+    string? secondMessage = Console.ReadLine();
+    string? newMessage = firstMessage + secondMessage;
+    firstMessage += secondMessage;
 
 }
 //11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно оно двум либо нет, 
