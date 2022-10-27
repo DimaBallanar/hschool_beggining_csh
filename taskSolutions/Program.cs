@@ -70,36 +70,36 @@
 // 5. Пользователь вводит число с клавиатуры. Нужно вывести на экран сколько в этом
 // числе цифр, а также положительное оно или отрицательное. Например, "Число " +
 // num + " однозначное положительное". (Length) string characters = "abc\u0000def";Console.WriteLine(characters.Length); // Displays 7
-{
-    Console.WriteLine("Введите любое число");
-    string? chisloUsera = Console.ReadLine();
-    // string? result = $"{chisloUsera} - ";
-    int length= chisloUsera?.Length ?? default;
-    Console.Write($"{chisloUsera} в нем {length} цифр ");
-    // if(int.TryParse(chisloUsera, out int perevod ))
-    // if (perevod / 10 < 1)
-    // {
-    //    result +="однозначное ";
-    // }
-    // else if (perevod / 10 >= 1 && perevod / 10 < 10)
-    // {
-    //     result +="двухзначное ";
-    // }
-    // else
-    // {
-    //     result +="трехзначное ";
-    // }
-    if (chisloUsera > 0)
-    {
-        Console.Write( "положительное");
-    }
-    else
-    {
-        Console.Write( "отрицательное");
-    }
-    
+// {
+//     Console.WriteLine("Введите любое число");
+//     string? chisloUsera = Console.ReadLine();
+//     // string? result = $"{chisloUsera} - ";
+//     int length= chisloUsera?.Length ?? default;
+//     Console.Write($"{chisloUsera} в нем {length} цифр ");
+//     // if(int.TryParse(chisloUsera, out int perevod ))
+//     // if (perevod / 10 < 1)
+//     // {
+//     //    result +="однозначное ";
+//     // }
+//     // else if (perevod / 10 >= 1 && perevod / 10 < 10)
+//     // {
+//     //     result +="двухзначное ";
+//     // }
+//     // else
+//     // {
+//     //     result +="трехзначное ";
+//     // }
+//     if (chisloUsera > 0)
+//     {
+//         Console.Write( "положительное");
+//     }
+//     else
+//     {
+//         Console.Write( "отрицательное");
+//     }
 
-}
+
+// }
 
 // // 6. Найти квадратный корень числа. Если же число без плавающей точки, то просто вывести его. В противном случае необходимо округлить число до целых.
 // Добавить проверку на ввод только чисел
@@ -188,7 +188,7 @@
 //             System.Console.WriteLine("Всё");
 //             break;
 //     }
-    
+
 
 // }
 
@@ -242,3 +242,62 @@
 //         Console.WriteLine("ввели число");
 //     }
 // }
+
+
+// string? stroka = Console.ReadLine();
+// Console.WriteLine(stroka?[0]);
+
+// //19.
+// string? inMessage = Console.ReadLine();
+// int number;
+// if (int.TryParse(inMessage, out number))
+// {
+//     if (number % 2 == 0)
+//     {
+//         Console.WriteLine ("четное");
+//     }
+//     else {Console.WriteLine ("нечетное");}
+// }
+// else 
+// {
+//     if(inMessage=="hschool")
+//     {Console.WriteLine (true);}
+//     else {Console.WriteLine (false);}
+// }
+
+
+
+
+
+// 14. Пользователь вводит 2 числа от 0 до 10. Сложите переменные так, чтобы в
+// результате получилось выражение: “I’m хх". Проверки на ввод только чисел.
+// Проверки на ввод чисел до 10. Если первое число – 0, то опустить его
+{
+    Console.WriteLine("введите первое число");
+    string? numberFirst = Console.ReadLine();
+    Console.WriteLine("введите первое число");
+    string? numberSecond = Console.ReadLine();
+    if (int.TryParse(numberFirst, out int number1) && int.TryParse(numberSecond, out int number2))
+    {
+        if (number1 >= 0 && number1 <= 10 && number2 >= 0 && number2 <= 10)
+        {
+            if (number1 == 0)
+            {
+                Console.WriteLine($"I'm {number2}");
+            }
+            else
+            {
+                Console.WriteLine($"I'm {number1}{number2}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("вы ввели число не от 0 до 10");
+        }
+    }
+    else
+    {
+        Console.WriteLine("вы ввели не числа");
+    }
+
+}
