@@ -244,8 +244,8 @@
     Console.WriteLine(firstMessage);
 
 }
-//11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно оно двум либо нет, 
-//то есть 6352 => 6 крастно двум, 3 не кратно двум, 5  не кратно двум, 2  крастно двум (if-else, тернаный оператор)
+// 11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно оно двум либо нет, 
+// то есть 6352 => 6 крастно двум, 3 не кратно двум, 5  не кратно двум, 2  крастно двум (if-else, тернаный оператор)
 {
     Console.WriteLine("введите строку до 5 символов");
     string? stroka = Console.ReadLine();
@@ -254,17 +254,34 @@
     {
         if (int.TryParse(stroka, out int chisla))
         {
-            int message5 = chisla / 10000;
-            string vivodPiatogo = message5 % 2 == 0 && chisla > 9999 ? $"{message5} кратно двум" : $"{message5} не кратно двум";
-            int message4 = (chisla - message5 * 10000) / 1000;
-            string vivodChetvertogo = message4 % 2 == 0 && (chisla - message5 * 10000) > 999 ? $"{message4} кратно двум" : $"{message4} не кратно двум";
-            int message3 = (chisla - message5 * 10000 - message4 * 1000) / 100;
-            string vivodTretego = message3 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} кратно двум" : $"{message3} не кратно двум";
-            int message2 = (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) / 10;
-            string vivodVtorogo = message2 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} кратно двум" : $"{message2} не кратно двум";
-            int message1 = chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10;
-            string vivodPervogo = message1 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} кратно двум" : $"{message1} не кратно двум";
-            Console.WriteLine($"{vivodPiatogo}   {vivodChetvertogo}  {vivodTretego}   {vivodVtorogo}  {vivodPervogo} ");
+                int message5 = chisla / 10000;
+                string vivodPiatogo = message5 % 2 == 0 && chisla > 9999 ? $"{message5} кратно двум" : $"{message5} не кратно двум";
+                int message4 = (chisla - message5 * 10000) / 1000;
+                string vivodChetvertogo = message4 % 2 == 0 && (chisla - message5 * 10000) > 999 ? $"{message4} кратно двум" : $"{message4} не кратно двум";
+                int message3 = (chisla - message5 * 10000 - message4 * 1000) / 100;
+                string vivodTretego = message3 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} кратно двум" : $"{message3} не кратно двум";
+                int message2 = (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) / 10;
+                string vivodVtorogo = message2 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} кратно двум" : $"{message2} не кратно двум";
+                int message1 = chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10;
+                string vivodPervogo = message1 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} кратно двум" : $"{message1} не кратно двум";
+                Console.WriteLine($"{vivodPiatogo}   {vivodChetvertogo}  {vivodTretego}   {vivodVtorogo}  {vivodPervogo} ");
+            // double message50 = chisla / 10000;
+            // Console.WriteLine(message50);
+            // int message5 = (int)message50;
+            // string vivodFive = message5 % 2 == 0 && message5 > 0 ? $"{message5} кратно двум" : $"{message5} не кратно двум";
+            // double message40 = (message50 - message5) * 10;
+            // int message4 = (int)message40;
+            // string vivodFour = message4 % 2 == 0 && message4 > 0 ? $"{message4} кратно двум" : $"{message4} не кратно двум";
+            // double message30 = (message40 - message4) * 10;
+            // int message3 = (int)message30;
+            // string vivodThree = message3 % 2 == 0 && message3 > 0 ? $"{message3} кратно двум" : $"{message3} не кратно двум";
+            // double message20 = (message30 - message3) * 10;
+            // int message2 = (int)message20;
+            // string vivodTwo = message2 % 2 == 0 && message2 > 0 ? $"{message2} кратно двум" : $"{message2} не кратно двум";
+            // double message10 = (message20 - message2) * 10;
+            // int message1 = (int)message10;
+            // string vivodOne = message1 % 2 == 0 && message1 > 0 ? $"{message1} кратно двум" : $"{message1} не кратно двум";
+            // Console.WriteLine($"{vivodFive}   {vivodFour}  {vivodThree}   {vivodThree}  {vivodOne} ");
         }
         else
         {
