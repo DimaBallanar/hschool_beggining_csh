@@ -97,3 +97,28 @@
 //         System.Console.WriteLine(string.Join(" ", inputText.Split(' ', StringSplitOptions.RemoveEmptyEntries)));
 //     }
 // }
+
+// 7. На вход программе подаётся строка. Замените все @ на '!' с помощью
+// глобального поиска и замены (2 способа)
+
+// 1 способ
+{
+System.Console.WriteLine("введите строку");
+string? inputMessage = Console.ReadLine();
+if (!string.IsNullOrEmpty(inputMessage))
+{
+    Console.WriteLine(inputMessage.Replace('@', '!'));
+}
+else
+{
+System.Console.WriteLine("null");
+}
+}
+// 2 способ
+{
+    System.Console.WriteLine("введите строку");
+string? inputMessage = Console.ReadLine();
+if (!string.IsNullOrEmpty(inputMessage))
+}
+
+
