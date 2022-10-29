@@ -318,3 +318,35 @@ System.Console.WriteLine(calculateWords.Length);
     textUsera = textUsera.ToLower();
     Console.WriteLine(textUsera.Contains("хорош"));
 }
+
+// 24.На вход программе подается строка. Напишите программу, которая подсчитывает
+// количество буквенных символов в нижнем регистре.
+// abcABCD12345 => 3
+
+
+
+// 25. На вход программе подается строка из букв А, Г, Ц, Т. Напишите программу,
+// которая подсчитывает сколько букв
+// АааГГЦЦцТТтттА => А – 4 Г – 2 Ц – 3 Т – 5 
+
+
+
+
+
+
+// 26. На вход программе подается строка текста. Напишите программу, которая
+// проверяет, что строка заканчивается подстрокой .com или .ru. Если
+// заканчивается, то вывести true, в противном случае false
+
+System.Console.WriteLine(" введите сайт");
+string? textEmail = Console.ReadLine();
+if (textEmail.EndsWith(".com") || textEmail.EndsWith(".ru"))
+{
+    System.Console.WriteLine(true);
+}
+else
+{
+    System.Console.WriteLine(false);
+}
+
+
