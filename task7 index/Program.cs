@@ -279,11 +279,11 @@
         System.Console.WriteLine(name20);
         if (Char.IsUpper(name10) && Char.IsUpper(name20))
         {
-            System.Console.WriteLine($"{nameSurName}-true");
+            System.Console.WriteLine($"{nameSurName}=>true");
         }
         else
         {
-            System.Console.WriteLine($"{nameSurName}-false");
+            System.Console.WriteLine($"{nameSurName}=>false");
         }
     }
     else
