@@ -26,6 +26,8 @@
 // выяснить, четное или нет. Если это строка то преобразовать строку в массив, где
 // каждый символ – один элемент массива
 // ‘hschool’ => [‘h’, ‘s’, ‘c’, ‘h’, ‘o’, ‘o’, ‘l’]
+
+
 // System.Console.WriteLine("введите строку");
 // String? textUser = Console.ReadLine();
 // if (!string.IsNullOrEmpty(textUser))
@@ -246,3 +248,46 @@
 //     textUsera = textUsera.Replace("щ", "");
 //     System.Console.WriteLine(textUsera);
 // }
+
+
+// 19.19. На вход программе подается строка. Преобразуйте первую букву каждого слова
+// строки в верхний регистр (for)
+
+
+// 20.20.На вход программе подается строка, где каждое слово заканчивается “_”.
+// Программа должна убрать “_” и первую букву каждого слова (помимо первого),
+// преобразовать в верхний регистр (for)
+
+
+// 21. На вход программе подается строка, состоящая из имени и фамилии человека,
+// разделенных одним пробелом. Напишите программу, которая проверяет, что имя
+// и фамилия начинаются с заглавной буквы.
+// Chris Alan => true
+// chris alan => false
+
+{
+    System.Console.WriteLine("введите Имя и Фамилию");
+    string? nameSurName = Console.ReadLine();
+    if (!string.IsNullOrEmpty(nameSurName))
+    {
+        string[] name = nameSurName.Split(" ");
+        string name1 = name[0];
+        char name10 = name1[0];
+        System.Console.WriteLine(name10);
+        string name2 = name[1];
+        char name20 = name2[0];
+        System.Console.WriteLine(name20);
+        if (Char.IsUpper(name10) && Char.IsUpper(name20))
+        {
+            System.Console.WriteLine($"{nameSurName}-true");
+        }
+        else
+        {
+            System.Console.WriteLine($"{nameSurName}-false");
+        }
+    }
+    else
+    {
+        System.Console.WriteLine("null");
+    }
+}
