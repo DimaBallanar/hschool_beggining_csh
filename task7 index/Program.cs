@@ -1,10 +1,11 @@
 ﻿// 1. Ввести строку. Если эта равна “hschool”, вывести true. В противном случае false.
 // Добавить проверки для строк. Удалить лишние пробелы
+
+
 // string? textEnter = Console.ReadLine();
 
 // if (!string.IsNullOrEmpty(textEnter))
 // {
-
 //     if (textEnter.ToLower().Trim() == "hschool")
 //     {
 //         // bool result= textEnter.ToLower().Trim() == "hschool";
@@ -14,9 +15,13 @@
 //     {
 //         System.Console.WriteLine(false);
 //     }
-
 // }
-// else { System.Console.WriteLine("вы ввели не строку"); }
+// else
+// {
+//     System.Console.WriteLine("вы ввели не строку");
+// }
+
+
 // 2. Ввести строку. Проверить является ли это число или строка. Если число, то
 // выяснить, четное или нет. Если это строка то преобразовать строку в массив, где
 // каждый символ – один элемент массива
@@ -31,15 +36,38 @@
 //     }
 //     else
 //     {
-// char[]result=textUser.ToCharArray();
-// Console.WriteLine(result.Length);
+//         char[] result = textUser.ToCharArray();
+//         Console.WriteLine(result.Length);
 //     }
 // }
+
+
 // 3. Преобразовать строку ‘Full сStaCK DevELoper’ в массив вида [‘full, ‘stack’,
 // ‘developer’]
+
 // string textUser = "Full сStaCK DevELoper";
 // textUser = textUser.ToLower();
 // string[] result = textUser.Split(' ');
 // System.Console.WriteLine(result[0]);
 // System.Console.WriteLine(result[1]);
 // System.Console.WriteLine(result[2]);
+
+
+// 4. Ввести строку. Проверить на isNaN. Если число, то ошибка ввода. Если это строка
+// то узнать какая у нее длина. Привести к одному регистру, убрать лишние пробелы
+System.Console.WriteLine("введите строку");
+string? userText = Console.ReadLine();
+if (!string.IsNullOrEmpty(userText))
+{
+    if (int.TryParse(userText, out int number))
+    {
+        System.Console.WriteLine("ошибка ввода");
+    }
+    else
+    {
+        System.Console.WriteLine($"символов в строке: {userText.Length}");
+        System.Console.WriteLine(userText.ToLower());
+        System.Console.WriteLine(string.Join(" ", userText.Split(' ', StringSplitOptions.RemoveEmptyEntries)));   //// вопросики,еще раз обьяснить как работает это комбо команд
+    }
+}
+
