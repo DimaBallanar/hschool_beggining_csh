@@ -174,6 +174,22 @@
 
 
 // 13 Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'.
-string[] massivStasa = { "я", "учу", "javascript", "!" };
-System.Console.WriteLine(string.Join("+",massivStasa));
+// string[] massivStasa = { "я", "учу", "javascript", "!" };
+// System.Console.WriteLine(string.Join("+",massivStasa));
 
+
+// 14 Дан массив. Вывести каждый отдельный элемент в консоль (for)
+
+// string[] massivLanguage={"огурец", "помидоры", "железобетон", "34", "линейка на 30см"};                  //просто перебор,с циклом фор все проще
+// Console.WriteLine(massivLanguage[0]);
+// Console.WriteLine(massivLanguage[1]);
+// Console.WriteLine(massivLanguage[2]);
+// Console.WriteLine(massivLanguage[3]);
+// Console.WriteLine(massivLanguage[4]);
+
+// 15 На вход программе подается строка текста, состоящая из слов, разделенных
+// ровно одним пробелом. Напишите программу, которая подсчитывает количество слов в ней
+System.Console.WriteLine("введите любой текс");
+string? sochinenie = Console.ReadLine();
+string[] calculateWords = sochinenie.Split(" ");
+System.Console.WriteLine(calculateWords.Length);
