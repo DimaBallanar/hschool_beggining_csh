@@ -102,23 +102,28 @@
 // глобального поиска и замены (2 способа)
 
 // 1 способ
-{
-System.Console.WriteLine("введите строку");
-string? inputMessage = Console.ReadLine();
-if (!string.IsNullOrEmpty(inputMessage))
-{
-    Console.WriteLine(inputMessage.Replace('@', '!'));
-}
-else
-{
-System.Console.WriteLine("null");
-}
-}
-// 2 способ
-{
-    System.Console.WriteLine("введите строку");
-string? inputMessage = Console.ReadLine();
-if (!string.IsNullOrEmpty(inputMessage))
-}
+// {
+// System.Console.WriteLine("введите строку");
+// string? inputMessage = Console.ReadLine();
+// if (!string.IsNullOrEmpty(inputMessage))
+// {
+//     Console.WriteLine(inputMessage.Replace('@', '!'));
+// }
+// else
+// {
+// System.Console.WriteLine("null");
+// }
+// }
+// // 2 способ
+// {
+//     System.Console.WriteLine("введите строку");
+// string? inputMessage = Console.ReadLine();
+// if (!string.IsNullOrEmpty(inputMessage))
+// }
 
 
+
+//8. Дана строка 'aaa bbb ccc'. Вырежите из нее слово 'bbb'
+
+string Text= "aaa bbb ccc";
+System.Console.WriteLine(Text.Remove(4, 4));
