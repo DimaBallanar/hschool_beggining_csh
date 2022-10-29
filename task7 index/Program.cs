@@ -132,10 +132,26 @@
 //9. На вход программе подается переменная date, в котрой лежит дата в формате
 // 'xxxx-xx-xx'. Преобразуйте эту дату в формат 'xx/xx/xxxx’. (reverse)
 
-System.Console.WriteLine("введите дату в формате год.месяц.день");
-string? date=Convert.ToString(Console.ReadLine());
-if(!string.IsNullOrEmpty(date))
-{
-string[] dates=date.Split('.');
-System.Console.WriteLine($"{dates[2]}/{dates[1]}/{dates[0]}");
-}
+// System.Console.WriteLine("введите дату в формате год.месяц.день");
+// string? date = Convert.ToString(Console.ReadLine());
+// if (!string.IsNullOrEmpty(date))
+// {
+//     string[] dates = date.Split('.');
+//     System.Console.WriteLine($"{dates[2]}/{dates[1]}/{dates[0]}");
+// }
+// else
+// {
+//     System.Console.WriteLine("вы ввели не в заданном формате");
+// }
+
+
+// 10. Дана строка из 3 слов разделенных пробелом:
+// • Найдите количество символов в этой строке.
+// • Вырежите из нее 2 и 3 слова.
+// • Найдите индекс 2 подстроки
+
+string userTextWords = "fruct vegetable bicycle";
+int textLength = userTextWords.Length;
+System.Console.WriteLine(textLength);
+System.Console.WriteLine(userTextWords.Remove(5));
+System.Console.WriteLine(userTextWords.IndexOf("vegetable"));
