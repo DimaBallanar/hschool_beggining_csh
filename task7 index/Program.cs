@@ -125,5 +125,17 @@
 
 //8. Дана строка 'aaa bbb ccc'. Вырежите из нее слово 'bbb'
 
-string Text= "aaa bbb ccc";
-System.Console.WriteLine(Text.Remove(4, 4));
+// string Text = "aaa bbb ccc";
+// System.Console.WriteLine(Text.Remove(4, 4));
+
+
+//9. На вход программе подается переменная date, в котрой лежит дата в формате
+// 'xxxx-xx-xx'. Преобразуйте эту дату в формат 'xx/xx/xxxx’. (reverse)
+
+System.Console.WriteLine("введите дату в формате год.месяц.день");
+string? date=Convert.ToString(Console.ReadLine());
+if(!string.IsNullOrEmpty(date))
+{
+string[] dates=date.Split('.');
+System.Console.WriteLine($"{dates[2]}/{dates[1]}/{dates[0]}");
+}
