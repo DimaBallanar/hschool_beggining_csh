@@ -163,14 +163,17 @@
 // Console.WriteLine(dataType?.Replace('-', '!')?? default);
 
 // 12 Пользователь вводит дату в формате 'xxxx-xx-xx'. Преобразуйте эту дату в формат 'xx.xx.xxxx'.
-System.Console.WriteLine("введите год");
-string? dataUsera=Console.ReadLine()+"-";
-System.Console.WriteLine("введите месяц");
-dataUsera+=Console.ReadLine()+"-";
-System.Console.WriteLine("введите число месяца");
-dataUsera+=Console.ReadLine();
-string[]dateBirthday=dataUsera.Split('-');
-System.Console.WriteLine($"{dateBirthday[2]}.{dateBirthday[1]}.{dateBirthday[0]}");
+// System.Console.WriteLine("введите год");
+// string? dataUsera = Console.ReadLine() + "-";
+// System.Console.WriteLine("введите месяц");
+// dataUsera += Console.ReadLine() + "-";
+// System.Console.WriteLine("введите число месяца");
+// dataUsera += Console.ReadLine();
+// string[] dateBirthday = dataUsera.Split('-');
+// System.Console.WriteLine($"{dateBirthday[2]}.{dateBirthday[1]}.{dateBirthday[0]}");
 
 
+// 13 Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'.
+string[] massivStasa = { "я", "учу", "javascript", "!" };
+System.Console.WriteLine(string.Join("+",massivStasa));
 
