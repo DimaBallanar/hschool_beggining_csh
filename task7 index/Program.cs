@@ -337,16 +337,30 @@ System.Console.WriteLine(calculateWords.Length);
 // 26. На вход программе подается строка текста. Напишите программу, которая
 // проверяет, что строка заканчивается подстрокой .com или .ru. Если
 // заканчивается, то вывести true, в противном случае false
-
-System.Console.WriteLine(" введите сайт");
-string? textEmail = Console.ReadLine();
-if (textEmail.EndsWith(".com") || textEmail.EndsWith(".ru"))
 {
-    System.Console.WriteLine(true);
+    System.Console.WriteLine(" введите сайт");
+    string? textEmail = Console.ReadLine();
+    if (textEmail.EndsWith(".com") || textEmail.EndsWith(".ru"))
+    {
+        System.Console.WriteLine(true);
+    }
+    else
+    {
+        System.Console.WriteLine(false);
+    }
 }
-else
+
+// 27. На вход подается url. Если он начинается с http, содержит хотя бы один “/” и
+// заканчивается подстрокой .com или .ru, то вывести true, в противном случае false
 {
-    System.Console.WriteLine(false);
+    System.Console.WriteLine(" введите сайт");
+    string? textEmail = Console.ReadLine();
+    if (textEmail.StartsWith("http") && textEmail.Contains("/") && (textEmail.EndsWith(".com") || textEmail.EndsWith(".ru")))
+    {
+        System.Console.WriteLine(true);
+    }
+    else
+    {
+        System.Console.WriteLine(false);
+    }
 }
-
-
