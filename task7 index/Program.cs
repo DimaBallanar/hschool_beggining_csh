@@ -55,19 +55,45 @@
 
 // 4. Ввести строку. Проверить на isNaN. Если число, то ошибка ввода. Если это строка
 // то узнать какая у нее длина. Привести к одному регистру, убрать лишние пробелы
-System.Console.WriteLine("введите строку");
-string? userText = Console.ReadLine();
-if (!string.IsNullOrEmpty(userText))
-{
-    if (int.TryParse(userText, out int number))
-    {
-        System.Console.WriteLine("ошибка ввода");
-    }
-    else
-    {
-        System.Console.WriteLine($"символов в строке: {userText.Length}");
-        System.Console.WriteLine(userText.ToLower());
-        System.Console.WriteLine(string.Join(" ", userText.Split(' ', StringSplitOptions.RemoveEmptyEntries)));   //// вопросики,еще раз обьяснить как работает это комбо команд
-    }
-}
+// System.Console.WriteLine("введите строку");
+// string? userText = Console.ReadLine();
+// if (!string.IsNullOrEmpty(userText))
+// {
+//     if (int.TryParse(userText, out int number))
+//     {
+//         System.Console.WriteLine("ошибка ввода");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine($"символов в строке: {userText.Length}");
+//         System.Console.WriteLine(userText.ToLower());
+//         System.Console.WriteLine(string.Join(" ", userText.Split(' ', StringSplitOptions.RemoveEmptyEntries)));   //// вопросики,еще раз обьяснить как работает это комбо команд
+//     }
+// }
 
+// 5. ‘HTML JavaScript PHP’ преобразовать в "HTML-JAVASCRIPT-PHP"
+
+// string userStas="HTML JavaScript PHP";
+// userStas=userStas.ToUpper();
+// System.Console.WriteLine(userStas.Replace(" ", "-"));
+
+
+// 6. Ввести строку. Проверить является ли это число или строка. Если число, то ошибка ввода. Если это строка то первый символ поставить в верхний регистр.
+// Убрать лишние пробелы
+
+// System.Console.WriteLine("введите свою строку");
+// string? inputText = Console.ReadLine();
+// if (!string.IsNullOrEmpty(inputText))
+// {
+//     if (int.TryParse(inputText, out int numberText))
+//     {
+//         System.Console.WriteLine("ошибка ввода");
+//     }
+//     else
+//     {
+//         string? liter = Convert.ToString(inputText[0]);
+//         liter = liter.ToUpper();
+//         inputText = liter + inputText.Remove(0, 1);
+//         System.Console.WriteLine(string.Join(" ", inputText.Split(' ', StringSplitOptions.RemoveEmptyEntries)));
+//     }
+// }
