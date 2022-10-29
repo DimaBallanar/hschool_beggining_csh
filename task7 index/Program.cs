@@ -198,9 +198,19 @@
 // 16 Пользователь вводит строку. Необходимо посчитать количество гласных (for)
 
 
-// System.Console.WriteLine(" введите любую строку");
+
 // {
+// System.Console.WriteLine(" введите любую строку");
 //     string? textUsera = Console.ReadLine();
 //     textUsera = textUsera.ToLower();
 //     Console.WriteLine($"{textUsera.Split('а', 'о', 'и', 'ы', 'у', 'э', 'я', 'ё', 'е', 'ю').Length - 1}");
 // }
+
+//17Пользователь вводит строку. Необходимо посчитать количество согласных (for)
+
+{
+    System.Console.WriteLine(" введите любую строку");
+    string? textUsera = Console.ReadLine();
+    textUsera = textUsera.ToLower();
+    Console.WriteLine($"{textUsera.Split('б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ').Length - 1}");
+}
