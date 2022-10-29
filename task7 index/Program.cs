@@ -150,8 +150,16 @@
 // • Вырежите из нее 2 и 3 слова.
 // • Найдите индекс 2 подстроки
 
-string userTextWords = "fruct vegetable bicycle";
-int textLength = userTextWords.Length;
-System.Console.WriteLine(textLength);
-System.Console.WriteLine(userTextWords.Remove(5));
-System.Console.WriteLine(userTextWords.IndexOf("vegetable"));
+// string userTextWords = "fruct vegetable bicycle";
+// int textLength = userTextWords.Length;
+// System.Console.WriteLine(textLength);
+// System.Console.WriteLine(userTextWords.Remove(5));
+// System.Console.WriteLine(userTextWords.IndexOf("vegetable"));
+
+//11.Пользователь вводит дату в формате ‘х-х-х'. Замените все дефисы на '!'
+
+// System.Console.WriteLine("введите дату в формате хх-хх-хххх");
+// string? dataType = Console.ReadLine();
+// Console.WriteLine(dataType?.Replace('-', '!')?? default);
+
+// 12
