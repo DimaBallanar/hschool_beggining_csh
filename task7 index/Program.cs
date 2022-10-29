@@ -189,7 +189,18 @@
 
 // 15 На вход программе подается строка текста, состоящая из слов, разделенных
 // ровно одним пробелом. Напишите программу, которая подсчитывает количество слов в ней
-System.Console.WriteLine("введите любой текс");
-string? sochinenie = Console.ReadLine();
-string[] calculateWords = sochinenie.Split(" ");
-System.Console.WriteLine(calculateWords.Length);
+
+// System.Console.WriteLine("введите любой текс");
+// string? sochinenie = Console.ReadLine();
+// string[] calculateWords = sochinenie.Split(" ");
+// System.Console.WriteLine(calculateWords.Length);
+
+// 16 Пользователь вводит строку. Необходимо посчитать количество гласных (for)
+
+
+// System.Console.WriteLine(" введите любую строку");
+// {
+//     string? textUsera = Console.ReadLine();
+//     textUsera = textUsera.ToLower();
+//     Console.WriteLine($"{textUsera.Split('а', 'о', 'и', 'ы', 'у', 'э', 'я', 'ё', 'е', 'ю').Length - 1}");
+// }
