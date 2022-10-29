@@ -208,9 +208,41 @@
 
 //17Пользователь вводит строку. Необходимо посчитать количество согласных (for)
 
-{
-    System.Console.WriteLine(" введите любую строку");
-    string? textUsera = Console.ReadLine();
-    textUsera = textUsera.ToLower();
-    Console.WriteLine($"{textUsera.Split('б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ').Length - 1}");
-}
+// {
+//     System.Console.WriteLine(" введите любую строку");
+//     string? textUsera = Console.ReadLine();
+//     textUsera = textUsera.ToLower();
+//     Console.WriteLine($"{textUsera.Split('б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ').Length - 1}");
+// }
+
+// 18.Пользователь вводит строку. Необходимо вывести все гласные отдельной строкой (for)
+// fullstack => ua
+// {
+//     System.Console.WriteLine(" введите любую строку");
+//     string? textUsera = Console.ReadLine();
+//     textUsera = textUsera.ToLower();
+//     // System.Console.WriteLine(textUsera.Replace($"[бвгджзйклмнпрстфхцчшщ]", " "));
+//     // System.Console.WriteLine(textUsera.Split(' ').s);
+//     textUsera = textUsera.Replace("б", "");
+//     textUsera = textUsera.Replace("в", "");
+//     textUsera = textUsera.Replace("г", "");
+//     textUsera = textUsera.Replace("д", "");
+//     textUsera = textUsera.Replace("ж", "");
+//     textUsera = textUsera.Replace("з", "");
+//     textUsera = textUsera.Replace("й", "");
+//     textUsera = textUsera.Replace("к", "");
+//     textUsera = textUsera.Replace("л", "");
+//     textUsera = textUsera.Replace("м", "");
+//     textUsera = textUsera.Replace("н", "");
+//     textUsera = textUsera.Replace("п", "");
+//     textUsera = textUsera.Replace("р", "");
+//     textUsera = textUsera.Replace("с", "");
+//     textUsera = textUsera.Replace("т", "");
+//     textUsera = textUsera.Replace("ф", "");
+//     textUsera = textUsera.Replace("х", "");
+//     textUsera = textUsera.Replace("ц", "");
+//     textUsera = textUsera.Replace("ч", "");
+//     textUsera = textUsera.Replace("ш", "");
+//     textUsera = textUsera.Replace("щ", "");
+//     System.Console.WriteLine(textUsera);
+// }
