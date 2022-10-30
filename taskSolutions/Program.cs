@@ -104,6 +104,25 @@
 // // 6. Найти квадратный корень числа. Если же число без плавающей точки, то просто вывести его. В противном случае необходимо округлить число до целых.
 // Добавить проверку на ввод только чисел
 // {
+//     System.Console.WriteLine("введите число");
+//     string? userNumber = Console.ReadLine();
+//     if (int.TryParse(userNumber, out int result))
+//     {
+//         double chislo = Math.Sqrt(result);
+//         string stringResult = Convert.ToString(chislo);
+//         if (int.TryParse(stringResult, out int userNum))
+//         {
+//             System.Console.WriteLine(userNum);
+//         }
+//         else
+//         {
+//             System.Console.WriteLine($"{Convert.ToInt32(chislo)}");
+//         }
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("вы ввели не число");
+//     }
 
 // }
 
@@ -215,8 +234,16 @@
 
 // {
 //     Console.WriteLine("введите количество сантиметров");  //надо сделать проверку на ввод чисел
-//     int santimetri=Convert.ToInt32(Console.ReadLine());
+//      string? userNumber = Console.ReadLine();
+//     if (int.TryParse(userNumber, out int santimetri))
+//     {
+
 //     Console.WriteLine($" в {santimetri} см  {santimetri/100}м");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("вы ввели не число");
+//     }
 // }
 
 // 12.
@@ -272,32 +299,32 @@
 // 14. Пользователь вводит 2 числа от 0 до 10. Сложите переменные так, чтобы в
 // результате получилось выражение: “I’m хх". Проверки на ввод только чисел.
 // Проверки на ввод чисел до 10. Если первое число – 0, то опустить его
-{
-    Console.WriteLine("введите первое число");
-    string? numberFirst = Console.ReadLine();
-    Console.WriteLine("введите первое число");
-    string? numberSecond = Console.ReadLine();
-    if (int.TryParse(numberFirst, out int number1) && int.TryParse(numberSecond, out int number2))
-    {
-        if (number1 >= 0 && number1 <= 10 && number2 >= 0 && number2 <= 10)
-        {
-            if (number1 == 0)
-            {
-                Console.WriteLine($"I'm {number2}");
-            }
-            else
-            {
-                Console.WriteLine($"I'm {number1}{number2}");
-            }
-        }
-        else
-        {
-            Console.WriteLine("вы ввели число не от 0 до 10");
-        }
-    }
-    else
-    {
-        Console.WriteLine("вы ввели не числа");
-    }
+// {
+//     Console.WriteLine("введите первое число");
+//     string? numberFirst = Console.ReadLine();
+//     Console.WriteLine("введите первое число");
+//     string? numberSecond = Console.ReadLine();
+//     if (int.TryParse(numberFirst, out int number1) && int.TryParse(numberSecond, out int number2))
+//     {
+//         if (number1 >= 0 && number1 <= 10 && number2 >= 0 && number2 <= 10)
+//         {
+//             if (number1 == 0)
+//             {
+//                 Console.WriteLine($"I'm {number2}");
+//             }
+//             else
+//             {
+//                 Console.WriteLine($"I'm {number1}{number2}");
+//             }
+//         }
+//         else
+//         {
+//             Console.WriteLine("вы ввели число не от 0 до 10");
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("вы ввели не числа");
+//     }
 
-}
+// }
