@@ -246,7 +246,44 @@
 //     }
 // }
 
-// 12.
+// 12.Напишите программу, в которой рассчитывается сумма и произведение цифр
+// положительного трёхзначного числа 123 -> Сумма цифр = 6 Произведение цифр = 6
+{
+    System.Console.WriteLine("введите трехзначное число");
+    string? userVvod = Console.ReadLine();
+    if ((int.TryParse(userVvod, out int gotovo)) && gotovo > 99 && gotovo < 1000)
+    {
+        int sotkiNumber = gotovo / 100;
+        int desyatkiNumber = (gotovo - sotkiNumber * 100) / 10;
+        int ediniciNumber = (gotovo - sotkiNumber * 100 - desyatkiNumber * 10);
+        System.Console.WriteLine($" сумма чисел {sotkiNumber + desyatkiNumber + ediniciNumber} ,  произведение {sotkiNumber * desyatkiNumber * ediniciNumber}");
+
+    }
+    else
+    {
+        System.Console.WriteLine("вы ввели значения не по условиям задачи");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // {
 //     Console.WriteLine("Задача номер 15.");
 //     Console.WriteLine("Введите строку ");
