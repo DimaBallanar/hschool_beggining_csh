@@ -238,10 +238,12 @@
     string? firstMessage = Console.ReadLine();
     Console.WriteLine("введите вторую строку");
     string? secondMessage = Console.ReadLine();
+    Console.WriteLine($"{firstMessage}{secondMessage}");
     string? newMessage = firstMessage + secondMessage;
     Console.WriteLine(newMessage);
     firstMessage += secondMessage;
     Console.WriteLine(firstMessage);
+    
 
 }
 // 11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно оно двум либо нет, 
