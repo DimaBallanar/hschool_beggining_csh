@@ -87,6 +87,7 @@ System.Console.WriteLine(userStas.Replace(" ", "-"));
 
 System.Console.WriteLine("введите свою строку");
 string? inputText = Console.ReadLine();
+inputText=inputText?.Trim();
 if (!string.IsNullOrEmpty(inputText))
 {
     if (int.TryParse(inputText, out int numberText))
@@ -95,10 +96,10 @@ if (!string.IsNullOrEmpty(inputText))
     }
     else
     {
-        string? liter = Convert.ToString(inputText[0]);
+        string liter = Convert.ToString(inputText[0]);
         liter = liter.ToUpper();
-        inputText = liter + inputText.Remove(0, 1);
-        System.Console.WriteLine(string.Join(" ", inputText.Split(' ', StringSplitOptions.RemoveEmptyEntries)));
+        // inputText = liter + inputText.Remove(0, 1);
+        System.Console.WriteLine(String.Concat(liter,inputText.Remove(0,1)));
     }
 }
 
