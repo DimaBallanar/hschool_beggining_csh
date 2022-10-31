@@ -362,22 +362,32 @@
 
 // 17.Пользователь вводит строку. Необходимо сделать проверку, что это не число и
 // вывести текущую строку в большом регистре
+// {
+//  System.Console.WriteLine("введите строку");
+//  string? stroka = Console.ReadLine();
+//  if(!string.IsNullOrEmpty(stroka))
+//  {
+//  if(int.TryParse(stroka, out _))
+//  {
+//     System.Console.WriteLine("вы ввели число");
 
- System.Console.WriteLine("введите строку");
- string? stroka = Console.ReadLine();
- if(!string.IsNullOrEmpty(stroka))
- {
- if(int.TryParse(stroka, out _))
- {
-    System.Console.WriteLine("вы ввели число");
+//  }
+//  else
+//  {
+//     System.Console.WriteLine(stroka.ToUpper());
+//  }
+//  }
+// }
 
- }
- else
- {
-    System.Console.WriteLine(stroka.ToUpper());
- }
- }
 
+// 18. Пользователь вводит строку. Необходимо повторить ее трижды
+
+{
+     System.Console.WriteLine("введите строку");
+string? stroka = Console.ReadLine();
+System.Console.WriteLine(string.Concat(stroka,stroka,stroka));
+
+}
 // //19.
 // string? inMessage = Console.ReadLine();
 // int number;
