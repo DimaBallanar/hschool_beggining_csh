@@ -276,14 +276,14 @@
     if (int.TryParse(userInput, out int number0))
     {
         int number1 = number0 / 1000;
-        int number2 = (number0 - number1 * 1000) / 100;
-        int number3 = (number0 - number1 * 1000 - number2 * 100) / 10;
-        int number4 = number0 - number1 * 1000 - number2 * 100 - number3 * 10;
-        string chetnoe1 = number1 > 0 && number1 % 2 == 0 ? $"{number1}-четное " : $"{number1} не четное ";
-        string chetnoe2 = number2 > 0 && number1 % 2 == 0 ? $"{number2}-четное " : $"{number2} не четное ";
-        string chetnoe3 = number3 > 0 && number1 % 2 == 0 ? $"{number3}-четное " : $"{number3} не четное ";
-        string chetnoe4 = number4 > 0 && number1 % 2 == 0 ? $"{number4}-четное " : $"{number4} не четное ";
-        System.Console.WriteLine(chetnoe1,chetnoe2,chetnoe3,chetnoe4);
+            int number2 = (number0 - number1 * 1000) / 100;
+           int number3 = (number0 - number1 * 1000 - number2 * 100) / 10;
+               int number4 = number0 - number1 * 1000 - number2 * 100 - number3 * 10;
+               string chetnoe1 = number1 > 0 && number1 % 2 == 0 ? $"{number1}-четное " : $"{number1} не четное ";
+        string chetnoe2 = number2 > 0 && number2 % 2 == 0 ? $"{number2}-четное " : $"{number2} не четное ";
+        string chetnoe3 = number3 > 0 && number3 % 2 == 0 ? $"{number3}-четное " : $"{number3} не четное ";
+        string chetnoe4 = number4 > 0 && number4 % 2 == 0 ? $"{number4}-четное " : $"{number4} не четное ";
+        System.Console.WriteLine($"{chetnoe1},{chetnoe2},{chetnoe3},{chetnoe4}");
 
     }
     else
