@@ -248,44 +248,87 @@
 
 // 12.Напишите программу, в которой рассчитывается сумма и произведение цифр
 // положительного трёхзначного числа 123 -> Сумма цифр = 6 Произведение цифр = 6
+// {
+//     System.Console.WriteLine("введите трехзначное число");
+//     string? userVvod = Console.ReadLine();
+//     if ((int.TryParse(userVvod, out int gotovo)) && gotovo > 99 && gotovo < 1000)
+//     {
+//         int sotkiNumber = gotovo / 100;
+//         int desyatkiNumber = (gotovo - sotkiNumber * 100) / 10;
+//         int ediniciNumber = (gotovo - sotkiNumber * 100 - desyatkiNumber * 10);
+//         System.Console.WriteLine($" сумма чисел {sotkiNumber + desyatkiNumber + ediniciNumber} ,  произведение {sotkiNumber * desyatkiNumber * ediniciNumber}");
+
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("вы ввели значения не по условиям задачи");
+//     }
+// }
+
+
+// 13. Пользователь вводит четырехзначное число. Напишите код, который будет
+// выявлять является ли каждое составляющее числа четным либо нечетным.
+// Добавить проверку на ввод только чисел
+// 1234 -> 1 – неч 2 – чет 3 – неч 4 - чет
 {
-    System.Console.WriteLine("введите трехзначное число");
-    string? userVvod = Console.ReadLine();
-    if ((int.TryParse(userVvod, out int gotovo)) && gotovo > 99 && gotovo < 1000)
+    System.Console.WriteLine("введите четырехзначное число");
+    string? userInput = Console.ReadLine();
+    if (int.TryParse(userInput, out int number0))
     {
-        int sotkiNumber = gotovo / 100;
-        int desyatkiNumber = (gotovo - sotkiNumber * 100) / 10;
-        int ediniciNumber = (gotovo - sotkiNumber * 100 - desyatkiNumber * 10);
-        System.Console.WriteLine($" сумма чисел {sotkiNumber + desyatkiNumber + ediniciNumber} ,  произведение {sotkiNumber * desyatkiNumber * ediniciNumber}");
+        int number1 = number0 / 1000;
+        int number2 = (number0 - number1 * 1000) / 100;
+        int number3 = (number0 - number1 * 1000 - number2 * 100) / 10;
+        int number4 = number0 - number1 * 1000 - number2 * 100 - number3 * 10;
+        string chetnoe1 = number1 > 0 && number1 % 2 == 0 ? $"{number1}-четное " : $"{number1} не четное ";
+        string chetnoe2 = number2 > 0 && number1 % 2 == 0 ? $"{number2}-четное " : $"{number2} не четное ";
+        string chetnoe3 = number3 > 0 && number1 % 2 == 0 ? $"{number3}-четное " : $"{number3} не четное ";
+        string chetnoe4 = number4 > 0 && number1 % 2 == 0 ? $"{number4}-четное " : $"{number4} не четное ";
+        System.Console.WriteLine(chetnoe1,chetnoe2,chetnoe3,chetnoe4);
 
     }
     else
     {
-        System.Console.WriteLine("вы ввели значения не по условиям задачи");
+        System.Console.WriteLine("вы ввели не число");
     }
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 14. Пользователь вводит 2 числа от 0 до 10. Сложите переменные так, чтобы в
+// результате получилось выражение: “I’m хх". Проверки на ввод только чисел.
+// Проверки на ввод чисел до 10. Если первое число – 0, то опустить его
 // {
-//     Console.WriteLine("Задача номер 15.");
+//     Console.WriteLine("введите первое число");
+//     string? numberFirst = Console.ReadLine();
+//     Console.WriteLine("введите первое число");
+//     string? numberSecond = Console.ReadLine();
+//     if (int.TryParse(numberFirst, out int number1) && int.TryParse(numberSecond, out int number2))
+//     {
+//         if (number1 >= 0 && number1 <= 10 && number2 >= 0 && number2 <= 10)
+//         {
+//             if (number1 == 0)
+//             {
+//                 Console.WriteLine($"I'm {number2}");
+//             }
+//             else
+//             {
+//                 Console.WriteLine($"I'm {number1}{number2}");
+//             }
+//         }
+//         else
+//         {
+//             Console.WriteLine("вы ввели число не от 0 до 10");
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("вы ввели не числа");
+//     }
+
+// }
+//15.Пользователь вводит строку. Необходимо сделать проверку, что это не число и вывести длину строки
+// {
 //     Console.WriteLine("Введите строку ");
 //     string? text = Console.ReadLine();
 //     if (!int.TryParse(text, out _)) // "_" игнорируем объявление переменной
@@ -333,35 +376,3 @@
 
 
 
-// 14. Пользователь вводит 2 числа от 0 до 10. Сложите переменные так, чтобы в
-// результате получилось выражение: “I’m хх". Проверки на ввод только чисел.
-// Проверки на ввод чисел до 10. Если первое число – 0, то опустить его
-// {
-//     Console.WriteLine("введите первое число");
-//     string? numberFirst = Console.ReadLine();
-//     Console.WriteLine("введите первое число");
-//     string? numberSecond = Console.ReadLine();
-//     if (int.TryParse(numberFirst, out int number1) && int.TryParse(numberSecond, out int number2))
-//     {
-//         if (number1 >= 0 && number1 <= 10 && number2 >= 0 && number2 <= 10)
-//         {
-//             if (number1 == 0)
-//             {
-//                 Console.WriteLine($"I'm {number2}");
-//             }
-//             else
-//             {
-//                 Console.WriteLine($"I'm {number1}{number2}");
-//             }
-//         }
-//         else
-//         {
-//             Console.WriteLine("вы ввели число не от 0 до 10");
-//         }
-//     }
-//     else
-//     {
-//         Console.WriteLine("вы ввели не числа");
-//     }
-
-// }
