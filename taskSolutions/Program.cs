@@ -270,27 +270,27 @@
 // выявлять является ли каждое составляющее числа четным либо нечетным.
 // Добавить проверку на ввод только чисел
 // 1234 -> 1 – неч 2 – чет 3 – неч 4 - чет
-{
-    System.Console.WriteLine("введите четырехзначное число");
-    string? userInput = Console.ReadLine();
-    if (int.TryParse(userInput, out int number0))
-    {
-        int number1 = number0 / 1000;
-            int number2 = (number0 - number1 * 1000) / 100;
-           int number3 = (number0 - number1 * 1000 - number2 * 100) / 10;
-               int number4 = number0 - number1 * 1000 - number2 * 100 - number3 * 10;
-               string chetnoe1 = number1 > 0 && number1 % 2 == 0 ? $"{number1}-четное " : $"{number1} не четное ";
-        string chetnoe2 = number2 > 0 && number2 % 2 == 0 ? $"{number2}-четное " : $"{number2} не четное ";
-        string chetnoe3 = number3 > 0 && number3 % 2 == 0 ? $"{number3}-четное " : $"{number3} не четное ";
-        string chetnoe4 = number4 > 0 && number4 % 2 == 0 ? $"{number4}-четное " : $"{number4} не четное ";
-        System.Console.WriteLine($"{chetnoe1},{chetnoe2},{chetnoe3},{chetnoe4}");
+// {
+//     System.Console.WriteLine("введите четырехзначное число");
+//     string? userInput = Console.ReadLine();
+//     if (int.TryParse(userInput, out int number0))
+//     {
+//         int number1 = number0 / 1000;
+//             int number2 = (number0 - number1 * 1000) / 100;
+//            int number3 = (number0 - number1 * 1000 - number2 * 100) / 10;
+//                int number4 = number0 - number1 * 1000 - number2 * 100 - number3 * 10;
+//                string chetnoe1 = number1 > 0 && number1 % 2 == 0 ? $"{number1}-четное " : $"{number1} не четное ";
+//         string chetnoe2 = number2 > 0 && number2 % 2 == 0 ? $"{number2}-четное " : $"{number2} не четное ";
+//         string chetnoe3 = number3 > 0 && number3 % 2 == 0 ? $"{number3}-четное " : $"{number3} не четное ";
+//         string chetnoe4 = number4 > 0 && number4 % 2 == 0 ? $"{number4}-четное " : $"{number4} не четное ";
+//         System.Console.WriteLine($"{chetnoe1},{chetnoe2},{chetnoe3},{chetnoe4}");
 
-    }
-    else
-    {
-        System.Console.WriteLine("вы ввели не число");
-    }
-}
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("вы ввели не число");
+//     }
+// }
 
 
 
@@ -338,10 +338,12 @@
 //         // if (!string.IsNullOrEmpty(text)) //(text != null) "" // string.IsNullOrEmpty(text) првоеряет на пустое значение если пустое то true
 //         // {
 //         //     text =$"Длинна строки {text.Length}";
+// System.Console.WriteLine(text);
 //         // }
 //         //  else
 //         // {
 //         //     text = "пустота";
+// System.Console.WriteLine(text);
 //         // }
 //     }
 //     else
@@ -351,8 +353,30 @@
 // }
 
 
+// 16.Пользователь вводит строку. Вывести первый символ строки (индексы)
+
+// System.Console.WriteLine("введите строку");
 // string? stroka = Console.ReadLine();
 // Console.WriteLine(stroka?[0]);
+//
+
+// 17.Пользователь вводит строку. Необходимо сделать проверку, что это не число и
+// вывести текущую строку в большом регистре
+
+ System.Console.WriteLine("введите строку");
+ string? stroka = Console.ReadLine();
+ if(!string.IsNullOrEmpty(stroka))
+ {
+ if(int.TryParse(stroka, out _))
+ {
+    System.Console.WriteLine("вы ввели число");
+
+ }
+ else
+ {
+    System.Console.WriteLine(stroka.ToUpper());
+ }
+ }
 
 // //19.
 // string? inMessage = Console.ReadLine();
