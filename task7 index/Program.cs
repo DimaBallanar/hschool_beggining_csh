@@ -87,7 +87,7 @@ System.Console.WriteLine(userStas.Replace(" ", "-"));
 
 System.Console.WriteLine("введите свою строку");
 string? inputText = Console.ReadLine();
-inputText=inputText?.Trim();
+inputText = inputText?.Trim();
 if (!string.IsNullOrEmpty(inputText))
 {
     if (int.TryParse(inputText, out int numberText))
@@ -99,7 +99,7 @@ if (!string.IsNullOrEmpty(inputText))
         string liter = Convert.ToString(inputText[0]);
         liter = liter.ToUpper();
         // inputText = liter + inputText.Remove(0, 1);
-        System.Console.WriteLine(String.Concat(liter,inputText.Remove(0,1)));
+        System.Console.WriteLine(String.Concat(liter, inputText.Remove(0, 1)));
     }
 }
 
@@ -260,6 +260,29 @@ System.Console.WriteLine(calculateWords.Length);
 // 19.19. На вход программе подается строка. Преобразуйте первую букву каждого слова
 // строки в верхний регистр (for)
 
+{
+    System.Console.WriteLine("введите любую строку");
+    string? userText = Convert.ToString(Console.ReadLine());
+    userText = userText?.Trim();
+    if (!string.IsNullOrEmpty(userText))
+    {
+        string[] userSplitText = userText.Split(' ');
+        string result = "";
+        for (int i = 0; i < userSplitText.Length; i++)
+        {
+            string? liter2 = Convert.ToString(userSplitText[i]);
+            char liter1 = liter2[0];
+            result += String.Concat(char.ToUpper(liter1), liter2?.Remove(0, 1), " ");
+        }
+        System.Console.WriteLine(result);
+    }
+    else
+    {
+        System.Console.WriteLine("Null");
+    }
+
+}
+
 
 // 20.20.На вход программе подается строка, где каждое слово заканчивается “_”.
 // Программа должна убрать “_” и первую букву каждого слова (помимо первого),
@@ -303,33 +326,34 @@ System.Console.WriteLine(calculateWords.Length);
 // регистр символов, другими словами замените все строчные символы заглавными
 // и наоборот. Swap Case => sWAP cASE
 
-{string? text = Console.ReadLine();
-text = text?.Trim();
-if (!string.IsNullOrEmpty(text)) //Is or Has => string.IsXXX or string.HasXXX результат true or false
 {
-    string result = "";
-    for (int i = 0; i < text.Length; i++)
+    string? text = Console.ReadLine();
+    text = text?.Trim();
+    if (!string.IsNullOrEmpty(text)) //Is or Has => string.IsXXX or string.HasXXX результат true or false
     {
-        if (char.IsUpper(text[i]))
+        string result = "";
+        for (int i = 0; i < text.Length; i++)
         {
-            result += char.ToLower(text[i]).ToString(); // Convert.ToString( char.ToLower(text[i]))
+            if (char.IsUpper(text[i]))
+            {
+                result += char.ToLower(text[i]).ToString(); // Convert.ToString( char.ToLower(text[i]))
+            }
+            else if (char.IsLower(text[i]))
+            {
+                result += char.ToUpper(text[i]).ToString();
+            }
+            else
+            {
+                result += text[i].ToString();
+            }
         }
-        else if (char.IsLower(text[i]))
-        {
-            result += char.ToUpper(text[i]).ToString();
-        }
-        else
-        {
-            result += text[i].ToString();
-        }
-    }
 
-    System.Console.WriteLine(result);
-}
-else
-{
-    System.Console.WriteLine("Empty string");
-}
+        System.Console.WriteLine(result);
+    }
+    else
+    {
+        System.Console.WriteLine("Empty string");
+    }
 
 }
 
@@ -391,3 +415,4 @@ else
         System.Console.WriteLine(false);
     }
 }
+
