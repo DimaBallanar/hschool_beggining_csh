@@ -4,23 +4,17 @@
 {
     string? textEnter = Console.ReadLine();
 
-    if (!string.IsNullOrEmpty(textEnter))
+    if (!string.IsNullOrEmpty(textEnter) && textEnter.ToLower().Trim() == "hschool")
     {
-        if (textEnter.ToLower().Trim() == "hschool")
-        {
-            // bool result= textEnter.ToLower().Trim() == "hschool";
-            System.Console.WriteLine(textEnter.ToLower().Trim() == "hschool");
-        }
-        else
-        {
-            System.Console.WriteLine(false);
-        }
+
+        System.Console.WriteLine("TRUE");
     }
     else
     {
-        System.Console.WriteLine("вы ввели не строку");
+        System.Console.WriteLine(false);
     }
 }
+
 
 // 2. Ввести строку. Проверить является ли это число или строка. Если число, то
 // выяснить, четное или нет. Если это строка то преобразовать строку в массив, где
