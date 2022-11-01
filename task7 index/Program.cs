@@ -303,7 +303,33 @@ System.Console.WriteLine(calculateWords.Length);
 // регистр символов, другими словами замените все строчные символы заглавными
 // и наоборот. Swap Case => sWAP cASE
 
+{string? text = Console.ReadLine();
+text = text?.Trim();
+if (!string.IsNullOrEmpty(text)) //Is or Has => string.IsXXX or string.HasXXX результат true or false
 {
+    string result = "";
+    for (int i = 0; i < text.Length; i++)
+    {
+        if (char.IsUpper(text[i]))
+        {
+            result += char.ToLower(text[i]).ToString(); // Convert.ToString( char.ToLower(text[i]))
+        }
+        else if (char.IsLower(text[i]))
+        {
+            result += char.ToUpper(text[i]).ToString();
+        }
+        else
+        {
+            result += text[i].ToString();
+        }
+    }
+
+    System.Console.WriteLine(result);
+}
+else
+{
+    System.Console.WriteLine("Empty string");
+}
 
 }
 
