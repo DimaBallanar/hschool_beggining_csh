@@ -146,7 +146,7 @@
     int numberA = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Введите второе число:");
     int numberB = Convert.ToInt32(Console.ReadLine());
-    int answerA = numberA > numberB ? numberA / numberB : numberB > numberA ? numberB - numberA: numberA + 10;
+    int answerA = numberA > numberB ? numberA / numberB : numberB > numberA ? numberB - numberA : numberA + 10;
     Console.WriteLine(answerA);
 
 }
@@ -160,35 +160,47 @@
     string? strokaOdin = Console.ReadLine();
     Console.WriteLine("Введите вторую строку");
     string? strokaDva = Console.ReadLine();
-    if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
+    if (!string.IsNullOrEmpty(strokaDva) && !string.IsNullOrEmpty(strokaOdin))
     {
-        Console.WriteLine("Введите операцию");
-        string? operacia = Console.ReadLine();
-        if (operacia?.Equals("+") ?? false) // ?? проверка оператора на null
+        if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
         {
-            Console.WriteLine(strokaA + strokaB);
+            Console.WriteLine("Введите операцию");
+            string? operacia = Console.ReadLine();
+            if (operacia?.Equals("+") ?? false)
+            {
+                Console.WriteLine(strokaA + strokaB);
+            }
+            else if (operacia?.Equals("-") ?? false)
+            {
+                Console.WriteLine(strokaA - strokaB);
+            }
+            else if (operacia?.Equals("*") ?? false)
+            {
+                Console.WriteLine(strokaA * strokaB);
+            }
+            else if (operacia?.Equals("/") ?? false)
+            {
+                Console.WriteLine(strokaA / strokaB);
+            }
+            else if (operacia?.Equals("%") ?? false)
+            {
+                Console.WriteLine(strokaA % strokaB);
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода операции");
+            }
         }
-        else if (operacia?.Equals("-") ?? false)
+        else
         {
-            Console.WriteLine(strokaA - strokaB);
-        }
-        else if (operacia?.Equals("*") ?? false)
-        {
-            Console.WriteLine(strokaA * strokaB);
-        }
-        else if (operacia?.Equals("/") ?? false)
-        {
-            Console.WriteLine(strokaA / strokaB);
-        }
-        else if (operacia?.Equals("%") ?? false)
-        {
-            Console.WriteLine(strokaA % strokaB);
+            System.Console.WriteLine($"{strokaOdin} {strokaDva}");
         }
     }
     else
     {
-        Console.WriteLine($"{strokaOdin} {strokaDva}");
+        System.Console.WriteLine("Ошибка ввода");
     }
+
 }
 
 //SWITCH
@@ -198,35 +210,47 @@
     string? strokaOdin = Console.ReadLine();
     Console.WriteLine("Введите вторую строку");
     string? strokaDva = Console.ReadLine();
-    if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
+    if (!string.IsNullOrEmpty(strokaDva) && !string.IsNullOrEmpty(strokaOdin))
     {
-        Console.WriteLine("Введите операцию");
-        string? operacia = Console.ReadLine();
-        switch (operacia)
+        if (int.TryParse(strokaOdin, out int strokaA) && int.TryParse(strokaDva, out int strokaB))
         {
-            case "+":
-                System.Console.WriteLine($" {strokaA}+{strokaB}");
-                break;
-            case "-":
-                System.Console.WriteLine($" {strokaA}-{strokaB}");
-                break;
-            case "*":
-                System.Console.WriteLine($" {strokaA}*{strokaB}");
-                break;
-            case "/":
-                System.Console.WriteLine($" {strokaA}/{strokaB}");
-                break;
-            case "%":
-                System.Console.WriteLine($" {strokaA}%{strokaB}");
-                break;
+            Console.WriteLine("Введите операцию");
+            string? operacia = Console.ReadLine();
+            switch (operacia)
+            {
+                case "+":
+                    System.Console.WriteLine($" {strokaA}+{strokaB}");
+                    break;
+                case "-":
+                    System.Console.WriteLine($" {strokaA}-{strokaB}");
+                    break;
+                case "*":
+                    System.Console.WriteLine($" {strokaA}*{strokaB}");
+                    break;
+                case "/":
+                    System.Console.WriteLine($" {strokaA}/{strokaB}");
+                    break;
+                case "%":
+                    System.Console.WriteLine($" {strokaA}%{strokaB}");
+                    break;
+                default:
+                    {
+                        Console.WriteLine("вы ввели не арифметическое действие");
+                        break;
+                    }
+            }
         }
+        else
+        {
+            Console.WriteLine($"{strokaOdin} {strokaDva}");
+        }
+
+
     }
     else
     {
-        Console.WriteLine("вы не ввели арифметическое действие");
+        System.Console.WriteLine("ошибка ввода");
     }
-
-
 }
 
 
