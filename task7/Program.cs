@@ -244,8 +244,6 @@
         {
             Console.WriteLine($"{strokaOdin} {strokaDva}");
         }
-
-
     }
     else
     {
