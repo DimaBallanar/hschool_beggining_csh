@@ -146,9 +146,8 @@
     int numberA = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Введите второе число:");
     int numberB = Convert.ToInt32(Console.ReadLine());
-    int answerA = numberA > 2 ? numberA / numberB : numberA = numberA + 10;
-    int answerB = numberB > 1 ? numberB - numberA : numberB = numberB + 10;
-    Console.WriteLine($"{answerA} {answerB}");
+    int answerA = numberA > numberB ? numberA / numberB : numberB > numberA ? numberB - numberA: numberA + 10;
+    Console.WriteLine(answerA);
 
 }
 // 9.9. Ввести две строки, если две строки числа то ввести арифметический оператор, 
@@ -243,7 +242,7 @@
     Console.WriteLine(newMessage);
     firstMessage += secondMessage;
     Console.WriteLine(firstMessage);
-    
+
 
 }
 // 11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно оно двум либо нет, 
@@ -256,17 +255,17 @@
     {
         if (int.TryParse(stroka, out int chisla))
         {
-                int message5 = chisla / 10000;
-                string vivodPiatogo = message5 % 2 == 0 && chisla > 9999 ? $"{message5} кратно двум" : $"{message5} не кратно двум";
-                int message4 = (chisla - message5 * 10000) / 1000;
-                string vivodChetvertogo = message4 % 2 == 0 && (chisla - message5 * 10000) > 999 ? $"{message4} кратно двум" : $"{message4} не кратно двум";
-                int message3 = (chisla - message5 * 10000 - message4 * 1000) / 100;
-                string vivodTretego = message3 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} кратно двум" : $"{message3} не кратно двум";
-                int message2 = (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) / 10;
-                string vivodVtorogo = message2 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} кратно двум" : $"{message2} не кратно двум";
-                int message1 = chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10;
-                string vivodPervogo = message1 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} кратно двум" : $"{message1} не кратно двум";
-                Console.WriteLine($"{vivodPiatogo}   {vivodChetvertogo}  {vivodTretego}   {vivodVtorogo}  {vivodPervogo} ");
+            int message5 = chisla / 10000;
+            string vivodPiatogo = message5 % 2 == 0 && chisla > 9999 ? $"{message5} кратно двум" : $"{message5} не кратно двум";
+            int message4 = (chisla - message5 * 10000) / 1000;
+            string vivodChetvertogo = message4 % 2 == 0 && (chisla - message5 * 10000) > 999 ? $"{message4} кратно двум" : $"{message4} не кратно двум";
+            int message3 = (chisla - message5 * 10000 - message4 * 1000) / 100;
+            string vivodTretego = message3 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} кратно двум" : $"{message3} не кратно двум";
+            int message2 = (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) / 10;
+            string vivodVtorogo = message2 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} кратно двум" : $"{message2} не кратно двум";
+            int message1 = chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10;
+            string vivodPervogo = message1 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} кратно двум" : $"{message1} не кратно двум";
+            Console.WriteLine($"{vivodPiatogo}   {vivodChetvertogo}  {vivodTretego}   {vivodVtorogo}  {vivodPervogo} ");
             // double message50 = chisla / 10000;
             // Console.WriteLine(message50);
             // int message5 = (int)message50;
@@ -316,3 +315,6 @@
         Console.WriteLine(answer);
     }
 }
+
+
+
