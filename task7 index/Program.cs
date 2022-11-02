@@ -228,6 +228,7 @@
 //      }
 // }
 
+
 // // 15 На вход программе подается строка текста, состоящая из слов, разделенных
 // // ровно одним пробелом. Напишите программу, которая подсчитывает количество слов в ней
 // {
@@ -237,9 +238,10 @@
 //     System.Console.WriteLine(calculateWords.Length);
 // }
 
+
 // // 16 Пользователь вводит строку. Необходимо посчитать количество гласных (for)
 
-
+// // 1 способ(не учили еще for)
 
 // {
 //     System.Console.WriteLine(" введите любую строку");
@@ -248,6 +250,32 @@
 //     Console.WriteLine($"{textUsera.Split('а', 'о', 'и', 'ы', 'у', 'э', 'я', 'ё', 'е', 'ю').Length - 1}");
 // }
 
+
+// // 2 способ с for
+// {
+//     System.Console.WriteLine(" введите любую строку");
+//     string? textUsera = Console.ReadLine();
+//     if(!string.IsNullOrEmpty(textUsera))
+//     {
+//     textUsera = textUsera.ToLower();
+//     string glasnie = "аоиыуэяёею";
+//     int result = 0;
+//     char[] splitText = textUsera.ToCharArray();     //char[] a= value.ToCharArray() -----разбивает слова на буквы
+//     for (int i = 0; i < textUsera.Length; i++)
+//     {
+//         if (glasnie.Contains(splitText[i]))
+//         {
+//             result += 1;
+//         }
+
+//     }
+//     System.Console.WriteLine(result);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("empty");
+//     }
+// }
 // //17Пользователь вводит строку. Необходимо посчитать количество согласных (for)
 
 // {
