@@ -45,31 +45,31 @@
 //     textUser = textUser.ToLower();
 //     string[] result = textUser.Split(' ');
 //     System.Console.WriteLine($"{result[0]},{result[1]},{result[2]}");
-  
+
 // }
 
 // // 4. Ввести строку. Проверить на isNaN. Если число, то ошибка ввода. Если это строка
 // // то узнать какая у нее длина. Привести к одному регистру, убрать лишние пробелы
-{
+// {
 
-    System.Console.WriteLine("введите строку");
-    string? userText = Console.ReadLine();
-    if (!string.IsNullOrEmpty(userText))
-    {
-        if (int.TryParse(userText, out int number))
-        {
-            System.Console.WriteLine("ошибка ввода");
-        }
-        else
-        {
-            System.Console.WriteLine($"{string.Join(" ", userText.Split(' ', StringSplitOptions.RemoveEmptyEntries)).ToLower()}      символов в строке: {userText.Length}" );   //// вопросики,еще раз обьяснить как работает это комбо команд
-        }
-    }
-    else
-    {
-        System.Console.WriteLine("EMpty");
-    }
-}
+//     System.Console.WriteLine("введите строку");
+//     string? userText = Console.ReadLine();
+//     if (!string.IsNullOrEmpty(userText))
+//     {
+//         if (int.TryParse(userText, out int number))
+//         {
+//             System.Console.WriteLine("ошибка ввода");
+//         }
+//         else
+//         {
+//             System.Console.WriteLine($"{string.Join(" ", userText.Split(' ', StringSplitOptions.RemoveEmptyEntries)).ToLower()}      символов в строке: {userText.Length}" );   //// вопросики,еще раз обьяснить как работает это комбо команд
+//         }
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("EMpty");
+//     }
+// }
 // // 5. ‘HTML JavaScript PHP’ преобразовать в "HTML-JAVASCRIPT-PHP"
 // {
 //     string userStas = "HTML JavaScript PHP";
@@ -79,25 +79,27 @@
 
 // // 6. Ввести строку. Проверить является ли это число или строка. Если число, то ошибка ввода. Если это строка то первый символ поставить в верхний регистр.
 // // Убрать лишние пробелы
-// {
-//     System.Console.WriteLine("введите свою строку");
-//     string? inputText = Console.ReadLine();
-//     inputText = inputText?.Trim();
-//     if (!string.IsNullOrEmpty(inputText))
-//     {
-//         if (int.TryParse(inputText, out int numberText))
-//         {
-//             System.Console.WriteLine("ошибка ввода");
-//         }
-//         else
-//         {
-//             string liter = Convert.ToString(inputText[0]);
-//             liter = liter.ToUpper();
-//             // inputText = liter + inputText.Remove(0, 1);
-//             System.Console.WriteLine(String.Concat(liter, inputText.Remove(0, 1)));
-//         }
-//     }
-// }
+{
+    System.Console.WriteLine("введите свою строку");
+    string? inputText = Console.ReadLine();
+    inputText = inputText?.Trim();
+    if (!string.IsNullOrEmpty(inputText))
+    {
+        if (int.TryParse(inputText, out _))
+        {
+            System.Console.WriteLine("ошибка ввода");
+        }
+        else
+        {
+            string liter = Convert.ToString(inputText[0]).ToUpper();
+            System.Console.WriteLine(String.Concat(liter, inputText.Remove(0, 1)));
+        }
+    }
+    else
+    {
+        System.Console.WriteLine("empty");
+    }
+}
 // // 7. На вход программе подаётся строка. Замените все @ на '!' с помощью
 // // глобального поиска и замены (2 способа)
 
