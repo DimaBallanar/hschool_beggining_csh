@@ -344,7 +344,31 @@
 // }
 
 
-// 
+// // 2 способ с for
+//  {
+//     System.Console.WriteLine(" введите любую строку");
+//     string? textUsera = Console.ReadLine();
+//     if(!string.IsNullOrEmpty(textUsera))
+//     {
+//     textUsera = textUsera.ToLower();
+//     string soglasnie = "аоиыуэяёею";
+//     string result = "";
+//     char[] splitText = textUsera.ToCharArray();     //char[] a= value.ToCharArray() -----разбивает слова на буквы
+//     for (int i = 0; i < textUsera.Length; i++)
+//     {
+//         if (soglasnie.Contains(splitText[i]))
+//         {
+//             result += splitText[i];
+//         }
+
+//     }
+//     System.Console.WriteLine(result);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("empty");
+//     }
+// }
 
 // // 19.19. На вход программе подается строка. Преобразуйте первую букву каждого слова
 // // строки в верхний регистр (for)
