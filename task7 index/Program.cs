@@ -388,45 +388,80 @@
 // // 24.На вход программе подается строка. Напишите программу, которая подсчитывает
 // // количество буквенных символов в нижнем регистре.
 // // abcABCD12345 => 3
-{
-    System.Console.WriteLine("введите строку");
-    string? inputText=Convert.ToString(Console.ReadLine());
-    if (!string.IsNullOrEmpty(inputText))
-    {
-string result="";
-int number=0 ;
-for(int i=0;i<inputText.Length;i++)
-{
-    string one=Convert.ToString(inputText[i]);
-    if(int.TryParse(one,out int _))
-    {
-result+=inputText[i];
-    }
-    else if(char.IsLower(inputText[i]))
-    {
-        number+=1;
-        result+=inputText[i];
-    }
-    else
-    {
-       result+=inputText[i]; 
-    }
-}
-System.Console.WriteLine($"{result} => {number}");
+// {
+//     System.Console.WriteLine("введите строку");
+//     string? inputText=Convert.ToString(Console.ReadLine());
+//     if (!string.IsNullOrEmpty(inputText))
+//     {
+// string result="";
+// int number=0 ;
+// for(int i=0;i<inputText.Length;i++)
+// {
+//     string one=Convert.ToString(inputText[i]);
+//     if(int.TryParse(one,out int _))
+//     {
+// result+=inputText[i];
+//     }
+//     else if(char.IsLower(inputText[i]))
+//     {
+//         number+=1;
+//         result+=inputText[i];
+//     }
+//     else
+//     {
+//        result+=inputText[i]; 
+//     }
+// }
+// System.Console.WriteLine($"{result} => {number}");
 
-    }
-    else
-    {
-        System.Console.WriteLine("empty Text");
-    }
-}
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("empty Text");
+//     }
+// }
 
 
 // // 25. На вход программе подается строка из букв А, Г, Ц, Т. Напишите программу,
 // // которая подсчитывает сколько букв
 // // АааГГЦЦцТТтттА => А – 4 Г – 2 Ц – 3 Т – 5 
+{
+     System.Console.WriteLine("введите строку с использованием букв А,Г,Ц,Т");
+    string? inputText=Convert.ToString(Console.ReadLine());
+    inputText=inputText?.ToLower();
+    int literA=0;
+    int literG=0;
+    int literC=0;
+    int literT=0;
+     if (!string.IsNullOrEmpty(inputText))
+     {
+        for(int i= 0; i<inputText.Length;i++)
+        {
+if(inputText[i]=='а')
+{
+literA+=1;
+}
+if(inputText[i]=='г')
+{
+literG+=1;
+}
+if(inputText[i]=='ц')
+{
+literC+=1;
+}
+if(inputText[i]=='т')
+{
+literT+=1;
+}
 
-
+        }
+        System.Console.WriteLine($"{inputText} => A - {literA}  Г - {literG}  Ц - {literC}  Т - {literT}");
+}
+else
+{
+System.Console.WriteLine("null");
+}
+}
 
 
 
