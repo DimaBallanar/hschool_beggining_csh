@@ -212,12 +212,20 @@
 // // 14 Дан массив. Вывести каждый отдельный элемент в консоль (for)
 
 // {
-//     string[] massivLanguage = { "огурец", "помидоры", "железобетон", "34", "линейка на 30см" };                  //просто перебор,с циклом фор все проще
+//     string[] massivLanguage = { "огурец", "помидоры", "железобетон", "34", "линейка на 30см" };                
 //     Console.WriteLine(massivLanguage[0]);
 //     Console.WriteLine(massivLanguage[1]);
 //     Console.WriteLine(massivLanguage[2]);
 //     Console.WriteLine(massivLanguage[3]);
 //     Console.WriteLine(massivLanguage[4]);
+// }
+// // 2 способ через for
+// {
+//      string[] massivLanguage = { "огурец", "помидоры", "железобетон", "34", "линейка на 30см" };
+//      for(int i=0;i<massivLanguage.Length;i++)
+//      {
+//         System.Console.WriteLine(massivLanguage[i]);
+//      }
 // }
 
 // // 15 На вход программе подается строка текста, состоящая из слов, разделенных
