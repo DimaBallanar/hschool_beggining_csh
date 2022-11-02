@@ -281,27 +281,27 @@
 // // 20.20.На вход программе подается строка, где каждое слово заканчивается “_”.
 // // Программа должна убрать “_” и первую букву каждого слова (помимо первого),
 // // преобразовать в верхний регистр (for)
-{
-    Console.WriteLine("vvedite text,gde megdy slovami vmesto probela stavit '_' ");
-    string? UserText=Convert.ToString(Console.ReadLine());
-    if(!string.IsNullOrEmpty(UserText))
-    {
-UserText=UserText.Trim();
-string[] userSplit=UserText.Split('_');
-string? newText="";
-newText+=userSplit[0];
-for(int i=1; i<userSplit.Length;i++)
-{
-    string? slovo=Convert.ToString(userSplit[i]);
-    newText+=String.Concat(char.ToUpper(slovo[0]),slovo.Remove(0,1));
-}
-System.Console.WriteLine(newText);
-    }
-    else
-    {
-        System.Console.WriteLine("Null");
-    }
-}
+// {
+//     Console.WriteLine("vvedite text,gde megdy slovami vmesto probela stavit '_' ");
+//     string? UserText=Convert.ToString(Console.ReadLine());
+//     if(!string.IsNullOrEmpty(UserText))
+//     {
+// UserText=UserText.Trim();
+// string[] userSplit=UserText.Split('_');
+// string? newText="";
+// newText+=userSplit[0];
+// for(int i=1; i<userSplit.Length;i++)
+// {
+//     string? slovo=Convert.ToString(userSplit[i]);
+//     newText+=String.Concat(char.ToUpper(slovo[0]),slovo.Remove(0,1));
+// }
+// System.Console.WriteLine(newText);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("Null");
+//     }
+// }
 
 
 // // 21. На вход программе подается строка, состоящая из имени и фамилии человека,
@@ -381,14 +381,45 @@ System.Console.WriteLine(newText);
 // {
 //     System.Console.WriteLine(" введите любую строку");
 //     string? textUsera = Console.ReadLine();
-//     textUsera = textUsera.ToLower();
-//     Console.WriteLine(textUsera.Contains("хорош"));
+//     textUsera = textUsera?.ToLower();
+//     Console.WriteLine(textUsera?.Contains("хорош"));
 // }
 
 // // 24.На вход программе подается строка. Напишите программу, которая подсчитывает
 // // количество буквенных символов в нижнем регистре.
 // // abcABCD12345 => 3
+{
+    System.Console.WriteLine("введите строку");
+    string? inputText=Convert.ToString(Console.ReadLine());
+    if (!string.IsNullOrEmpty(inputText))
+    {
+string result="";
+int number=0 ;
+for(int i=0;i<inputText.Length;i++)
+{
+    string one=Convert.ToString(inputText[i]);
+    if(int.TryParse(one,out int _))
+    {
+result+=inputText[i];
+    }
+    else if(char.IsLower(inputText[i]))
+    {
+        number+=1;
+        result+=inputText[i];
+    }
+    else
+    {
+       result+=inputText[i]; 
+    }
+}
+System.Console.WriteLine($"{result} => {number}");
 
+    }
+    else
+    {
+        System.Console.WriteLine("empty Text");
+    }
+}
 
 
 // // 25. На вход программе подается строка из букв А, Г, Ц, Т. Напишите программу,
