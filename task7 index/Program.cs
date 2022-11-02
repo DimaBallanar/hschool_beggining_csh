@@ -172,6 +172,17 @@
 //     System.Console.WriteLine(userTextWords.Remove(5));
 //     System.Console.WriteLine(userTextWords.IndexOf("vegetable"));
 // }
+
+// // 2 способ
+// {
+//     System.Console.WriteLine("введите три любых слова");
+//     string? newText=Convert.ToString(Console.ReadLine());
+// string[] splitUser=newText.Split(" ");
+// System.Console.WriteLine($" количество символов в этой строке: {newText.Length}");
+// string newText1=splitUser[0];
+// System.Console.WriteLine(newText1);
+// System.Console.WriteLine($"{newText.IndexOf(splitUser[1])}");
+// }
 // //11.Пользователь вводит дату в формате ‘х-х-х'. Замените все дефисы на '!'
 // {
 //     System.Console.WriteLine("введите дату в формате хх-хх-хххх");
