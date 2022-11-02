@@ -285,6 +285,32 @@
 //     Console.WriteLine($"{textUsera.Split('б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ').Length - 1}");
 // }
 
+// // 2 способ
+//  {
+//     System.Console.WriteLine(" введите любую строку");
+//     string? textUsera = Console.ReadLine();
+//     if(!string.IsNullOrEmpty(textUsera))
+//     {
+//     textUsera = textUsera.ToLower();
+//     string soglasnie = "бвгджзйклмнпрстфхцчшщ";
+//     int result = 0;
+//     char[] splitText = textUsera.ToCharArray();     //char[] a= value.ToCharArray() -----разбивает слова на буквы
+//     for (int i = 0; i < textUsera.Length; i++)
+//     {
+//         if (soglasnie.Contains(splitText[i]))
+//         {
+//             result += 1;
+//         }
+
+//     }
+//     System.Console.WriteLine(result);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("empty");
+//     }
+// }
+
 // // 18.Пользователь вводит строку. Необходимо вывести все гласные отдельной строкой (for)
 // // fullstack => ua
 // {
@@ -317,6 +343,8 @@
 //     System.Console.WriteLine(textUsera);
 // }
 
+
+// 
 
 // // 19.19. На вход программе подается строка. Преобразуйте первую букву каждого слова
 // // строки в верхний регистр (for)
