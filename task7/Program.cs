@@ -278,15 +278,15 @@
         if (int.TryParse(stroka, out int chisla))
         {
             int message5 = chisla / 10000;
-            string vivodPiatogo = message5 % 2 == 0 && chisla > 9999 ? $"{message5} кратно двум" : $"{message5} не кратно двум";
+            string vivodPiatogo = message5 % 2 == 0 && chisla > 9999 ? $"{message5} кратно двум" : chisla > 9999 ? $"{message5} не кратно двум" : "";
             int message4 = (chisla - message5 * 10000) / 1000;
-            string vivodChetvertogo = message4 % 2 == 0 && (chisla - message5 * 10000) > 999 ? $"{message4} кратно двум" : $"{message4} не кратно двум";
+            string vivodChetvertogo = message4 % 2 == 0 && (chisla - message5 * 10000) > 999 ? $"{message4} кратно двум" : (chisla - message5 * 10000) > 999 ? $"{message4} не кратно двум" : "";
             int message3 = (chisla - message5 * 10000 - message4 * 1000) / 100;
-            string vivodTretego = message3 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} кратно двум" : $"{message3} не кратно двум";
+            string vivodTretego = message3 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} кратно двум" : (chisla - message5 * 10000 - message4 * 1000) > 99 ? $"{message3} не кратно двум" : "";
             int message2 = (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) / 10;
-            string vivodVtorogo = message2 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} кратно двум" : $"{message2} не кратно двум";
+            string vivodVtorogo = message2 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} кратно двум" : (chisla - message5 * 10000 - message4 * 1000 - message3 * 100) > 9 ? $"{message2} не кратно двум" : "";
             int message1 = chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10;
-            string vivodPervogo = message1 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} кратно двум" : $"{message1} не кратно двум";
+            string vivodPervogo = message1 % 2 == 0 && (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} кратно двум" : (chisla - message5 * 10000 - message4 * 1000 - message3 * 100 - message2 * 10) > 0 ? $"{message1} не кратно двум" : "";
             Console.WriteLine($"{vivodPiatogo}   {vivodChetvertogo}  {vivodTretego}   {vivodVtorogo}  {vivodPervogo} ");
             // double message50 = chisla / 10000;
             // Console.WriteLine(message50);
