@@ -79,27 +79,27 @@
 
 // // 6. Ввести строку. Проверить является ли это число или строка. Если число, то ошибка ввода. Если это строка то первый символ поставить в верхний регистр.
 // // Убрать лишние пробелы
-{
-    System.Console.WriteLine("введите свою строку");
-    string? inputText = Console.ReadLine();
-    inputText = inputText?.Trim();
-    if (!string.IsNullOrEmpty(inputText))
-    {
-        if (int.TryParse(inputText, out _))
-        {
-            System.Console.WriteLine("ошибка ввода");
-        }
-        else
-        {
-            string liter = Convert.ToString(inputText[0]).ToUpper();
-            System.Console.WriteLine(String.Concat(liter, inputText.Remove(0, 1)));
-        }
-    }
-    else
-    {
-        System.Console.WriteLine("empty");
-    }
-}
+// {
+//     System.Console.WriteLine("введите свою строку");
+//     string? inputText = Console.ReadLine();
+//     inputText = inputText?.Trim();
+//     if (!string.IsNullOrEmpty(inputText))
+//     {
+//         if (int.TryParse(inputText, out _))
+//         {
+//             System.Console.WriteLine("ошибка ввода");
+//         }
+//         else
+//         {
+//             string liter = Convert.ToString(inputText[0]).ToUpper();
+//             System.Console.WriteLine(String.Concat(liter, inputText.Remove(0, 1)));
+//         }
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("empty");
+//     }
+// }
 // // 7. На вход программе подаётся строка. Замените все @ на '!' с помощью
 // // глобального поиска и замены (2 способа)
 
@@ -117,11 +117,25 @@
 //     }
 // }
 // // 2 способ
-// // {
-// //     System.Console.WriteLine("введите строку");
-// // string? inputMessage = Console.ReadLine();
-// // if (!string.IsNullOrEmpty(inputMessage))
-// // }
+// {
+//     System.Console.WriteLine("введите строку");
+//     string? inputMessage = Console.ReadLine();
+//     if (!string.IsNullOrEmpty(inputMessage))
+//     {
+//         string[] splitText = inputMessage.Split("@");
+//         string? newTextConsole = "";
+//         for (int i = 0; i < splitText.Length; i++)
+//         {
+//             newTextConsole += splitText[i] + '!';
+//         }
+//         newTextConsole = newTextConsole.Remove(newTextConsole.Length - 1);
+//         System.Console.WriteLine(newTextConsole);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("empty");
+//     }
+// }
 
 
 
