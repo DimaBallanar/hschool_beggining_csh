@@ -501,7 +501,7 @@
 //     System.Console.WriteLine(" введите любую строку");
 //     string? textUsera = Console.ReadLine();
 //     textUsera = textUsera?.ToLower();
-//     Console.WriteLine(textUsera?.Contains("хорош"));
+//     Console.WriteLine($"{textUsera} => {textUsera?.Contains("хорош")}");
 // }
 
 // // 24.На вход программе подается строка. Напишите программу, которая подсчитывает
