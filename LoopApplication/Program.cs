@@ -82,13 +82,25 @@
 //     System.Console.WriteLine(i);
 // }
 // 6. С помощью цикла while найдите сумму чисел от 1 до 100.
+// {
+//     int i = 1;
+//     int summa = 0;
+//     while (i <= 100)
+//     {
+//         summa += i;
+//         i++;
+//     }
+//     System.Console.WriteLine(summa);
+// }
+// 
+// 7. Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for of найдите сумму
+// элементов этого массива
 {
-    int i = 1;
-    int summa = 0;
-    while (i <= 100)
+    int[] macbook = new int[5] { 1, 2, 3, 4, 5 };
+    int sum = 0;
+    for (int i = 0; i < macbook.Length; i++)
     {
-        summa += i;
-        i++;
+        sum += macbook[i];
     }
-    System.Console.WriteLine(summa);
+    System.Console.WriteLine(sum);
 }
