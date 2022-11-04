@@ -95,12 +95,23 @@
 // 
 // 7. Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for of найдите сумму
 // элементов этого массива
-{
-    int[] macbook = new int[5] { 1, 2, 3, 4, 5 };
-    int sum = 0;
-    for (int i = 0; i < macbook.Length; i++)
-    {
-        sum += macbook[i];
-    }
-    System.Console.WriteLine(sum);
-}
+// {
+//     int[] macbook = new int[5] { 1, 2, 3, 4, 5 };
+//     int sum = 0;
+//     for (int i = 0; i < macbook.Length; i++)
+//     {
+//         sum += macbook[i];
+//     }
+//     System.Console.WriteLine(sum);
+// }
+//  2 способ с foreach=========================================================
+// {
+//     int[] iphone=new int[5]{1,2,3,4,5};
+//     int summForeach=0;
+//     foreach(int iphon in iphone)
+//     {
+//         summForeach+=iphon;
+//     }
+// System.Console.WriteLine(summForeach);
+// }
+// 
