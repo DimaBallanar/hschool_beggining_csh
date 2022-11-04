@@ -115,3 +115,16 @@
 // System.Console.WriteLine(summForeach);
 // }
 // 
+
+// 8. Дан массив 2, 5, 9, 15, 0, 4. Выведите все числа кратные 3 циклом foreach in
+
+{
+    int[] massiv8 = new int[] { 2, 5, 9, 15, 0, 4 };
+    foreach (int mass in massiv8)
+    {
+        if (mass % 3 == 0 & mass > 0)
+        {
+            System.Console.WriteLine(mass);
+        }
+    }
+}
