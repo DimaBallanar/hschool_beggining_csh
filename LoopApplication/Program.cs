@@ -118,13 +118,69 @@
 
 // 8. Дан массив 2, 5, 9, 15, 0, 4. Выведите все числа кратные 3 циклом foreach in
 
+// {
+//     int[] massiv8 = new int[] { 2, 5, 9, 15, 0, 4 };
+//     foreach (int mass in massiv8)
+//     {
+//         if (mass % 3 == 0 & mass > 0)
+//         {
+//             System.Console.WriteLine(mass);
+//         }
+//     }
+// }
+
+// 9. Дан массив с элементами [1, 2, 2, 3, 4, 4, 3, 4, 5]. Выведите только уникальные
+// значения массива -> [1, 5] (for)
+
 {
-    int[] massiv8 = new int[] { 2, 5, 9, 15, 0, 4 };
-    foreach (int mass in massiv8)
+    int[] massiv9 = new int[] { 1, 2, 2, 3, 4, 4, 3, 4, 5 };
+    int one = 0;
+    int two = 0;
+    int three = 0;
+    int four = 0;
+    int five = 0;
+    for (int i = 0; i < massiv9.Length; i++)
     {
-        if (mass % 3 == 0 & mass > 0)
+        if (massiv9[i] == 1)
         {
-            System.Console.WriteLine(mass);
+            one += 1;
+        }
+        if (massiv9[i] == 2)
+        {
+            two += 1;
+        }
+        if (massiv9[i] == 3)
+        {
+            three += 1;
+        }
+        if (massiv9[i] == 4)
+        {
+            four += 1;
+        }
+        if (massiv9[i] == 5)
+        {
+            five += 1;
         }
     }
+    if (one == 1)
+    {
+        System.Console.WriteLine('1');
+    }
+    if (two == 1)
+    {
+        System.Console.WriteLine('2');
+    }
+    if (three == 1)
+    {
+        System.Console.WriteLine('3');
+    }
+    if (four == 1)
+    {
+        System.Console.WriteLine('4');
+    }
+    if (five == 1)
+    {
+        System.Console.WriteLine('5');
+    }
+
 }
