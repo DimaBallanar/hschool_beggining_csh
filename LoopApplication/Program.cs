@@ -264,13 +264,29 @@
 
 // 13.Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. С помощью цикла for создайте строку '-1-2-3-4-5-6-7-8-9-‘
 
+// {
+//     int[] massNumber = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//     string textLine = "-";
+//     for (int i = 0; i < massNumber.Length; i++)
+//     {
+//         textLine += massNumber[i];
+//         textLine += "-";
+//     }
+//     System.Console.WriteLine(textLine);
+// }
+
+// 14.Дано число 7, найдите все числа кратные 7 до 100
+
 {
-    int[] massNumber = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    string textLine = "-";
-    for (int i = 0; i < massNumber.Length; i++)
+    int number = 1;
+    string result = "";
+    while (number <= 100)
     {
-        textLine += massNumber[i];
-        textLine += "-";
+        if (number % 7 == 0)
+        {
+            result += $"{number} ";
+        }
+        number++;
     }
-    System.Console.WriteLine(textLine);
+    System.Console.Write(result);
 }
