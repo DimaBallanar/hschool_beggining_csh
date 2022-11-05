@@ -277,16 +277,33 @@
 
 // 14.Дано число 7, найдите все числа кратные 7 до 100
 
+// {
+//     int number = 1;
+//     string result = "";
+//     while (number <= 100)
+//     {
+//         if (number % 7 == 0)
+//         {
+//             result += $"{number} ";
+//         }
+//         number++;
+//     }
+//     System.Console.Write(result);
+// }
+
+
+// 15.Дано предложение и количество раз которое его надо повторить. Напишите программу, 
+// которая повторяет данное предложение нужное количество раз.
+
+
 {
-    int number = 1;
-    string result = "";
-    while (number <= 100)
+    System.Console.WriteLine("введите любое предложение");
+    string? userText = Convert.ToString(Console.ReadLine());
+    System.Console.WriteLine("сколько раз это предложение надо повторить?");
+    int repeat = Convert.ToInt32(Console.ReadLine());
+    for (int i = 1; i <= repeat; i++)
     {
-        if (number % 7 == 0)
-        {
-            result += $"{number} ";
-        }
-        number++;
+        System.Console.WriteLine(userText);
     }
-    System.Console.Write(result);
 }
+
