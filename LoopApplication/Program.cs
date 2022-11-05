@@ -132,55 +132,89 @@
 // 9. Дан массив с элементами [1, 2, 2, 3, 4, 4, 3, 4, 5]. Выведите только уникальные
 // значения массива -> [1, 5] (for)
 
+// {
+//     int[] massiv9 = new int[] { 1, 2, 2, 3, 4, 4, 3, 4, 5 };
+//     int one = 0;
+//     int two = 0;
+//     int three = 0;
+//     int four = 0;
+//     int five = 0;
+//     for (int i = 0; i < massiv9.Length; i++)
+//     {
+//         if (massiv9[i] == 1)
+//         {
+//             one += 1;
+//         }
+//         if (massiv9[i] == 2)
+//         {
+//             two += 1;
+//         }
+//         if (massiv9[i] == 3)
+//         {
+//             three += 1;
+//         }
+//         if (massiv9[i] == 4)
+//         {
+//             four += 1;
+//         }
+//         if (massiv9[i] == 5)
+//         {
+//             five += 1;
+//         }
+//     }
+//     if (one == 1)
+//     {
+//         System.Console.WriteLine('1');
+//     }
+//     if (two == 1)
+//     {
+//         System.Console.WriteLine('2');
+//     }
+//     if (three == 1)
+//     {
+//         System.Console.WriteLine('3');
+//     }
+//     if (four == 1)
+//     {
+//         System.Console.WriteLine('4');
+//     }
+//     if (five == 1)
+//     {
+//         System.Console.WriteLine('5');
+//     }
+
+// }
+
+// =================================================================   не потянул ,логика есть,реализация хромает
+// 2 способ с .Count()
+// {
+//     int[] massiv9 = new int[] { 1, 2, 2, 3, 4, 4, 3, 4, 5 };
+//     for (int i = 0; i < massiv9.Length; i++)
+//     {
+//         for (int k = i; k < massiv9.Length; k++)
+//         {
+//             int skok = 0;
+//             int number = massiv9.Count(k, skok +=);
+//         }
+//         if (massiv9.Count() == 1)
+//         {
+//             System.Console.WriteLine(massiv9[i]);
+//         }
+//     }
+// }
+
+// 10. Дан массив 2, 5, 9, 15, 0, 4. Выведите все числа кратные 5 циклом while
+
 {
-    int[] massiv9 = new int[] { 1, 2, 2, 3, 4, 4, 3, 4, 5 };
-    int one = 0;
-    int two = 0;
-    int three = 0;
-    int four = 0;
-    int five = 0;
-    for (int i = 0; i < massiv9.Length; i++)
+    int[] massiv10 = new int[] { 2, 5, 9, 15, 0, 4 };
+    int index = 0;
+    while (index < massiv10.Length)
     {
-        if (massiv9[i] == 1)
+        if (massiv10[index] % 5 == 0 && massiv10[index] != 0)
         {
-            one += 1;
+            System.Console.WriteLine(massiv10[index]);
         }
-        if (massiv9[i] == 2)
-        {
-            two += 1;
-        }
-        if (massiv9[i] == 3)
-        {
-            three += 1;
-        }
-        if (massiv9[i] == 4)
-        {
-            four += 1;
-        }
-        if (massiv9[i] == 5)
-        {
-            five += 1;
-        }
-    }
-    if (one == 1)
-    {
-        System.Console.WriteLine('1');
-    }
-    if (two == 1)
-    {
-        System.Console.WriteLine('2');
-    }
-    if (three == 1)
-    {
-        System.Console.WriteLine('3');
-    }
-    if (four == 1)
-    {
-        System.Console.WriteLine('4');
-    }
-    if (five == 1)
-    {
-        System.Console.WriteLine('5');
+        index += 1;
     }
 
 }
