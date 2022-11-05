@@ -250,14 +250,27 @@
 // 12.Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. 
 // Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5 -> 10, 20, 50, 235
 
+// {
+//     int[] loopMassiv = new int[] { 10, 20, 30, 50, 235, 3000 };
+//     foreach (int loop in loopMassiv)
+//     {
+//         string lop = Convert.ToString(loop);
+//         if (lop.StartsWith('1') || lop.StartsWith('2') || lop.StartsWith('5'))
+//         {
+//             System.Console.Write($"{lop} ");
+//         }
+//     }
+// }
+
+// 13.Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. С помощью цикла for создайте строку '-1-2-3-4-5-6-7-8-9-‘
+
 {
-    int[] loopMassiv = new int[] { 10, 20, 30, 50, 235, 3000 };
-    foreach (int loop in loopMassiv)
+    int[] massNumber = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    string textLine = "-";
+    for (int i = 0; i < massNumber.Length; i++)
     {
-        string lop = Convert.ToString(loop);
-        if (lop.StartsWith('1') || lop.StartsWith('2') || lop.StartsWith('5'))
-        {
-            System.Console.Write($"{lop} ");
-        }
+        textLine += massNumber[i];
+        textLine += "-";
     }
+    System.Console.WriteLine(textLine);
 }
