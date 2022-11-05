@@ -222,26 +222,42 @@
 // 11. Дан массив с числами. Числа могут быть положительными и отрицательными.
 // Найдите сумму всех положительных элементов массива циклом foreach in
 
+// {
+// System.Console.WriteLine(" введите длину массива");
+// int massivLength = Convert.ToInt32(Console.ReadLine());
+// int[] massiv = new int[massivLength];
+// for (int i = 0; i < massivLength; i++)
+// {
+//     System.Console.WriteLine($"введите {i} элемент массива");
+//     massiv[i] = Convert.ToInt32(Console.ReadLine());
+//     if (string.IsNullOrEmpty(Convert.ToString(massiv[i])))     //не работает ,как хочу : при вводе пустого числа в массив-должно вбивать ноль
+//     {
+//         massiv[i] = 0;
+//     }
+// }
+// int summMassiv = 0;
+// foreach (int mass in massiv)
+// {
+//     if (mass > 0)
+//     {
+//         summMassiv += mass;
+//     }
+// }
+// System.Console.WriteLine(summMassiv);
+// }
+
+
+// 12.Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. 
+// Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5 -> 10, 20, 50, 235
+
 {
-    System.Console.WriteLine(" введите длину массива");
-    int massivLength = Convert.ToInt32(Console.ReadLine());
-    int[] massiv = new int[massivLength];
-    for (int i = 0; i < massivLength; i++)
+    int[] loopMassiv = new int[] { 10, 20, 30, 50, 235, 3000 };
+    foreach (int loop in loopMassiv)
     {
-        System.Console.WriteLine($"введите {i} элемент массива");
-        massiv[i] = Convert.ToInt32(Console.ReadLine());
-        if (string.IsNullOrEmpty(Convert.ToString(massiv[i])))     //не работает ,как хочу : при вводе пустого числа в массив-должно вбивать ноль
+        string lop = Convert.ToString(loop);
+        if (lop.StartsWith('1') || lop.StartsWith('2') || lop.StartsWith('5'))
         {
-            massiv[i] = 0;
+            System.Console.Write($"{lop} ");
         }
     }
-    int summMassiv = 0;
-    foreach (int mass in massiv)
-    {
-        if (mass > 0)
-        {
-            summMassiv += mass;
-        }
-    }
-    System.Console.WriteLine(summMassiv);
 }
