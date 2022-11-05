@@ -203,18 +203,45 @@
 //     }
 // }
 
-// 10. Дан массив 2, 5, 9, 15, 0, 4. Выведите все числа кратные 5 циклом while
+// // 10. Дан массив 2, 5, 9, 15, 0, 4. Выведите все числа кратные 5 циклом while
+
+// {
+//     int[] massiv10 = new int[] { 2, 5, 9, 15, 0, 4 };
+//     int index = 0;
+//     while (index < massiv10.Length)
+//     {
+//         if (massiv10[index] % 5 == 0 && massiv10[index] != 0)
+//         {
+//             System.Console.WriteLine(massiv10[index]);
+//         }
+//         index += 1;
+//     }
+// }
+
+
+// 11. Дан массив с числами. Числа могут быть положительными и отрицательными.
+// Найдите сумму всех положительных элементов массива циклом foreach in
 
 {
-    int[] massiv10 = new int[] { 2, 5, 9, 15, 0, 4 };
-    int index = 0;
-    while (index < massiv10.Length)
+    System.Console.WriteLine(" введите длину массива");
+    int massivLength = Convert.ToInt32(Console.ReadLine());
+    int[] massiv = new int[massivLength];
+    for (int i = 0; i < massivLength; i++)
     {
-        if (massiv10[index] % 5 == 0 && massiv10[index] != 0)
+        System.Console.WriteLine($"введите {i} элемент массива");
+        massiv[i] = Convert.ToInt32(Console.ReadLine());
+        if (string.IsNullOrEmpty(Convert.ToString(massiv[i])))     //не работает ,как хочу : при вводе пустого числа в массив-должно вбивать ноль
         {
-            System.Console.WriteLine(massiv10[index]);
+            massiv[i] = 0;
         }
-        index += 1;
     }
-
+    int summMassiv = 0;
+    foreach (int mass in massiv)
+    {
+        if (mass > 0)
+        {
+            summMassiv += mass;
+        }
+    }
+    System.Console.WriteLine(summMassiv);
 }
