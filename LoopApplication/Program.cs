@@ -296,14 +296,53 @@
 // которая повторяет данное предложение нужное количество раз.
 
 
+// {
+//     System.Console.WriteLine("введите любое предложение");
+//     string? userText = Convert.ToString(Console.ReadLine());
+//     System.Console.WriteLine("сколько раз это предложение надо повторить?");
+//     int repeat = Convert.ToInt32(Console.ReadLine());
+//     for (int i = 1; i <= repeat; i++)
+//     {
+//         System.Console.WriteLine(userText);
+//     }
+// }
+
+
+// 16.Пользователь вводит число, явдяющееся количеством элементов будущего массива и 
+// выбирает тип данных массива. Напишите код заполнения массива выбранным типом данных. 
+
 {
-    System.Console.WriteLine("введите любое предложение");
-    string? userText = Convert.ToString(Console.ReadLine());
-    System.Console.WriteLine("сколько раз это предложение надо повторить?");
-    int repeat = Convert.ToInt32(Console.ReadLine());
-    for (int i = 1; i <= repeat; i++)
+    System.Console.WriteLine("введите количество элементов будущего массива");
+    int massivLength = Convert.ToInt32(Console.ReadLine());
+    System.Console.WriteLine("выберите тип данных массива: текст или число");
+    string? userType = Console.ReadLine();
+    if (!string.IsNullOrEmpty(userType))
     {
-        System.Console.WriteLine(userText);
+        if (userType == "текст")
+        {
+            string[] text = new string[massivLength];
+            for (int i = 0; i < massivLength; i++)
+            {
+                System.Console.WriteLine($"введите {i} элемент массива");
+                text[i] = Console.ReadLine();
+            }
+            System.Console.WriteLine(String.Join(',', text));
+        }
+        if (userType == "число")
+        {
+            double[] numeration = new double[massivLength];
+            for (int i = 0; i < massivLength; i++)
+            {
+                System.Console.WriteLine($"введите {i} элемент массива");
+                numeration[i] = Convert.ToDouble(Console.ReadLine());
+            }
+            System.Console.WriteLine(String.Join(',', numeration));
+        }
+    }
+    else
+    {
+        System.Console.WriteLine("null");
     }
 }
+
 
