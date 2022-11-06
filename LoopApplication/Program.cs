@@ -374,25 +374,31 @@
 {
     System.Console.WriteLine("введите любое число");
     string? userNumber = Convert.ToString(Console.ReadLine());
-    // string mass = userNumber.ToString();
-    char[] massiv = userNumber.ToCharArray();
-    string result = "";
-    for (int i = 0; i < massiv.Length - 1; i++)
+    if (!string.IsNullOrEmpty(userNumber))
     {
-        if (massiv[i] % 2 != 0 && massiv[i + 1] % 2 != 0)
+        char[] massiv = userNumber.ToCharArray();
+        string result = "";
+        for (int i = 0; i < massiv.Length - 1; i++)
         {
-            result += massiv[i];
-            result += ":";
-        }
+            if (massiv[i] % 2 != 0 && massiv[i + 1] % 2 != 0)
+            {
+                result += massiv[i];
+                result += ":";
+            }
 
-        else
-        {
-            result += massiv[i];
-        }
+            else
+            {
+                result += massiv[i];
+            }
 
+        }
+        result += massiv[massiv.Length - 1];
+        System.Console.WriteLine(result);
     }
-    result += massiv[massiv.Length - 1];
-    System.Console.WriteLine(result);
+    else
+    {
+        System.Console.WriteLine("null");
+    }
 }
 
 
