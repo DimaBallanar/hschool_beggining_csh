@@ -311,38 +311,62 @@
 // 16.Пользователь вводит число, явдяющееся количеством элементов будущего массива и 
 // выбирает тип данных массива. Напишите код заполнения массива выбранным типом данных. 
 
+// {
+//     System.Console.WriteLine("введите количество элементов будущего массива");
+//     int massivLength = Convert.ToInt32(Console.ReadLine());
+//     System.Console.WriteLine("выберите тип данных массива: текст или число");
+//     string? userType = Console.ReadLine();
+//     if (!string.IsNullOrEmpty(userType))
+//     {
+//         if (userType == "текст")
+//         {
+//             string[] text = new string[massivLength];
+//             for (int i = 0; i < massivLength; i++)
+//             {
+//                 System.Console.WriteLine($"введите {i} элемент массива");
+//                 text[i] = Console.ReadLine();
+//             }
+//             System.Console.WriteLine(String.Join(',', text));
+//         }
+//         if (userType == "число")
+//         {
+//             double[] numeration = new double[massivLength];
+//             for (int i = 0; i < massivLength; i++)
+//             {
+//                 System.Console.WriteLine($"введите {i} элемент массива");
+//                 numeration[i] = Convert.ToDouble(Console.ReadLine());
+//             }
+//             System.Console.WriteLine(String.Join(',', numeration));
+//         }
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("null");
+//     }
+// }
+
+
+// 17.Пользователь вводит число, явдяющееся количеством элементов будущего массива.
+//  Напишите код заполнения массива. Записать в массив только числа.
 {
-    System.Console.WriteLine("введите количество элементов будущего массива");
-    int massivLength = Convert.ToInt32(Console.ReadLine());
-    System.Console.WriteLine("выберите тип данных массива: текст или число");
-    string? userType = Console.ReadLine();
-    if (!string.IsNullOrEmpty(userType))
+    System.Console.WriteLine("введите число-размер массива");
+    int massivPower = Convert.ToInt32(Console.ReadLine());
+    string[] massiv = new string[massivPower];
+    for (int i = 0; i < massivPower; i++)
     {
-        if (userType == "текст")
+        System.Console.WriteLine($"введите {i} элемент массива");
+        string? number = Console.ReadLine();
+        if (int.TryParse(number, out _))
         {
-            string[] text = new string[massivLength];
-            for (int i = 0; i < massivLength; i++)
-            {
-                System.Console.WriteLine($"введите {i} элемент массива");
-                text[i] = Console.ReadLine();
-            }
-            System.Console.WriteLine(String.Join(',', text));
+            massiv[i] = number;
         }
-        if (userType == "число")
+        else
         {
-            double[] numeration = new double[massivLength];
-            for (int i = 0; i < massivLength; i++)
-            {
-                System.Console.WriteLine($"введите {i} элемент массива");
-                numeration[i] = Convert.ToDouble(Console.ReadLine());
-            }
-            System.Console.WriteLine(String.Join(',', numeration));
+            massiv[i] = "0";
         }
     }
-    else
-    {
-        System.Console.WriteLine("null");
-    }
+    System.Console.WriteLine(string.Join(',', massiv));
 }
+
 
 
