@@ -348,25 +348,53 @@
 
 // 17.Пользователь вводит число, явдяющееся количеством элементов будущего массива.
 //  Напишите код заполнения массива. Записать в массив только числа.
+// {
+//     System.Console.WriteLine("введите число-размер массива");
+//     int massivPower = Convert.ToInt32(Console.ReadLine());
+//     string[] massiv = new string[massivPower];
+//     for (int i = 0; i < massivPower; i++)
+//     {
+//         System.Console.WriteLine($"введите {i} элемент массива");
+//         string? number = Console.ReadLine();
+//         if (int.TryParse(number, out _))
+//         {
+//             massiv[i] = number;
+//         }
+//         else
+//         {
+//             massiv[i] = "0";
+//         }
+//     }
+//     System.Console.WriteLine(string.Join(',', massiv));
+// }
+
+// 18.Пользователь вводит многозначное число. Необходимо вставить двоеточие между двумя нечетными числами.
+//  Работать с числом как с массивом. Использовать for 55639217 -> 5:563:921:7.
+
 {
-    System.Console.WriteLine("введите число-размер массива");
-    int massivPower = Convert.ToInt32(Console.ReadLine());
-    string[] massiv = new string[massivPower];
-    for (int i = 0; i < massivPower; i++)
+    System.Console.WriteLine("введите любое число");
+    string? userNumber = Convert.ToString(Console.ReadLine());
+    // string mass = userNumber.ToString();
+    char[] massiv = userNumber.ToCharArray();
+    string result = "";
+    for (int i = 1; i < massiv.Length;i++)
     {
-        System.Console.WriteLine($"введите {i} элемент массива");
-        string? number = Console.ReadLine();
-        if (int.TryParse(number, out _))
+        if (massiv[i - 1] % 2 != 0 && massiv[i] % 2 != 0)
         {
-            massiv[i] = number;
+            result += massiv[i-1];
+            result += ":";
         }
         else
         {
-            massiv[i] = "0";
+            result += massiv[i-1];
         }
+        
     }
-    System.Console.WriteLine(string.Join(',', massiv));
+    // result+=massiv[massiv.Length];
+    System.Console.WriteLine(result);
+
 }
+
 
 
 
