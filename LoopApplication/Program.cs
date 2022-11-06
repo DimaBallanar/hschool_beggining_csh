@@ -377,22 +377,22 @@
     // string mass = userNumber.ToString();
     char[] massiv = userNumber.ToCharArray();
     string result = "";
-    for (int i = 1; i < massiv.Length;i++)
+    for (int i = 0; i < massiv.Length - 1; i++)
     {
-        if (massiv[i - 1] % 2 != 0 && massiv[i] % 2 != 0)
+        if (massiv[i] % 2 != 0 && massiv[i + 1] % 2 != 0)
         {
-            result += massiv[i-1];
+            result += massiv[i];
             result += ":";
         }
+
         else
         {
-            result += massiv[i-1];
+            result += massiv[i];
         }
-        
-    }
-    // result+=massiv[massiv.Length];
-    System.Console.WriteLine(result);
 
+    }
+    result += massiv[massiv.Length - 1];
+    System.Console.WriteLine(result);
 }
 
 
