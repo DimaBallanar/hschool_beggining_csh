@@ -251,10 +251,11 @@
     int summMassiv = 0;
     foreach (int mass in massiv)
     {
-        if (mass > 0)
-        {
-            summMassiv += mass;
-        }
+        // if (mass > 0)
+        // {
+        //     summMassiv += mass;
+        // }
+        summMassiv += mass > 0 ? mass : 0;
     }
     System.Console.WriteLine(summMassiv);
 }
