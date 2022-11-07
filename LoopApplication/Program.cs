@@ -396,8 +396,8 @@
         {
             if (massiv[i] % 2 != 0 && massiv[i + 1] % 2 != 0)
             {
-                result += massiv[i];
-                result += ":";
+                result += string.Concat($"{massiv[i]}:");
+                // result += ":";
             }
 
             else
