@@ -415,6 +415,34 @@
     }
 }
 
+// {
+//     System.Console.WriteLine("введите любое число");
+//     string? userNumber = Convert.ToString(Console.ReadLine());
+//     if (!string.IsNullOrEmpty(userNumber))
+//     {
+//         char[] massiv = userNumber.ToCharArray();
+//         string result = "";
+//         for (int i = 0; i < massiv.Length - 1; i++)
+//         {
+//             if (massiv[i] % 2 != 0 && massiv[i + 1] % 2 != 0)
+//             {
+//                 result += string.Concat($"{massiv[i]}:");
+//             }
+
+//             else
+//             {
+//                 result += massiv[i];
+//             }
+
+//         }
+//         result += massiv[massiv.Length - 1];
+//         System.Console.WriteLine(result);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("null");
+//     }
+// }
 
 
 
