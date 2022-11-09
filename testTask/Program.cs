@@ -156,35 +156,36 @@
 
 
 // есть массив строк-сконкатенировать все строки с циклом 
-// string[] userText = new string[] { "frrdad", "213", "1234", "1245", "1313" };
-// string result="";
-// for (int i = 0; i < userText.Length; i++)
-// {
-//     result+= userText[i];
-// }
-// System.Console.WriteLine(result);
-// int index = 0;
-// string resultWhile="";
-// while(index<userText.Length)
-// {
-//     resultWhile+=userText[index++];
-// }
-// System.Console.WriteLine(resultWhile);
+{
+string[] userText = new string[] { "frrdad", "213", "1234", "1245", "1313" };
+string result="";
+for (int i = 0; i < userText.Length; i++)
+{
+    result+= userText[i];
+}
+System.Console.WriteLine(result);
+int index = 0;
+string resultWhile="";
+while(index<userText.Length)
+{
+    resultWhile+=userText[index++];
+}
+System.Console.WriteLine(resultWhile);
+}
 
+// дан массив строк, между ними поставить http
 
-// дан массик строк, между ними поставить http
+{
 
+string[] massiv = new[] { "github.com", "HannaPleshko" };
+ string result = "";
+for (int i = 0; i < massiv.Length; i++)
 
-
-// string[] massiv = new[] { "github.com", "HannaPleshko" };
-//  string result = "";
-// for (int i = 0; i < massiv.Length; i++)
-
-// {
-//     result += massiv[i];
-// }
-// System.Console.WriteLine(string.Concat($"https://{result}"));
-
+{
+    result += massiv[i];
+}
+System.Console.WriteLine(string.Concat($"https://{result}"));
+}
 
 // у тебя есть массив чисел, ты с клавиатуры вводишь число, 
 // найти индекс первого вхождения этого числа в массиве, в противном случае вывести -1
