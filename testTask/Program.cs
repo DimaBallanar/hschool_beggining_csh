@@ -29,77 +29,82 @@
             break;
     }
 }
-// {
-//     System.Console.WriteLine("введите первое число");
-//     int number1 = Convert.ToInt32(Console.ReadLine());
-//     System.Console.WriteLine("введите второе число");
-//     int number2 = Convert.ToInt32(Console.ReadLine());
-//     System.Console.WriteLine("введите операцию");
-//     string? operation = Console.ReadLine();
-//     string result = operation switch
-//     {
-//         "*" => $"number1 * number2",
-//         "-" => $"number1 * number2",
-//         "+" => $"number1 * number2",
-//         "/" => $"number1 * number2",
-//         "%" => $"number1 * number2",
-//         "^" => $"{Math.Pow(number1, number2)}",
-//         _ => $"ошибка",
-//     };
-//     System.Console.WriteLine(result);
-// }
+{
+    System.Console.WriteLine("введите первое число");
+    int number1 = Convert.ToInt32(Console.ReadLine());
+    System.Console.WriteLine("введите второе число");
+    int number2 = Convert.ToInt32(Console.ReadLine());
+    System.Console.WriteLine("введите операцию");
+    string? operation = Console.ReadLine();
+    string result = operation switch
+    {
+        "*" => $"number1 * number2",
+        "-" => $"number1 * number2",
+        "+" => $"number1 * number2",
+        "/" => $"number1 * number2",
+        "%" => $"number1 * number2",
+        "^" => $"{Math.Pow(number1, number2)}",
+        _ => $"ошибка",
+    };
+    System.Console.WriteLine(result);
+}
+{
+    object[] items = new object[6] { 48, -43, -41, -19, 95, 43 };
+    int difference = 0;
+    for (int i = 0; i < items.Length; i++)
+    {
+        difference -= items[i] is int number ? number : default;
+    }
 
-// object[] items = new object[6] { 48, -43, -41, -19, 95, 43 };
-// int difference = 0;
-// for (int i = 0; i < items.Length; i++)
-// {
-//  difference -= items[i] is int number ? number : default;
-// }
+    string? consoleText = Console.ReadLine();
+    if (int.TryParse(consoleText, out int number) && number > 0)
+    {
+        int result = 1;
+        for (int i = 0; i <= number; i++)
+        {
+            result *= i;
+        }
+        Console.WriteLine(result);
+    }
 
-// string? consoleText = Console.ReadLine();
-// if (int.TryParse(consoleText, out int number) && number > 0)
-// {
-//  int result = 1;
-//  for (int i = 0; i <= number; i++)
-//  {
-//  result *= i;
-//  }
-//  Console.WriteLine(result);
-// }
+    else
+    {
+        Console.WriteLine("Вы ввели не натуральное число");
+    }
+}
 
-// else
-// {
-//  Console.WriteLine("Вы ввели не натуральное число");
-// }
-// int number = new Random().Next(55, 777);
-// int result = 0;
-// for (int i = 1; i <= number; i++)
-// {
-//     if (i == 451)
-//     {
-//         //Выход из цикла если i имеет значение 451
-//         break;
-//     }
-//     else if (i % 3 == 0)
-//     {
-//         //Переходим на новую итерацию цикла i++
-//         continue;
-//     }
+// =======================random
+{
+    int number = new Random().Next(55, 777);
+    int result = 0;
+    for (int i = 1; i <= number; i++)
+    {
+        if (i == 451)
+        {
+            //Выход из цикла если i имеет значение 451
+            break;
+        }
+        else if (i % 3 == 0)
+        {
+            //Переходим на новую итерацию цикла i++
+            continue;
+        }
 
-//     if (i % 4 == 0)
-//     {
-//         result += i / 4;
-//     }
-//     else if (i % 10 == 0)
-//     {
-//         result += i - 1;
-//     }
-//     else
-//     {
-//         result += i;
-//     }
-// }
-// Console.WriteLine(result);
+        if (i % 4 == 0)
+        {
+            result += i / 4;
+        }
+        else if (i % 10 == 0)
+        {
+            result += i - 1;
+        }
+        else
+        {
+            result += i;
+        }
+    }
+    Console.WriteLine(result);
+}
 System.Console.WriteLine("введите любое число");
 string? userNumber = Convert.ToString(Console.ReadLine());
 if (!string.IsNullOrEmpty(userNumber))
