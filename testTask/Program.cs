@@ -49,28 +49,28 @@
     System.Console.WriteLine(result);
 }
 {
-    object[] items = new object[6] { 48, -43, -41, -19, 95, 43 };
-    int difference = 0;
-    for (int i = 0; i < items.Length; i++)
-    {
-        difference -= items[i] is int number ? number : default;
-    }
+    // object[] items = new object[6] { 48, -43, -41, -19, 95, 43 };
+    // int difference = 0;
+    // for (int i = 0; i < items.Length; i++)
+    // {
+    //     difference -= items[i] is int number ? number : default;
+    // }
 
-    string? consoleText = Console.ReadLine();
-    if (int.TryParse(consoleText, out int number) && number > 0)
-    {
-        int result = 1;
-        for (int i = 0; i <= number; i++)
-        {
-            result *= i;
-        }
-        Console.WriteLine(result);
-    }
+    // string? consoleText = Console.ReadLine();
+    // if (int.TryParse(consoleText, out int number) && number > 0)
+    // {
+    //     int result = 1;
+    //     for (int i = 0; i <= number; i++)
+    //     {
+    //         result *= i;
+    //     }
+    //     Console.WriteLine(result);
+    // }
 
-    else
-    {
-        Console.WriteLine("Вы ввели не натуральное число");
-    }
+    // else
+    // {
+    //     Console.WriteLine("Вы ввели не натуральное число");
+    // }
 }
 
 // =======================random
