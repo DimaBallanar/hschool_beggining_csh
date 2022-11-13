@@ -62,7 +62,7 @@
     int umnForeEach = 1;
     foreach (int count in massiv)
     {
-        umnForeEach = umnForeEach * massiv[count - 2];
+        umnForeEach = umnForeEach * count;
     }
     System.Console.WriteLine(umnForeEach);
 }
