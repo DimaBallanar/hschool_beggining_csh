@@ -244,21 +244,47 @@
 
 
 
-string text = "teg54";
-// int number =Convert.ToInt32(text);
-// int number3=int.Parse(text);
-int.TryParse(text, out int newNumber);
-char result = text[1];
-text = result.ToString();
-// ==
-// if(text=="e")
-// пользователь вводит строку, содержит символы (числа ,буквы и тд), найти все цифры  исложить между собой
-System.Console.WriteLine("введите что-то");
-string? userText = Console.ReadLine();
-int resultNumber = 0;
-for (int i = 0; i < userText.Length; i++)
-{
-    int.TryParse(userText[i].ToString(), out int verdict);
-    resultNumber += verdict;
-}
-System.Console.WriteLine(resultNumber);
+// string text = "teg54";
+// // int number =Convert.ToInt32(text);
+// // int number3=int.Parse(text);
+// int.TryParse(text, out int newNumber);
+// char result = text[1];
+// text = result.ToString();
+// // ==
+// // if(text=="e")
+// // пользователь вводит строку, содержит символы (числа ,буквы и тд), найти все цифры  исложить между собой
+// System.Console.WriteLine("введите что-то");
+// string? userText = Console.ReadLine();
+// int resultNumber = 0;
+// for (int i = 0; i < userText.Length; i++)
+// {
+//     int.TryParse(userText[i].ToString(), out int verdict);
+//     resultNumber += verdict;
+// }
+// System.Console.WriteLine(resultNumber);
+
+ System.Console.WriteLine("for");
+    int[] massiv = new int[] { 2, 3, 4, 5 };
+    int umnFor = 1;
+    for (int i = 0; i < massiv.Length; i++)
+    {
+        umnFor = umnFor * massiv[i];
+    }
+    System.Console.WriteLine(umnFor);
+
+    System.Console.WriteLine("while");
+    int index = 0;
+    int umnWhile = 1;
+    while (index < 4)
+    {
+        umnWhile = umnWhile * massiv[index];
+        index++;
+    }
+    System.Console.WriteLine(umnWhile);
+    System.Console.WriteLine("foreach");
+    int umnForeEach = 1;
+    foreach (int count in massiv)
+    {
+        umnForeEach = umnForeEach * count;
+    }
+    System.Console.WriteLine(umnForeEach);
