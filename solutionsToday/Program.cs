@@ -42,10 +42,15 @@
 // System.Console.WriteLine(result);
 
 
-int number = 5;
+// int number = 5;
 
-System.Console.WriteLine(number.ToString().GetType());
+// System.Console.WriteLine(number.ToString().GetType());
 
-bool value = true;
+// bool value = true;
 
-System.Console.WriteLine(value.ToString().GetType());
+// System.Console.WriteLine(value.ToString().GetType());
+
+
+
+string userText="\\\"";
+System.Console.WriteLine(userText);
