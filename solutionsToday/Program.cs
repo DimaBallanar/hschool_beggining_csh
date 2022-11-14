@@ -55,6 +55,54 @@
 // string userText="\\\"";
 // System.Console.WriteLine(userText);
 
-string text1 = null;
-//равнозначно
-string? text2 = null;
+// string text1 = null;
+// //равнозначно
+// string? text2 = null;
+
+// у нас есть строка,где для всех букв произвести следующие операции, 
+// если код этой буквы равен простому числу-то суммируем если нет -игнорируем
+System.Console.WriteLine("введите строку");
+string? userText = Console.ReadLine();
+if (!string.IsNullOrEmpty(userText))
+{
+    int result = 0;
+    foreach (char let in userText)
+    {
+        if (!char.IsLetter(let))
+        {
+            continue;
+        }
+        int number = +let;
+        // int number = Convert.ToInt32(let);
+        bool isSimpleNumber = true;
+        for (int i = 2; i <= number / 2; i++)
+        {
+            if (number % i == 0)
+            {
+                isSimpleNumber = false;
+                break;
+            }
+        }
+        if (isSimpleNumber)
+        {
+            // прибавляем с результату значение
+            result += number;
+        }
+    }
+    System.Console.WriteLine(result);
+}
+else
+{
+    System.Console.WriteLine("Null");
+}
+
+
+
+
+
+
+
+
+
+
+
