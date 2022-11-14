@@ -97,7 +97,14 @@ else
 }
 
 
-
+// 2 ваиант кода
+// int number = +let;
+//         // int number = Convert.ToInt32(let);
+//         bool isSimpleNumber = true;
+//         for (int i = 2; i <= number / 2 && isSimpleNumber; i++)
+//         {
+//             isSimpleNumber = number % i == 0;
+//         }
 
 
 
