@@ -36,6 +36,16 @@
 //     System.Console.WriteLine("empty");
 // }
 
-var random = new Random();
+// var random = new Random();
 
-random.Next(3, 4);
+// int result=random.Next(3, 4);
+// System.Console.WriteLine(result);
+
+
+int number = 5;
+
+System.Console.WriteLine(number.ToString().GetType());
+
+bool value = true;
+
+System.Console.WriteLine(value.ToString().GetType());
