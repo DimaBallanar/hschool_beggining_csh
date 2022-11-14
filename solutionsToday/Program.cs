@@ -52,5 +52,9 @@
 
 
 
-string userText="\\\"";
-System.Console.WriteLine(userText);
+// string userText="\\\"";
+// System.Console.WriteLine(userText);
+
+string text1 = null;
+//равнозначно
+string? text2 = null;
