@@ -13,30 +13,36 @@
     System.Console.WriteLine("введите максимально допустимое значение");
     int maxValue = Convert.ToInt32(Console.ReadLine());
     int random = new Random().Next(minValue, maxValue);
-    int tryGuess;
+    System.Console.WriteLine(random);
     do
     {
         System.Console.WriteLine("попробуй угадать число,которое я загадал");
-        tryGuess = Convert.ToInt32(Console.ReadLine());
+        int tryGuess = Convert.ToInt32(Console.ReadLine());
+        if (tryGuess >= minValue && tryGuess <= maxValue && )
+        {
+            if (random == tryGuess)
+            {
+                System.Console.WriteLine("верно,как ты это сделал?");
+                break;
+            }
+            else if (tryGuess <= random + 10 && tryGuess >= random - 10)
+            {
+                System.Console.WriteLine($"ты был близок");
+            }
+            else
+            {
+                System.Console.WriteLine($"очень холодно {random}");
+            }
 
-        if (random == tryGuess)
-        {
-            System.Console.WriteLine("верно,как ты это сделал?");
-            continue;
-        }
-        else if (tryGuess <= random + 10 && tryGuess >= random - 10)
-        {
-            System.Console.WriteLine($"ты был близок");
         }
         else
         {
-            System.Console.WriteLine($"очень холодно {random}");
+            System.Console.WriteLine("вы ввели число за даипазоном");
         }
-
     }
     while (random >= minValue && random <= maxValue);
-
 }
+
 
 
 
