@@ -68,11 +68,11 @@ if (!string.IsNullOrEmpty(userText))
     int result = 0;
     foreach (char let in userText)
     {
-        if (!char.IsLetter(let))
+        if (!char.IsLetter(let))   // наш символ является не буквой?
         {
             continue;
         }
-        int number = +let;
+        int number = +let;   // преобразуем чар в тип int с использованием +
         // int number = Convert.ToInt32(let);
         bool isSimpleNumber = true;
         for (int i = 2; i <= number / 2; i++)
@@ -107,7 +107,36 @@ else
 //         }
 
 
+// вводим строку. заменяем если с маленькой буквы то на большую, если с большой то на малую. если цифра то удаляем
 
+{
+    Console.WriteLine("старт");
+    string? text = Console.ReadLine();
+    if (!string.IsNullOrEmpty(text))
+    {
+        string result = "";
+        foreach (char item in text)
+        {
+            if (char.IsUpper(item))
+            {
+                result += char.ToLower(item);
+            }
+            else if (char.IsLower(item))
+            {
+                result += char.ToUpper(item);
+            }
+            else if (!char.IsDigit(item))
+            {
+                result += item;
+            }
+        }
+        Console.WriteLine(result);
+    }
+    else
+    {
+        Console.WriteLine("ошибка");
+    }
+}
 
 
 
