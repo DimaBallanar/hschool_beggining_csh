@@ -13,22 +13,56 @@
     System.Console.WriteLine("введите максимально допустимое значение");
     int maxValue = Convert.ToInt32(Console.ReadLine());
     int random = new Random().Next(minValue, maxValue);
-    System.Console.WriteLine("попробуй угадать число,которое я загадал");
-    int tryGuess=Convert.ToInt32(Console.ReadLine());
-    if(random==tryGuess)
+    int tryGuess;
+    do
     {
-        System.Console.WriteLine("верно,как ты это сделал?");
-    }
-    else if(tryGuess<=random+10 && tryGuess>=random-10)
-    {
-        System.Console.WriteLine($"ты был близок {random}");
-    }
-    else
-    {
-        System.Console.WriteLine($"не угадал {random}");
-    }
+        System.Console.WriteLine("попробуй угадать число,которое я загадал");
+        tryGuess = Convert.ToInt32(Console.ReadLine());
 
+        if (random == tryGuess)
+        {
+            System.Console.WriteLine("верно,как ты это сделал?");
+            continue;
+        }
+        else if (tryGuess <= random + 10 && tryGuess >= random - 10)
+        {
+            System.Console.WriteLine($"ты был близок");
+        }
+        else
+        {
+            System.Console.WriteLine($"очень холодно {random}");
+        }
 
-
+    }
+    while (random >= minValue && random <= maxValue);
 
 }
+
+
+
+// 2. Написать программу, которая подсчитывает количество в строке букв, пробелов, цифр и
+// остальных символов.
+
+// {
+//     System.Console.WriteLine("введите набор текста");
+//     string? textRandom = Console.ReadLine();
+//     if (!string.IsNullOrEmpty(textRandom))
+//     {
+//         int liter = 0;
+//         int probel = 0;
+//         int number = 0;
+//         int symbol = 0;
+//         for (int i = 0; i < textRandom.Length; i++)
+//         {
+//             liter += textRandom[i] is int place? place : default;
+//             int.TryParse(textRandom[i],out int kolvo)
+
+//         }
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("empty");
+//     }
+
+
+// }
