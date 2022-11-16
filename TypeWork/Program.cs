@@ -18,7 +18,7 @@
     {
         System.Console.WriteLine("попробуй угадать число,которое я загадал");
         int tryGuess = Convert.ToInt32(Console.ReadLine());
-        if (tryGuess >= minValue && tryGuess <= maxValue && )
+        if (tryGuess >= minValue && tryGuess <= maxValue && !)
         {
             if (random == tryGuess)
             {
@@ -50,25 +50,26 @@
 // остальных символов.
 
 // {
-//     System.Console.WriteLine("введите набор текста");
-//     string? textRandom = Console.ReadLine();
-//     if (!string.IsNullOrEmpty(textRandom))
-//     {
-//         int liter = 0;
-//         int probel = 0;
-//         int number = 0;
-//         int symbol = 0;
-//         for (int i = 0; i < textRandom.Length; i++)
-//         {
-//             liter += textRandom[i] is int place? place : default;
-//             int.TryParse(textRandom[i],out int kolvo)
+    System.Console.WriteLine("введите набор текста");
+    string? textRandom = Console.ReadLine();
+    if (!string.IsNullOrEmpty(textRandom))
+    {
+        int liter = 0;
+        int probel = 0;
+        int number = 0;
+        int symbol = 0;
+        for (int i = 0; i < textRandom.Length; i++)
+        {
+            liter += textRandom[i] is int place? place : default;
+            int.TryParse(textRandom[i].ToString,out int kolvo)
 
-//         }
-//     }
-//     else
-//     {
-//         System.Console.WriteLine("empty");
-//     }
+        }
+
+    }
+    else
+    {
+        System.Console.WriteLine("empty");
+    }
 
 
 // }
