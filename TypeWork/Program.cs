@@ -124,3 +124,24 @@
 
 }
 
+
+
+
+{
+    System.Console.WriteLine("введите число N");
+    // int N = Convert.ToInt32(Console.ReadLine());
+    int N=6;
+    // int z=N-1;
+    int[] result = new int[] { };
+    // string result = "";
+    for (int i = 0; i < N; i++)
+    {
+        // int t = i;
+        // result[i]=t;
+        int k = 0 + i;
+        result[i]= k;
+    }
+
+    System.Console.WriteLine(string.Join(' ', result));
+
+}
