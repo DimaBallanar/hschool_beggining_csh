@@ -4,8 +4,8 @@
     {
         // Task1();
         // Task2();
-        Task3();
-        // Task4();
+        // Task3();
+        Task4();
     }
 
     #region Task 1
@@ -67,9 +67,32 @@
     static string Reverse(string text)
     {
         string result = "";
-        for (int i=text.Length-1; i>-1 ; i--)
+        for (int i = text.Length - 1; i > -1; i--)
         {
             result += text[i];
+        }
+        return result;
+    }
+    #endregion
+    #region Task 4
+    // найти индекс минимального значения числа массива
+
+    static void Task4()
+    {
+        int[] value = new int[] { 1, 3, 4, 5, 76, 7, 43, 342, 1231, 3 };
+        System.Console.WriteLine(MaxValue(value));
+    }
+    static int MaxValue(int[] value)
+    {
+        int result = 0;
+        int second = 0;
+        for (int i = 0; i < value.Length; i++)
+        {
+            if (second < value[i])
+            {
+                second = value[i];
+                result = i;
+            }
         }
         return result;
     }
