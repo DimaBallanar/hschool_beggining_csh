@@ -4,8 +4,8 @@
     {
         // Task1();
         Task2();
-        Task3();
-        Task4();
+        // Task3();
+        // Task4();
     }
 
     #region Task 1
@@ -26,7 +26,7 @@
     #endregion
 
     #region Task 2
-    
+
     //     2. Напишите метод, который принимает строку в маленьком регистре и возаращает
     // строку, где каждое слово начинается с большого регистра
     // hschool company -> Hschool Company 
@@ -34,20 +34,20 @@
     {
         userText = userText.ToLower();
         string[] massivText = userText.Split(' ');
-        string result="";
-        for (int i=0;i<massivText.Length;i++)
+        string result = "";
+        for (int i = 0; i < massivText.Length; i++)
         {
-            result+=massivText[i].ToUpper();
+            result += massivText[i].ToUpper() + " ";
             // char[] a =mass.ToCharArray();
             // char[0]=char[0].ToUpper();
         }
-return result;
+        return result;
     }
     static void Task2()
     {
         System.Console.WriteLine("введите любую строку");
         string userText = Console.ReadLine();
-        System.Console.WriteLine(UpperLvl);
+        System.Console.WriteLine(UpperLvl(userText));
     }
     #endregion
 
