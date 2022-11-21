@@ -26,11 +26,29 @@
     #endregion
 
     #region Task 2
+    
+    //     2. Напишите метод, который принимает строку в маленьком регистре и возаращает
+    // строку, где каждое слово начинается с большого регистра
+    // hschool company -> Hschool Company 
+    static string UpperLvl(string userText)
+    {
+        userText = userText.ToLower();
+        string[] massivText = userText.Split(' ');
+        string result="";
+        for (int i=0;i<massivText.Length;i++)
+        {
+            result+=massivText[i].ToUpper();
+            // char[] a =mass.ToCharArray();
+            // char[0]=char[0].ToUpper();
+        }
+return result;
+    }
     static void Task2()
     {
-
+        System.Console.WriteLine("введите любую строку");
+        string userText = Console.ReadLine();
+        System.Console.WriteLine(UpperLvl);
     }
-
     #endregion
 
     #region Task 3
