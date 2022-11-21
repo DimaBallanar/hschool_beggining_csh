@@ -3,8 +3,8 @@
     static void Main(string[] args)
     {
         // Task1();
-        Task2();
-        // Task3();
+        // Task2();
+        Task3();
         // Task4();
     }
 
@@ -56,6 +56,25 @@
         return count;
     }
     #endregion
+    #region Task 3
+    // написать метод который разворачивает строку задом наперед
+
+    static void Task3()
+    {
+        string text = "привет";
+        System.Console.WriteLine(Reverse(text));
+    }
+    static string Reverse(string text)
+    {
+        string result = "";
+        for (int i=text.Length-1; i>-1 ; i--)
+        {
+            result += text[i];
+        }
+        return result;
+    }
+    #endregion
+
 
 }
 
