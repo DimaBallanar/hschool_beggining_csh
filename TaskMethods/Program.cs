@@ -33,30 +33,23 @@
     static string UpperLvl(string userText)
     {
         // userText = userText.ToLower();
+        // string userText1 = userText.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         string[] massivText = userText.Split(' ');
         string result = "";
         for (int i = 0; i < massivText.Length; i++)
         {
-            char a = massivText[i][0];
-            result += char.ToUpper(a) + massivText[i].Remove(0, 1) + " ";
-            // System.Console.WriteLine(result);
-            // char[] myText = massivText[i].ToCharArray();
-            // char a = myText[0].ToUpper();
-            // string mySpace = a + string.Join(' ',myText.Remove(0,1));
-            // result += massivText[i][0] + massivText[i].Remove(0, 1) + " ";
-            // System.Console.WriteLine(massivText[i][0]);
-            // char first=Convert.ToChar(massivText[i][0]);
-            // result+=first;
-            // result += massivText[i].ToUpper() + " ";
-            // char[] a =mass.ToCharArray();
-            // char[0]=char[0].ToUpper();
+            string five=massivText[i];
+            string liter = Convert.ToString(five[0]).ToUpper();
+            result += liter.ToUpper() + massivText[i].Remove(0, 1) + " ";
+
         }
         return result;
     }
     static void Task2()
     {
         System.Console.WriteLine("введите любую строку");
-        string userText = Console.ReadLine().ToLower();
+        string? userText = Console.ReadLine().ToLower();
+        // string userText = " hello my little worls";
         System.Console.WriteLine(UpperLvl(userText));
     }
     #endregion
