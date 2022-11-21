@@ -100,4 +100,16 @@
 
 
 }
+internal class Program1
+{
 
+    static void Main()
+    {
+        CalculateNumbers((double)6M, 4.4);
+    }
+
+    static void CalculateNumbers(double number1, double number2)
+    {
+        System.Console.WriteLine(number1 + number2);
+    }
+}
