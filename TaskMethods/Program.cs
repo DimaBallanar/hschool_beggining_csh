@@ -37,7 +37,14 @@
         string result = "";
         for (int i = 0; i < massivText.Length; i++)
         {
-            result += massivText[i].ToUpper() + " ";
+            char[] myText = massivText[i].ToCharArray();
+            char a = myText[0].ToUpper();
+            string mySpace = a + string.Join(' ',myText.Remove(0,1));
+            // result += massivText[i][0] + massivText[i].Remove(0, 1) + " ";
+            // System.Console.WriteLine(massivText[i][0]);
+            // char first=Convert.ToChar(massivText[i][0]);
+            // result+=first;
+            // result += massivText[i].ToUpper() + " ";
             // char[] a =mass.ToCharArray();
             // char[0]=char[0].ToUpper();
         }
