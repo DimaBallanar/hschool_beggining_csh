@@ -32,14 +32,17 @@
     // hschool company -> Hschool Company 
     static string UpperLvl(string userText)
     {
-        userText = userText.ToLower();
+        // userText = userText.ToLower();
         string[] massivText = userText.Split(' ');
         string result = "";
         for (int i = 0; i < massivText.Length; i++)
         {
-            char[] myText = massivText[i].ToCharArray();
-            char a = myText[0].ToUpper();
-            string mySpace = a + string.Join(' ',myText.Remove(0,1));
+            char a = massivText[i][0];
+            result += char.ToUpper(a) + massivText[i].Remove(0, 1) + " ";
+            // System.Console.WriteLine(result);
+            // char[] myText = massivText[i].ToCharArray();
+            // char a = myText[0].ToUpper();
+            // string mySpace = a + string.Join(' ',myText.Remove(0,1));
             // result += massivText[i][0] + massivText[i].Remove(0, 1) + " ";
             // System.Console.WriteLine(massivText[i][0]);
             // char first=Convert.ToChar(massivText[i][0]);
@@ -53,7 +56,7 @@
     static void Task2()
     {
         System.Console.WriteLine("введите любую строку");
-        string userText = Console.ReadLine();
+        string userText = Console.ReadLine().ToLower();
         System.Console.WriteLine(UpperLvl(userText));
     }
     #endregion
