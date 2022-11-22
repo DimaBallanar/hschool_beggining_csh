@@ -193,4 +193,23 @@ internal class Program6
         Parse("text_21", '_', out string name, out string age);
         System.Console.WriteLine("name - {0} age = {1}", name, age);
     }
+
+     static void Task5()
+    {
+        string input = "Hello askdjhasd oaisd/ 213 123/sdf sdf/sdf";
+        char symbol = ' ';
+        bool result = Method1(input, symbol, out int count);
+        Console.WriteLine(string.Format("Symbol - {0}, length new array - {1}", symbol, count));
+    }
+    static bool Method1(string text, char symbol, out int count)
+    {
+        if (text.IndexOf(symbol) > -1)
+        {
+            count = text.Split(symbol).Length;
+            return true;
+        }
+        count = 0; // default
+        return false;
+
+    }
 }
