@@ -113,3 +113,20 @@ internal class Program1
         System.Console.WriteLine(number1 + number2);
     }
 }
+internal class Program3
+{
+    static void Counter(int value) 
+    {
+        value++; 
+        System.Console.WriteLine(value);
+    }
+
+    static void Main()
+    {
+        int number = 1;
+        System.Console.WriteLine(number);
+        Counter(number); // int value = (number = 1) => int value  = 1;
+        System.Console.WriteLine(number);
+        Counter(number); // int value = (number = 1) => int value  = 1;
+    }
+}
