@@ -170,3 +170,27 @@ internal class Program5
         // System.Console.WriteLine(number1 + number2);
     }
 }
+
+internal class Program6
+{
+    static bool Parse(string text, char separator, out string name, out string age)
+    {
+        string[] result = text.Split(separator);
+        if (result.Length == 2)
+        {
+            name = result[0];
+            age = result[1];
+            return true;
+        }
+
+        name = "";
+        age = "";
+        return false;
+    }
+
+    static void Main()
+    {
+        Parse("text_21", '_', out string name, out string age);
+        System.Console.WriteLine("name - {0} age = {1}", name, age);
+    }
+}
