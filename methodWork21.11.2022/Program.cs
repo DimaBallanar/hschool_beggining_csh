@@ -261,5 +261,27 @@ internal class Program7
     }
 }
 
+internal class Program9
+{
+    static void Main(string[] args)
+    {
+        Task();
+        System.Console.WriteLine(Sum(1, 2, 3, 4, 5));
+    }
+    static void Task()
+    {
+
+    }
+    static double Sum(params double[] numbers)
+    {
+        double sumelements = 0;
+        foreach (var item in numbers)
+        {
+            sumelements += item;
+        }
+        return sumelements / numbers.Length;
+    }
+}
+
 
 
