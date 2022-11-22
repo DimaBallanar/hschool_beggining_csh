@@ -147,3 +147,26 @@ internal class Program4
         Counter(ref number);
     }
 }
+
+internal class Program5
+{
+    static void Main()
+    {
+        // CalculareNambers(6L, 6F);
+        int number = 5;
+        int step = 7;
+        Move(ref number, step);
+        Move(ref number, step);
+        Move(ref number, step);
+        Move(ref number, step);
+        Move(ref number, step);
+        Move(ref number, step);
+        System.Console.WriteLine(number);
+    }
+
+    static void Move(ref int number, int step)
+    {
+        number += step;
+        // System.Console.WriteLine(number1 + number2);
+    }
+}
