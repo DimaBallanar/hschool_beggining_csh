@@ -130,3 +130,20 @@ internal class Program3
         Counter(number); // int value = (number = 1) => int value  = 1;
     }
 }
+internal class Program4
+{
+    static void Counter(ref int value) //int number с строчки 11 
+    {
+        value++; 
+        System.Console.WriteLine(value);
+    }
+
+    static void Main()
+    {
+        int number = 10;
+        System.Console.WriteLine(number);
+        Counter(ref number);
+        System.Console.WriteLine(number);
+        Counter(ref number);
+    }
+}
