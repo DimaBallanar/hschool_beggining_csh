@@ -213,3 +213,28 @@ internal class Program6
 
     }
 }
+
+internal class Program7
+{
+    static int Sum(params int[] numbers)//int number0, int number1, ..., int number9 => int[] array
+    {
+        int sum = 0;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+        return sum;
+    }
+
+    static void Main()
+    {
+        int number1 = 1;
+        int number5 = 5;
+        int sum1 = Sum(number1, 2, 3, 4, number5, 6, 7, 8, 9, 10);
+        System.Console.WriteLine(sum1);
+        int sum2 = Sum(new int[] { number1, 2, 3, 4, number5, 6, 7, 8, 9, 10 }); // => array[0], array[1], ..., array[9]  
+        System.Console.WriteLine(sum2);
+    }
+}
+
+
