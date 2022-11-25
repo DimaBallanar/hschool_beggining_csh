@@ -67,11 +67,11 @@
             {
                 number += 1;
             }
-            else if(char.IsLetter(textRandom[i]))
+            else if (char.IsLetter(textRandom[i]))
             {
                 liter += 1;
             }
-            else if (textRandom[i].ToString()==" ")
+            else if (Convert.ToString(textRandom[i]) == " ")
             {
                 probel += 1;
             }
