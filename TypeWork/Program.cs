@@ -67,11 +67,11 @@
             {
                 number += 1;
             }
-            if (textRandom[i].Equals(typeof(string)))
+            else if(char.IsLetter(textRandom[i]))
             {
                 liter += 1;
             }
-            if (textRandom[i].Equals(" "))
+            else if (textRandom[i].ToString()==" ")
             {
                 probel += 1;
             }
@@ -106,21 +106,21 @@
 // //Фиббоначи. Вывести весь этот ряд записанный в массив.
 
 
-{
-    System.Console.WriteLine("введите число N");
-    int N = Convert.ToInt32(Console.ReadLine());
-    // int z=N-1;
-    // int[] result = new int[] { };
-    string result = "";
-    for (int i = 0; i < N; i++)
-    {
-        int t = i;
-        result+=t;
-        int k = t + i;
-        result += k;
-    }
+// {
+//     System.Console.WriteLine("введите число N");
+//     int N = Convert.ToInt32(Console.ReadLine());
+//     // int z=N-1;
+//     // int[] result = new int[] { };
+//     string result = "";
+//     for (int i = 0; i < N; i++)
+//     {
+//         int t = i;
+//         result+=t;
+//         int k = t + i;
+//         result += k;
+//     }
 
-    System.Console.WriteLine(string.Join(' ', result));
+//     System.Console.WriteLine(string.Join(' ', result));
 
-}
+// }
 
