@@ -100,25 +100,28 @@
 {
     System.Console.WriteLine("введите текст");
     string? uxerText = Console.ReadLine();
+    // string uxerText = "dfdf eqe qeq eqeq qsdb";
     System.Console.WriteLine("введите символ для поиска");
     string? userFind = Console.ReadLine();
+    // string userFind = 'e'.ToString();
     if (!string.IsNullOrEmpty(uxerText) && !string.IsNullOrEmpty(userFind))
     {
         int p = 0;
         string[] result = new string[uxerText.Length];
         foreach (char us in uxerText)
         {
-            if (string.Equals(userFind, us))
+            if (userFind == us.ToString())
             {
-                result[us] += us;
+                result[p] += us;
                 p++;
             }
             else
             {
-                result[us] += 0;
+                result[p] += 0;
                 p++;
             }
         }
+        System.Console.WriteLine(string.Join(',', result));
     }
     else
     { System.Console.WriteLine("null"); }
