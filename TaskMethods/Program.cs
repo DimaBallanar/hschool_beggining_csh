@@ -79,17 +79,19 @@
 
     static string CheckStroker(string[] massivText)
     {
-        string[] result = new string[massivText.Length];
+        // string[] result = new string[massivText.Length];
+        string result = "";
         for (int i = 0; i < massivText.Length; i++)
         {
             if (massivText[i].Length <= 2)
             {
-                result[i] += massivText[i];
+                result += string.Concat(massivText[i], ",");
             }
 
         }
 
-        return string.Join(',', result);
+        // return string.Join(',', result);
+        return result;
     }
 
     #endregion
