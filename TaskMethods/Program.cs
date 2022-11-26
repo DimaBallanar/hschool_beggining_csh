@@ -3,9 +3,21 @@
     static void Main(string[] args)
     {
         // Task1();
-        Task2();
-        // Task3();
+        // Task2();
+        Task3();
         // Task4();
+        // Task5();
+        // Task6();
+        // Task7();
+        // Task8();
+        // Task9();
+        // Task10();
+        // Task11();
+        // Task12();
+        // Task13();
+        // Task14();
+        // Task15();
+
     }
 
     #region Task 1
@@ -38,7 +50,7 @@
         string result = "";
         for (int i = 0; i < massivText.Length; i++)
         {
-            string five=massivText[i];
+            string five = massivText[i];
             string liter = Convert.ToString(five[0]).ToUpper();
             result += liter.ToUpper() + massivText[i].Remove(0, 1) + " ";
 
@@ -55,13 +67,29 @@
     #endregion
 
     #region Task 3
-//     3. Напишите метод, который принимает статичный массив строк. Необходимо
-// отфильтровать значения и оставить только те, где длина строк до 2 символов.
-// [“by”, “belarus”, “de”, “ru”, “germany”] -> [“by”, “de”, “ru”]
+    //     3. Напишите метод, который принимает статичный массив строк. Необходимо
+    // отфильтровать значения и оставить только те, где длина строк до 2 символов.
+    // [“by”, “belarus”, “de”, “ru”, “germany”] -> [“by”, “de”, “ru”]
 
     static void Task3()
     {
+        string[] massivText = new string[] { "by", "belarus", "de", "ru", "germany" };
+        System.Console.WriteLine(CheckStroker(massivText));
+    }
 
+    static string CheckStroker(string[] massivText)
+    {
+        string[] result = new string[massivText.Length];
+        for (int i = 0; i < massivText.Length; i++)
+        {
+            if (massivText[i].Length <= 2)
+            {
+                result[i] += massivText[i];
+            }
+
+        }
+
+        return string.Join(',', result);
     }
 
     #endregion
