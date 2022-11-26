@@ -134,22 +134,59 @@
 // //Фиббоначи. Вывести весь этот ряд записанный в массив.
 
 
+// {
+//     System.Console.WriteLine("введите число N");
+//     int N = Convert.ToInt32(Console.ReadLine());
+//     int f = 0;
+//     int s = 1;
+//     int[] result = new int[N];
+//     for (int i = 2; i < N; i++)
+//     {
+//         result[i - 2] = f;
+//         result[i - 1] = s;
+//         result[i] = f + s;
+//         f = s;
+//         s = result[i];
+//     }
+
+//     System.Console.WriteLine(string.Join(' ', result));
+
+// }
+
+
+
+// 5. У пользователя есть строка, удалить из неё все числа и символы ‘.’, ‘-’, ‘,’ , ‘*’ и тд. Заменить
+// пробелы символом ‘/’. Если пользователь ввел символ вопрос ‘?’ он может быть только один
+// и после него пробелы должны заменены на ‘=‘, все большие буквы заменить на маленькую и
+// перед ней поставить ‘-’, но результирующая строка не может начинаться с ‘-’
+// ПриветМир, я Пишу код*который не ВсегдаХороший)Но я?Учусь и у Меня?Все получится
+// привет-мир/я/-пишу/кодкоторый/не/-всегда-хороший-но/я?-учусь=и=у=-менявсе=получится
+
 {
-    System.Console.WriteLine("введите число N");
-    int N = Convert.ToInt32(Console.ReadLine());
-    int f = 0;
-    int s = 1;
-    int[] result = new int[N];
-    for (int i = 2; i < N; i++)
+    System.Console.WriteLine("введите строку");
+    string? userText = Console.ReadLine();
+    string result = "";
+    if (!string.IsNullOrEmpty(userText))
     {
-        result[i - 2] = f;
-        result[i - 1] = s;
-        result[i] = f + s;
-        f = s;
-        s = result[i];
+        foreach (char t in userText)
+        {
+            if (char.IsDigit(t))
+            {
+                result += "";
+            }
+            else if (t == ' ')
+            {
+                result += '/';
+            }
+            else
+            {
+                result += t;
+            }
+        }
+        System.Console.WriteLine(result);
     }
-
-    System.Console.WriteLine(string.Join(' ', result));
-
+    else
+    {
+        System.Console.WriteLine("null or empty");
+    }
 }
-
