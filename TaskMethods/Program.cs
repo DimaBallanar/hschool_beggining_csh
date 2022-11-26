@@ -4,9 +4,9 @@
     {
         // Task1();
         // Task2();
-        Task3();
+        // Task3();
         // Task4();
-        // Task5();
+        Task5();
         // Task6();
         // Task7();
         // Task8();
@@ -120,4 +120,35 @@
         return true;
     }
     #endregion
+
+
+
+    #region Task5
+
+    // 5. На входе n – количество элементов массива (вводится с клавиатуры). Далее
+    // производится заполнение массива с слуйчными числами. Реализуйте два метода
+    // для поиска минимального и максимального значения. 
+
+
+    static void Task5()
+    {
+        System.Console.WriteLine("введите размер массива");
+        int res = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine(ParseText(res));
+    }
+
+    static int ParseText(int res)
+    {
+        int[] massivNumbers = new int[res];
+        Random rnd = new Random();
+        foreach (int mass in massivNumbers)
+        {
+            massivNumbers[mass] = rnd.Next();
+        }
+        int minValue = massivNumbers.Min();
+        int maxValue = massivNumbers.Max();
+        return maxValue;
+    }
+    #endregion
+
 }
