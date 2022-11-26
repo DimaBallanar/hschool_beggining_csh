@@ -97,35 +97,35 @@
 // 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в
 // массив и вывести через символ, который кажет пользователь.
 
-{
-    System.Console.WriteLine("введите текст");
-    string? uxerText = Console.ReadLine();
-    // string uxerText = "dfdf eqe qeq eqeq qsdb";
-    System.Console.WriteLine("введите символ для поиска");
-    string? userFind = Console.ReadLine();
-    // string userFind = 'e'.ToString();
-    if (!string.IsNullOrEmpty(uxerText) && !string.IsNullOrEmpty(userFind))
-    {
-        int p = 0;
-        string[] result = new string[uxerText.Length];
-        foreach (char us in uxerText)
-        {
-            if (userFind == us.ToString())
-            {
-                result[p] += us;
-                p++;
-            }
-            else
-            {
-                result[p] += 0;
-                p++;
-            }
-        }
-        System.Console.WriteLine(string.Join(',', result));
-    }
-    else
-    { System.Console.WriteLine("null"); }
-}
+// {
+//     System.Console.WriteLine("введите текст");
+//     string? uxerText = Console.ReadLine();
+//     // string uxerText = "dfdf eqe qeq eqeq qsdb";
+//     System.Console.WriteLine("введите символ для поиска");
+//     string? userFind = Console.ReadLine();
+//     // string userFind = 'e'.ToString();
+//     if (!string.IsNullOrEmpty(uxerText) && !string.IsNullOrEmpty(userFind))
+//     {
+//         int p = 0;
+//         string[] result = new string[uxerText.Length];
+//         foreach (char us in uxerText)
+//         {
+//             if (userFind == us.ToString())
+//             {
+//                 result[p] += us;
+//                 p++;
+//             }
+//             else
+//             {
+//                 result[p] += 0;
+//                 p++;
+//             }
+//         }
+//         System.Console.WriteLine(string.Join(',', result));
+//     }
+//     else
+//     { System.Console.WriteLine("null"); }
+// }
 
 
 
@@ -134,21 +134,22 @@
 // //Фиббоначи. Вывести весь этот ряд записанный в массив.
 
 
-// {
-//     System.Console.WriteLine("введите число N");
-//     int N = Convert.ToInt32(Console.ReadLine());
-//     // int z=N-1;
-//     // int[] result = new int[] { };
-//     string result = "";
-//     for (int i = 0; i < N; i++)
-//     {
-//         int t = i;
-//         result += t;
-//         int k = t + i;
-//         result += k;
-//     }
+{
+    System.Console.WriteLine("введите число N");
+    int N = Convert.ToInt32(Console.ReadLine());
+    int f = 0;
+    int s = 1;
+    int[] result = new int[N];
+    for (int i = 2; i < N; i++)
+    {
+        result[i - 2] = f;
+        result[i - 1] = s;
+        result[i] = f + s;
+        f = s;
+        s = result[i];
+    }
 
-//     System.Console.WriteLine(string.Join(' ', result));
+    System.Console.WriteLine(string.Join(' ', result));
 
-// }
+}
 
