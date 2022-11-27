@@ -18,11 +18,20 @@
 
 //     }
 // }
-static double CalculateCost(double costItem, double vat = 13, double costumDuty = 5, double Tax = 10)
-{
-    vat = 1 + vat / 100;
-    costumDuty = 1 + costumDuty / 100;
-    Tax = 1 + Tax / 100;
-    return costItem * vat * costumDuty * Tax;
-}
-System.Console.WriteLine(CalculateCost(100, costumDuty: 7));
+// static double CalculateCost(double costItem, double vat = 13, double costumDuty = 5, double Tax = 10)
+// {
+//     vat = 1 + vat / 100;
+//     costumDuty = 1 + costumDuty / 100;
+//     Tax = 1 + Tax / 100;
+//     return costItem * vat * costumDuty * Tax;
+// }
+// System.Console.WriteLine(CalculateCost(100, costumDuty: 7));
+
+
+
+static double SumValues(double value1, double value2) => value1 + value2;
+// равнозначны
+    // static double SumValues(double value1, double value2)
+    // {
+    //     return value1 + value2;
+    // }
