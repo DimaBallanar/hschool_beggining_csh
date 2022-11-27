@@ -6,14 +6,14 @@
         // Task2();
         // Task3();
         // Task4();
-        Task5();
+        // Task5();
         // Task6();
         // Task7();
         // Task8();
         // Task9();
         // Task10();
         // Task11();
-        // Task12();
+        Task12();
         // Task13();
         // Task14();
         // Task15();
@@ -151,4 +151,50 @@
     }
     #endregion
 
+    #region 12
+    //     12. На входе строка. Необходимо создать метод, возвращающий true, если это слово
+    // палиндром и false в противном случае
+    static void Task12()
+    {
+        System.Console.WriteLine("введите слово");
+        string? userText = Console.ReadLine();
+        if (!string.IsNullOrWhiteSpace(userText))
+        {
+            System.Console.WriteLine(Palindrom(userText));
+        }
+    }
+    static bool Palindrom(string userText)
+    {
+        for (int i = 0; i < userText.Length; i++)
+        {
+            if (userText[i] != userText[userText.Length - 1 - i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    #endregion
+
+
+    //  #region Task9
+
+    //     9. На входе 2 массива, размерность которых вводится с клавиатуры, а значения
+    // заполняются случайными числами. Реализуйте 2 метода. Первый что массивы
+    // имеют одинаковую размерность и все элементы отличаются. Второй произвести
+    // поэлементное умножение. Если результат метода проверки – true, то вызывать
+    // новый метод, возвращающий вывод элементов через запятую 
+
+
+    // static void Task9()
+    // {
+
+    // }
+
+    // static int (int res)
+    // {
+
+    //     return maxValue;
+    // }
+    // #endregion
 }
