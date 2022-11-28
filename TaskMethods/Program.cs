@@ -7,13 +7,13 @@
         // Task3();
         // Task4();
         // Task5();
-        // Task6();
+        Task6();
         // Task7();
         // Task8();
         // Task9();
         // Task10();
         // Task11();
-        Task12();
+        // Task12();
         // Task13();
         // Task14();
         // Task15();
@@ -162,7 +162,65 @@
     }
     #endregion
 
-    #region 12
+    #region Task6
+    // 6. На входе n – количество элементов массива (вводится с клавиатуры). Далее
+    // производится заполнение массива с слуйчными числами. Реализуйте методы
+    // подсчета количества элементов массива меньше и больш среднего значения. 
+    static void Task6()
+    {
+        System.Console.WriteLine("введите количество элементов массива");
+        string? n = Console.ReadLine();
+        if (!string.IsNullOrEmpty(n))
+        {
+            int[] massivPull = new int[Convert.ToInt32(n)];
+            Random rnd = new Random();
+            for (int i = 0; i < massivPull.Length; i++)
+            {
+                massivPull[i] = rnd.Next(-100, 100);
+            }
+            int sumMassiv = 0;
+            foreach (int mass in massivPull)
+            {
+                sumMassiv += mass;
+            }
+            int result = sumMassiv / Convert.ToInt32(n);
+            System.Console.WriteLine(More(massivPull, result));
+            System.Console.WriteLine(Less(massivPull, result));
+            static int More(int[] massivPull, int result)
+            {
+                int m = 0;
+
+                foreach (int mass in massivPull)
+                {
+                    if (mass > result)
+                    {
+                        m += 1;
+                    }
+                }
+                return m;
+            }
+            static int Less(int[] massivPull, int result)
+            {
+                int m = 0;
+
+                foreach (int mass in massivPull)
+                {
+                    if (mass < result)
+                    {
+                        m += 1;
+                    }
+                }
+                return m;
+            }
+        }
+        else
+        {
+            System.Console.WriteLine("null");
+        }
+    }
+    #endregion
+
+    #region Task12
     //     12. На входе строка. Необходимо создать метод, возвращающий true, если это слово
     // палиндром и false в противном случае
     static void Task12()
