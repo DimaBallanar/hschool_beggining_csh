@@ -134,10 +134,11 @@
     {
         System.Console.WriteLine("введите размер массива");
         int res = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine(ParseText(res));
+        System.Console.WriteLine(MinNumberMass(res));
+        System.Console.WriteLine(MaxNumberMass(res));
     }
 
-    static int ParseText(int res)
+    static int MinNumberMass(int res)
     {
         int[] massivNumbers = new int[res];
         Random rnd = new Random();
@@ -146,6 +147,16 @@
             massivNumbers[mass] = rnd.Next();
         }
         int minValue = massivNumbers.Min();
+        return minValue;
+    }
+    static int MaxNumberMass(int res)
+    {
+        int[] massivNumbers = new int[res];
+        Random rnd = new Random();
+        foreach (int mass in massivNumbers)
+        {
+            massivNumbers[mass] = rnd.Next();
+        }
         int maxValue = massivNumbers.Max();
         return maxValue;
     }
