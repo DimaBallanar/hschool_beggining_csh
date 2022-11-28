@@ -10,8 +10,8 @@
         // Task6();
         // Task7();
         // Task8();
-        Task9();
-        // Task10();
+        // Task9();
+        Task10();
         // Task11();
         // Task12();
         // Task13();
@@ -381,6 +381,54 @@
         }
         return string.Join(", ", result);
     }
+
+    #endregion
+
+
+    #region Task10
+    // 10. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве
+    // только числа. Второй для получения только четных элементов массива. Если
+    // результат метода проверки – true, то вызывать новую метод, возвращающий
+    // массив с четными элементами массива
+
+    static void Task10()
+    {
+        object[] massivQueen = { "3", "367", "3", "3", "5", "3", "3", "6" };
+        if (MethodEquals(massivQueen))
+        {
+            System.Console.WriteLine(string.Join(",", ParaNumbers(massivQueen)));
+        }
+        else
+        {
+            System.Console.WriteLine("не только числа");
+        }
+    }
+    static bool MethodEquals(object[] massivQueen)
+    {
+        foreach (object mass in massivQueen)
+        {
+            if (!int.TryParse(mass.ToString(), out int number))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static string[] ParaNumbers(object[] massivQueen)
+    {
+        string[] result = new string[massivQueen.Length];
+        for (int i = 0; i < massivQueen.Length; i++)
+        {
+            if (Convert.ToInt32(massivQueen[i]) % 2 == 0)
+            {
+                result[i] += massivQueen[i];
+            }
+
+        }
+        return result;
+    }
+
+
 
     #endregion
 
