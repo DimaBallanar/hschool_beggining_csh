@@ -423,8 +423,13 @@
             {
                 result[i] += massivQueen[i];
             }
+            else
+            {
+                result[i] += " ";
+            }
 
         }
+        // string result1=string.Join(",",result).Split('',StringSplitOptions.RemoveEmptyEntries);
         return result;
     }
 
