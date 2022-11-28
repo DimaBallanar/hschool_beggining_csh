@@ -237,7 +237,11 @@
         }
         if (CheckNumber(massivUser))
         {
-
+            System.Console.WriteLine(sumMassiv(massivUser));
+        }
+        else
+        {
+            System.Console.WriteLine("массив содержит не цифры");
         }
     }
     static bool CheckNumber(string[] massivUser)
@@ -248,11 +252,17 @@
             {
                 return false;
             }
-            else
-            {
-                return true;
-            }
         }
+        return true;
+    }
+    static int sumMassiv(string[] massivUser)
+    {
+        int check = 0;
+        foreach (string sum in massivUser)
+        {
+            check += Convert.ToInt32(sum);
+        }
+        return check;
     }
 
 
@@ -310,5 +320,5 @@
 
     //     return maxValue;
     // }
-    // #endregion
+    #endregion
 }
