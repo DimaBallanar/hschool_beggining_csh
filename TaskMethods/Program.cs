@@ -8,8 +8,8 @@
         // Task4();
         // Task5();
         // Task6();
-        Task7();
-        // Task8();
+        // Task7();
+        Task8();
         // Task9();
         // Task10();
         // Task11();
@@ -284,14 +284,19 @@
             }
             System.Console.WriteLine(TextParseLower(textMassiv));
         }
+        else
+        {
+            System.Console.WriteLine("содержит не только строки");
+        }
 
     }
     static bool ResultParse(object[] textMassiv)
     {
-        if ()
-        {
-            return false;
-        }
+        foreach (object text in textMassiv)
+            if (text.ToString().Length < 2)      // надо записать правильное условие на проверку строки
+            {
+                return false;
+            }
         return true;
     }
 
