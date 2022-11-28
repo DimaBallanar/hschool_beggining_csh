@@ -9,8 +9,8 @@
         // Task5();
         // Task6();
         // Task7();
-        Task8();
-        // Task9();
+        // Task8();
+        Task9();
         // Task10();
         // Task11();
         // Task12();
@@ -321,6 +321,66 @@
 
 
 
+
+    #endregion
+
+
+    #region  Task9
+    // 9. На входе 2 массива, размерность которых вводится с клавиатуры, а значения
+    // заполняются случайными числами. Реализуйте 2 метода. Первый что массивы
+    // имеют одинаковую размерность и все элементы отличаются. Второй произвести
+    // поэлементное умножение. Если результат метода проверки – true, то вызывать
+    // новый метод, возвращающий вывод элементов через запятую 
+    static void Task9()
+    {
+        int lenght1 = Convert.ToInt32(Console.ReadLine());
+        int[] numbers1 = new int[lenght1];
+        for (int i = 0; i < lenght1; i++)
+        {
+            numbers1[i] = new Random().Next(-100, 100);
+        }
+        System.Console.WriteLine(string.Join(", ", numbers1));
+        int lenght2 = Convert.ToInt32(Console.ReadLine());
+        int[] numbers2 = new int[lenght2];
+        for (int i = 0; i < lenght2; i++)
+        {
+            numbers2[i] = new Random().Next(-100, 100);
+        }
+        System.Console.WriteLine(string.Join(", ", numbers2));
+        if (MethodLenght(numbers1, numbers2))
+        {
+            System.Console.WriteLine(MethodMultiplicationItems(numbers1, numbers2));
+        }
+        else
+        {
+            System.Console.WriteLine("error");
+        }
+    }
+
+    static bool MethodLenght(int[] number1, int[] number2)
+    {
+        if (number1.Length != number2.Length)
+        {
+            return false;
+        }
+        for (int i = 0; i < number1.Length; i++)
+        {
+            if (number1[i] == number2[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static string MethodMultiplicationItems(int[] number1, int[] number2)
+    {
+        int[] result = new int[number1.Length];
+        for (int i = 0; i < number1.Length; i++)
+        {
+            result[i] = number1[i] * number2[i];
+        }
+        return string.Join(", ", result);
+    }
 
     #endregion
 
