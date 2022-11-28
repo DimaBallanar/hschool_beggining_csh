@@ -265,15 +265,59 @@
         return check;
     }
 
+    #endregion
+
+    #region 8
+    //     8. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве
+    // только строки. Второй для получения суммы всех строчных элементов массива.
+    // Если результат метода проверки – true, то вызывать новый метод, возвращающую
+    // конкатенацию всех строчных элементов массива
+    static void Task8()
+    {
+        object[] textMassiv = new object[] { "sdsddsdsd", "sdsdda", "5", "+", " " };
+        if (ResultParse(textMassiv))
+        {
+            string textEnter = "";
+            foreach (object text in textMassiv)
+            {
+                textEnter += text;
+            }
+            System.Console.WriteLine(TextParseLower(textMassiv));
+        }
+
+    }
+    static bool ResultParse(object[] textMassiv)
+    {
+        if ()
+        {
+            return false;
+        }
+        return true;
+    }
+
+    static string TextParseLower(object[] textMassiv)
+    {
+        string textEnter = "";
+        string resultText = "";
+        foreach (object text in textMassiv)
+        {
+            textEnter += text;
+        }
+        for (int i = 0; i < textEnter.Length; i++)
+        {
+            if (char.IsLower(textEnter[i]))
+            {
+                resultText += textEnter[i];
+            }
+        }
+        return resultText;
+    }
+
 
 
 
 
     #endregion
-
-
-
-
 
     #region Task12
     //     12. На входе строка. Необходимо создать метод, возвращающий true, если это слово
