@@ -7,8 +7,8 @@
         // Task3();
         // Task4();
         // Task5();
-        Task6();
-        // Task7();
+        // Task6();
+        Task7();
         // Task8();
         // Task9();
         // Task10();
@@ -219,6 +219,40 @@
         }
     }
     #endregion
+
+    #region Task7
+    // 7. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве
+    // только числа. Второй для получения суммы всех элементов массива. Если
+    // результат метода проверки – true, то вызывать новый метод, возвращающий
+    // сумму всех элементов массива
+    static void Task7()
+    {
+        System.Console.WriteLine("введите размер массива");
+        int n = Convert.ToInt32(Console.ReadLine());
+        string[] massivUser = new string[n];
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"введите {i} элемент массива");
+            massivUser[i] = Console.ReadLine();
+        }
+
+        static bool CheckNumber(string[] massivUser)
+        {
+foreach(string mass in massivUser)
+{
+    if()
+}
+        }
+
+    }
+
+
+
+    #endregion
+
+
+
+
 
     #region Task12
     //     12. На входе строка. Необходимо создать метод, возвращающий true, если это слово
