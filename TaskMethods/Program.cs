@@ -11,8 +11,8 @@
         // Task7();
         // Task8();
         // Task9();
-       // Task10();
-         Task11();
+        // Task10();
+        Task11();
         // Task12();
         // Task13();
         // Task14();
@@ -437,24 +437,28 @@
 
     #endregion
 
-#region Task11
-//11. На входе число. Необходимо создать метод, возвращающий факториал числа.
-//Пример фактериала 4! = 1 * 2 * 3 * 4
+    #region Task11
+    //11. На входе число. Необходимо создать метод, возвращающий факториал числа.
+    //Пример фактериала 4! = 1 * 2 * 3 * 4
 
-static void Task11()
-{
-    System.Console.WriteLine("Введите любое число,а мы посчитаем его факториал");
-    int number=Convert.ToInt32(Console.ReadLine());
-    System.Console.WriteLine($"факторил вашего числа {number} является {}");
-}
-static int FactorialCount(int number)
-{
-    int result=1;
-    for(int)
-}
+    static void Task11()
+    {
+        System.Console.WriteLine("Введите любое число,а мы посчитаем его факториал");
+        int number = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine($"факторил вашего числа {number} является {FactorialCount(number)}");
+    }
+    static int FactorialCount(int number)
+    {
+        int result = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            result = result * i;
+        }
+        return result;
+    }
 
 
-#endregion
+    #endregion
     #region Task12
     //     12. На входе строка. Необходимо создать метод, возвращающий true, если это слово
     // палиндром и false в противном случае
