@@ -14,8 +14,8 @@
         // Task10();
         // Task11();
         // Task12();
-        Task13();
-        // Task14();
+        // Task13();
+        Task14();
         // Task15();
 
     }
@@ -510,7 +510,7 @@
                     // string s = t.ToString();
                     // i = Array.IndexOf(checkResult, t);
                     // textCheck = textCheck.Remove(i, 1);
-                    vibe=false;
+                    vibe = false;
                 }
                 // else
                 // {
@@ -521,9 +521,65 @@
         return vibe;
     }
 
-
-
     #endregion
 
+    #region  Task14
+    // 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел
 
+    static void Task14()
+    {
+        System.Console.WriteLine("введите первое число");
+        // int firstNumber = Convert.ToInt32(Console.ReadLine());
+        int firstNumber=10;
+        System.Console.WriteLine("введите второе число");
+        // int SecondNumber = Convert.ToInt32(Console.ReadLine());
+        int SecondNumber=4;
+        System.Console.WriteLine(NOD(firstNumber, SecondNumber));
+
+    }
+
+    static int NOD(int firstNumber, int SecondNumber)
+    {
+        string result1 = "";
+        for (int i = 1; i <= firstNumber; i++)
+        {
+            if (firstNumber % i == 0)
+            {
+                result1 += i + ",";
+            }
+        }
+        string result2 = "";
+        for (int i = 1; i <= firstNumber; i++)
+        {
+            if (firstNumber % i == 0)
+            {
+                result2 += i + ",";
+            }
+        }
+        int NOD = 1;
+        if (result1.Length > result2.Length)
+        {
+            for (int i = 0; i < result2.Length; i++)
+            {
+                if (result2[i] == result1[i])
+                {
+                    NOD = NOD * result2[i];
+                }
+            }
+
+        }
+        else
+        {
+            for (int i = 0; i < result1.Length; i++)
+            {
+                if (result1[i] == result2[i])
+                {
+                    NOD = NOD * result1[i];
+                }
+            }
+
+        }
+        return NOD;
+    }
+    #endregion
 }
