@@ -50,7 +50,26 @@ namespace RefMethodsHomeWork
             string? userMail = Console.ReadLine();
             if (!string.IsNullOrEmpty(userMail))
             {
+                
+               System.Console.WriteLine(MailParser(out string domen));
 
+            }
+            else
+            {
+                System.Console.WriteLine("ERROR");
+            }
+        }
+        void MailParser(string userMail, out string domen)
+        {
+            string[] domenParse = { "@gmail", "@yandex", "@yahoo", "@outlook", "@protonmail", "@tut" };
+            userMail.ToLower();
+            foreach (string t in domenParse)
+            {
+                if (userMail.Contains(t))
+                {
+
+                    domen = userMail.Remove(userMail.IndexOf("."));
+                }
             }
         }
 
