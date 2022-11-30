@@ -12,9 +12,9 @@
         // Task8();
         // Task9();
         // Task10();
-        Task11();
+        // Task11();
         // Task12();
-        // Task13();
+        Task13();
         // Task14();
         // Task15();
 
@@ -484,6 +484,46 @@
     }
     #endregion
 
+
+    #region Task13
+    // На входе строка. Необходимо создать метод, возвращающий true, если это слово
+    // анаграмма и false в противном случае
+
+    static void Task13()
+    {
+        string text = "gohome";
+        string textCheck = "hogome";
+        System.Console.WriteLine(Anagramma(text, textCheck));
+
+    }
+    static bool Anagramma(string text, string textCheck)
+    {
+        bool vibe = true;
+        if (text.Length == textCheck.Length)
+        {
+            char[] checkResult = textCheck.ToCharArray();
+            int i = 0;
+            foreach (char t in text)
+            {
+                if (!textCheck.Contains(t))
+                {
+                    // string s = t.ToString();
+                    // i = Array.IndexOf(checkResult, t);
+                    // textCheck = textCheck.Remove(i, 1);
+                    vibe=false;
+                }
+                // else
+                // {
+                //     vibe = false;
+                // }
+            }
+        }
+        return vibe;
+    }
+
+
+
+    #endregion
 
 
 }
