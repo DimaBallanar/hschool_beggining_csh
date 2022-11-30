@@ -48,8 +48,8 @@ namespace RefMethodsHomeWork
         static void Task2()
         {
             System.Console.WriteLine("введите свою почту");
-            // string? userMail = Console.ReadLine();
-            string userMail = "frwe@gmail.by";
+            string? userMail = Console.ReadLine();
+            // string userMail = "frwe@gmail.by";
 
             if (!string.IsNullOrEmpty(userMail))
             {
@@ -71,8 +71,25 @@ namespace RefMethodsHomeWork
             {
                 if (userMail.Contains(domenParse[i]))
                 {
-                    domen = userMail.Remove(0,userMail.LastIndexOf("@"));
-                    return;
+                    int countMark = 0;
+                    string checkValue = userMail.Remove(0, userMail.LastIndexOf("@"));
+                    foreach (char c in checkValue)
+                    {
+                        if (c == '.')
+                        {
+                            countMark++;
+                        }
+                    }
+                    if (countMark == 1)
+                    {
+                        domen = userMail.Remove(0, userMail.LastIndexOf("@"));
+                        return;
+                    }
+                    else
+                    {
+                        domen = "не почта";
+                        return;
+                    }
                 }
 
             }
