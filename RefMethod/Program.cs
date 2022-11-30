@@ -8,8 +8,8 @@ namespace RefMethodsHomeWork
         {
             // Task1();
             // Task2();
-            Task3();
-            // Task4();
+            // Task3();
+            Task4();
             // Task5();
             // Task6();
             // Task7();
@@ -139,6 +139,39 @@ namespace RefMethodsHomeWork
         #region Task4
         // 4. Написать метод выполняющий сложение парметов, если параметры одного типа
         // данных возвращать true и результат сложение, в противном случае false (out)
+
+        static void Task4()
+        {
+            System.Console.WriteLine("input some info");
+            // object? userInfo1 = Console.ReadLine();
+            object? userInfo1 = 12331;
+            System.Console.WriteLine("input some info");
+            // object? userInfo2 = Console.ReadLine();
+             object? userInfo2 = 331;
+            object result;
+            System.Console.WriteLine($"{CheckType(userInfo1, userInfo2, out result)}, {result}");
+
+
+        }
+        static bool CheckType(object userInfo1, object userInfo2, out object result)
+        {
+            if (userInfo1.GetType == userInfo2.GetType)
+            {
+                if (userInfo1 is int)
+                {
+                    result = Convert.ToInt32(userInfo1) + Convert.ToInt32(userInfo2);
+                    return true;
+                }
+                else if (userInfo1 is string)
+                {
+                    result = Convert.ToString(userInfo1) + Convert.ToString(userInfo2);
+                    return true;
+                }
+            }
+            result = false;
+            return false;
+        }
+
 
 
 
