@@ -462,26 +462,26 @@
     #region Task12
     //     12. На входе строка. Необходимо создать метод, возвращающий true, если это слово
     // палиндром и false в противном случае
-    // static void Task12()
-    // {
-    //     System.Console.WriteLine("введите слово");
-    //     string? userText = Console.ReadLine();
-    //     if (!string.IsNullOrWhiteSpace(userText))
-    //     {
-    //         System.Console.WriteLine(Palindrom(userText));
-    //     }
-    // }
-    // static bool Palindrom(string userText)
-    // {
-    //     for (int i = 0; i < userText.Length; i++)
-    //     {
-    //         if (userText[i] != userText[userText.Length - 1 - i])
-    //         {
-    //             return false;
-    //         }
-    //     }
-    //     return true;
-    // }
+    static void Task12()
+    {
+        System.Console.WriteLine("введите слово");
+        string? userText = Console.ReadLine();
+        if (!string.IsNullOrWhiteSpace(userText))
+        {
+            System.Console.WriteLine(Palindrom(userText));
+        }
+    }
+    static bool Palindrom(string userText)
+    {
+        for (int i = 0; i < userText.Length; i++)
+        {
+            if (userText[i] != userText[userText.Length - 1 - i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     #endregion
 
 
