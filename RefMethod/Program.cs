@@ -71,7 +71,7 @@ namespace RefMethodsHomeWork
             {
                 if (userMail.Contains(domenParse[i]))
                 {
-                    domen = userMail.Remove(userMail.IndexOf("."));
+                    domen = userMail.Remove(0,userMail.LastIndexOf("@"));
                     return;
                 }
 
