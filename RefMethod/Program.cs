@@ -44,14 +44,18 @@ namespace RefMethodsHomeWork
         #region Task2();
         //         2. Написать метод, который проверяет является ли введнная строка почтовым
         // адрессом и возвращающий домен почты.(out)
+
         static void Task2()
         {
             System.Console.WriteLine("введите свою почту");
-            string? userMail = Console.ReadLine();
+            // string? userMail = Console.ReadLine();
+            string userMail = "frwe@gmail.by";
+
             if (!string.IsNullOrEmpty(userMail))
             {
-                
-               System.Console.WriteLine(MailParser(out string domen));
+                string result;
+                MailParser(userMail, out result);
+                System.Console.WriteLine(result);
 
             }
             else
@@ -59,18 +63,21 @@ namespace RefMethodsHomeWork
                 System.Console.WriteLine("ERROR");
             }
         }
-        void MailParser(string userMail, out string domen)
+        static void MailParser(string userMail, out string domen)
         {
             string[] domenParse = { "@gmail", "@yandex", "@yahoo", "@outlook", "@protonmail", "@tut" };
             userMail.ToLower();
-            foreach (string t in domenParse)
+            for (int i = 0; i < domenParse.Length; i++)
             {
-                if (userMail.Contains(t))
+                if (userMail.Contains(domenParse[i]))
                 {
-
                     domen = userMail.Remove(userMail.IndexOf("."));
+                    return;
                 }
+
             }
+            domen = "не почта";
+            return;
         }
 
         #endregion
