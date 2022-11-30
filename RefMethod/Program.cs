@@ -143,33 +143,44 @@ namespace RefMethodsHomeWork
         static void Task4()
         {
             System.Console.WriteLine("input some info");
-            // object? userInfo1 = Console.ReadLine();
-            object? userInfo1 = 12331;
+            object? userInfo1 = Console.ReadLine();
+            // object? userInfo1 = 12331;
             System.Console.WriteLine("input some info");
-            // object? userInfo2 = Console.ReadLine();
-             object? userInfo2 = 331;
+            object? userInfo2 = Console.ReadLine();
+            // object? userInfo2 = 331;
             object result;
-            System.Console.WriteLine($"{CheckType(userInfo1, userInfo2, out result)}, {result}");
+            bool sure;
+            CheckType(userInfo1, userInfo2, out sure, out result);
+            System.Console.WriteLine($"{sure},{result}");
 
 
         }
-        static bool CheckType(object userInfo1, object userInfo2, out object result)
+        static void CheckType(object userInfo1, object userInfo2, out bool sure, out object result)
         {
-            if (userInfo1.GetType == userInfo2.GetType)
+            sure = true;
+            if ((userInfo1 is int && userInfo2 is int) || (userInfo1 is string && userInfo2 is string))
             {
                 if (userInfo1 is int)
                 {
-                    result = Convert.ToInt32(userInfo1) + Convert.ToInt32(userInfo2);
-                    return true;
+                    int mySpace = 0;
+                    mySpace += Convert.ToInt32(userInfo1);
+                    mySpace += Convert.ToInt32(userInfo2);
+                    System.Console.WriteLine(mySpace);
+                    result = mySpace;
+                    return;
+
                 }
-                else if (userInfo1 is string)
+                if (userInfo1 is string)
                 {
                     result = Convert.ToString(userInfo1) + Convert.ToString(userInfo2);
-                    return true;
+                    return;
+
                 }
             }
-            result = false;
-            return false;
+            sure = false;
+            result = "";
+            return;
+
         }
 
 
