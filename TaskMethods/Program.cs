@@ -590,11 +590,10 @@
     {
         object[] array16 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F" };
         object[] array2 = { 0, 1 };
+        System.Console.WriteLine("введите число");
         int number = Convert.ToInt32(Console.ReadLine());
         System.Console.WriteLine(MetrhodConvertNumberic(number, array16));
         System.Console.WriteLine(MetrhodConvertNumberic(number, array2));
-
-
     }
     static string MetrhodConvertNumberic(int number, object[] array)
     {
