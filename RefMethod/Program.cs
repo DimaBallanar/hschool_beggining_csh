@@ -206,7 +206,7 @@ namespace RefMethodsHomeWork
             if (userText.Contains(userSplit))
             {
                 splitter = true;
-                result = userText.Replace("userSplit", "userSplit  ");
+                result = userText.Replace(userSplit, $"{userSplit} ");
             }
             else
             {
