@@ -9,8 +9,8 @@ namespace RefMethodsHomeWork
             // Task1();
             // Task2();
             // Task3();
-            Task4();
-            // Task5();
+            // Task4();
+            Task5();
             // Task6();
             // Task7();
             // Task8();
@@ -183,16 +183,36 @@ namespace RefMethodsHomeWork
 
         }
 
-
-
-
         #endregion
 
         #region Task5
         // 5. Пользователь вводит строку и разделитель. Написать метод возвращающий
         // наличие в строке разделителя, если разделитель есть вернуть строку разбитую
         // данным разделителем (out)
-
+        static void Task5()
+        {
+            System.Console.WriteLine("введите строку");
+            string? userText = Console.ReadLine();
+            System.Console.WriteLine("введите разделитель");
+            string? userSplit = Console.ReadLine();
+            bool splitter;
+            string result;
+            SplitText(userText, userSplit, out splitter, out result);
+            System.Console.WriteLine($"{splitter}, {result}");
+        }
+        static void SplitText(string userText, string userSplit, out bool splitter, out string result)
+        {
+            splitter = false;
+            if (userText.Contains(userSplit))
+            {
+                splitter = true;
+                result = userText.Replace("userSplit", "userSplit  ");
+            }
+            else
+            {
+                result = userText;
+            }
+        }
 
 
         #endregion
