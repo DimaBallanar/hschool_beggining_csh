@@ -15,8 +15,8 @@
         // Task11();
         // Task12();
         // Task13();
-        Task14();
-        // Task15();
+        // Task14();
+        Task15();
 
     }
 
@@ -530,10 +530,10 @@
     {
         System.Console.WriteLine("введите первое число");
         // int firstNumber = Convert.ToInt32(Console.ReadLine());
-        int firstNumber=10;
+        int firstNumber = 10;
         System.Console.WriteLine("введите второе число");
         // int SecondNumber = Convert.ToInt32(Console.ReadLine());
-        int SecondNumber=4;
+        int SecondNumber = 4;
         System.Console.WriteLine(NOD(firstNumber, SecondNumber));
 
     }
@@ -580,6 +580,32 @@
 
         }
         return NOD;
+    }
+    #endregion
+
+
+    #region Task15
+
+    static void Task15()
+    {
+        object[] array16 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F" };
+        object[] array2 = { 0, 1 };
+        int number = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine(MetrhodConvertNumberic(number, array16));
+        System.Console.WriteLine(MetrhodConvertNumberic(number, array2));
+
+
+    }
+    static string MetrhodConvertNumberic(int number, object[] array)
+    {
+        string numberin = "";
+
+        while (number >= 1)
+        {
+            numberin += array[number % array.Length].ToString();
+            number /= array.Length;
+        }
+        return new string(numberin.Reverse().ToArray());
     }
     #endregion
 }
