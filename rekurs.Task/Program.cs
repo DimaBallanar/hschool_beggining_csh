@@ -47,7 +47,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             System.Console.WriteLine("введите натуральное число");
             int userNumber = Convert.ToInt32(Console.ReadLine());
             // int userNumber = 12;
-            System.Console.WriteLine(SummNumbers(userNumber));
+            if (userNumber > 0)
+                System.Console.WriteLine(SummNumbers(userNumber));
+            else
+                System.Console.WriteLine("error");
         }
         static int SummNumbers(int userNumber)
         {
@@ -67,7 +70,31 @@ namespace MyApp // Note: actual namespace depends on the project name.
         #region Task3
         // 3. Дано натуральное число больше 1 (вводится с клавиатуры). Выведите все простые
         // делители этого числа используя рекурсию 
-
+        static void Task3()
+        {
+            System.Console.WriteLine("введите число больше 1");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number > 1)
+            {
+                System.Console.WriteLine();
+            }
+            else
+            {
+                System.Console.WriteLine("ввели число ,меньше заданого по условию");
+            }
+        }
+        static int DivNumbers(int number)
+        {
+            int result=1;
+            for(int i=2;i<=number;i++)
+            {
+                if(number%i==0)
+                {
+                    result*=i;
+                }
+            }
+            return result*DivNumbers(number)
+        }
         #endregion
 
 
