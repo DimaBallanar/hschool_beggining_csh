@@ -268,12 +268,12 @@ namespace RefMethodsHomeWork
         static void Task7()
         {
             System.Console.WriteLine("введите строку чисел");
-            // string? userNumbers = Console.ReadLine();
-            string userNumbers = "10101001010";
+            string? userNumbers = Console.ReadLine();
+            // string userNumbers = "11001";
             Result(userNumbers, out int number, out bool type);
             if (type)
             {
-                System.Console.WriteLine(number);
+                System.Console.WriteLine($"{type},{number}");
             }
             else
             {
@@ -286,10 +286,10 @@ namespace RefMethodsHomeWork
         {
             type = true;
             string tryResult = "";
-            System.Console.WriteLine(Convert.ToInt32(userNumbers));
+
             for (int i = 0; i < userNumbers.Length; i++)
             {
-                if (Convert.ToInt32(userNumbers[i]) == 0 || Convert.ToInt32(userNumbers[i]) == 1)
+                if (userNumbers[i] == '0' || userNumbers[i] == '1')
                 {
                     tryResult += userNumbers[i];
                 }
@@ -307,7 +307,7 @@ namespace RefMethodsHomeWork
             {
                 number = 0;
             }
-            System.Console.WriteLine(number);
+            // System.Console.WriteLine(number);
         }
 
         #endregion
