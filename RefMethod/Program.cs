@@ -268,7 +268,8 @@ namespace RefMethodsHomeWork
         static void Task7()
         {
             System.Console.WriteLine("введите строку чисел");
-            string? userNumbers = Console.ReadLine();
+            // string? userNumbers = Console.ReadLine();
+            string userNumbers = "10101001010";
             Result(userNumbers, out int number, out bool type);
             if (type)
             {
@@ -285,11 +286,12 @@ namespace RefMethodsHomeWork
         {
             type = true;
             string tryResult = "";
-            foreach (char user in userNumbers)
+            System.Console.WriteLine(Convert.ToInt32(userNumbers));
+            for (int i = 0; i < userNumbers.Length; i++)
             {
-                if (user == 0 || user == 1)
+                if (Convert.ToInt32(userNumbers[i]) == 0 || Convert.ToInt32(userNumbers[i]) == 1)
                 {
-                    tryResult += user;
+                    tryResult += userNumbers[i];
                 }
                 else
                 {
@@ -305,7 +307,7 @@ namespace RefMethodsHomeWork
             {
                 number = 0;
             }
-
+            System.Console.WriteLine(number);
         }
 
         #endregion
