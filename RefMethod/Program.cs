@@ -11,8 +11,8 @@ namespace RefMethodsHomeWork
             // Task3();
             // Task4();
             // Task5();
-            Task6();
-            // Task7();
+            // Task6();
+            Task7();
             // Task8();
         }
         #region Task1
@@ -265,7 +265,48 @@ namespace RefMethodsHomeWork
         // 7. Написать метод который принимает строку, если строка содержит только 0 и 1
         // вернуть true, а 0 и 1 перевести в 10-ную систему счисления, в противном случае
         // false (out)
+        static void Task7()
+        {
+            System.Console.WriteLine("введите строку чисел");
+            string? userNumbers = Console.ReadLine();
+            Result(userNumbers, out int number, out bool type);
+            if (type)
+            {
+                System.Console.WriteLine(number);
+            }
+            else
+            {
+                System.Console.WriteLine(type);
+            }
 
+
+        }
+        static void Result(string userNumbers, out int number, out bool type)
+        {
+            type = true;
+            string tryResult = "";
+            foreach (char user in userNumbers)
+            {
+                if (user == 0 || user == 1)
+                {
+                    tryResult += user;
+                }
+                else
+                {
+                    type = false;
+                    break;
+                }
+            }
+            if (type)
+            {
+                number = Convert.ToInt32(tryResult, 2);
+            }
+            else
+            {
+                number = 0;
+            }
+
+        }
 
         #endregion
 
