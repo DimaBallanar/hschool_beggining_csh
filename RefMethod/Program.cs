@@ -221,30 +221,43 @@ namespace RefMethodsHomeWork
         // //6. Написать метод возвращающий разность между найбольшим и наименьшим
         // значением из списка. Результат разности возращать через out, метод для поиска
         // минимального и максимального написать с использованием params)
-static void Task6()
-{
-    System.Console.WriteLine("введите размер массива чисел");
-    int size=Convert.ToInt32(Console.ReadLine());
-    int[] massiv=new int[size];
-    for(int i=0;i<size;i++)
-    {
-        System.Console.WriteLine($"Введите {i} элемент массива");
-        massiv[i]=Convert.ToInt32(Console.ReadLine());
-    }
+        static void Task6()
+        {
+            System.Console.WriteLine("введите размер массива чисел");
+            int size = Convert.ToInt32(Console.ReadLine());
+            int[] massiv = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                System.Console.WriteLine($"Введите {i} элемент массива");
+                massiv[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Count(out int result, massiv);
+            System.Console.WriteLine(result);
+        }
+        static int Count(out int result, params int[] massiv)
+        {
+            int maxNum = massiv[0];
+            int minNum = massiv[0];
+            for (int i = 1; i < massiv.Length; i++)
+            {
+                if (maxNum < massiv[i])
+                {
+                    maxNum = massiv[i];
+                }
+            }
+            System.Console.WriteLine(maxNum);
+            for (int i = 1; i < massiv.Length; i++)
+            {
+                if (minNum > massiv[i])
+                {
+                    minNum = massiv[i];
+                }
 
-}
-static int Count(out int result,params int[] massiv )
-{
-  int maxNum=0;
-  int minNum=0;
-  for(int i=1;i<=massiv.Length;i++)
-  {
-    if(massiv[i-1]>massiv[i])
-    {
-
-    }
-  }
-}
+            }
+            System.Console.WriteLine(minNum);
+            result = maxNum - minNum;
+            return result;
+        }
 
         #endregion
 
