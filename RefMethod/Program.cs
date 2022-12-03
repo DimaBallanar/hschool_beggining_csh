@@ -12,8 +12,8 @@ namespace RefMethodsHomeWork
             // Task4();
             // Task5();
             // Task6();
-            Task7();
-            // Task8();
+            // Task7();
+            Task8();
         }
         #region Task1
         //         1. На входе дано три массива заполненных случайными числами. Написать метод 
@@ -314,7 +314,21 @@ namespace RefMethodsHomeWork
 
         #region Task8
         // 8. На входе метода набор 0 и 1 перевести в 16-ную систему счисления (params)
+        static void Task8()
+        {
+            Translate(1, 1, 0, 0, 1);
+        }
+        static void Translate(params int[] values)
+        {
+            string text = "";
+            for (int i = 0; i < values.Length; i++)
+            {
+                text += values[i];
+            }
+            string result = Convert.ToString(Convert.ToInt32(text, 2), 16);
+            System.Console.WriteLine(result);
 
+        }
 
         #endregion
 
