@@ -10,8 +10,8 @@ namespace RefMethodsHomeWork
             // Task2();
             // Task3();
             // Task4();
-            Task5();
-            // Task6();
+            // Task5();
+            Task6();
             // Task7();
             // Task8();
         }
@@ -221,7 +221,30 @@ namespace RefMethodsHomeWork
         // //6. Написать метод возвращающий разность между найбольшим и наименьшим
         // значением из списка. Результат разности возращать через out, метод для поиска
         // минимального и максимального написать с использованием params)
+static void Task6()
+{
+    System.Console.WriteLine("введите размер массива чисел");
+    int size=Convert.ToInt32(Console.ReadLine());
+    int[] massiv=new int[size];
+    for(int i=0;i<size;i++)
+    {
+        System.Console.WriteLine($"Введите {i} элемент массива");
+        massiv[i]=Convert.ToInt32(Console.ReadLine());
+    }
 
+}
+static int Count(out int result,params int[] massiv )
+{
+  int maxNum=0;
+  int minNum=0;
+  for(int i=1;i<=massiv.Length;i++)
+  {
+    if(massiv[i-1]>massiv[i])
+    {
+
+    }
+  }
+}
 
         #endregion
 
