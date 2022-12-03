@@ -74,26 +74,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             System.Console.WriteLine("введите число больше 1");
             int number = Convert.ToInt32(Console.ReadLine());
+            int result = 0;
             if (number > 1)
             {
-                System.Console.WriteLine();
+                System.Console.WriteLine(DivNumbers(number, ref result));
             }
             else
             {
                 System.Console.WriteLine("ввели число ,меньше заданого по условию");
             }
         }
-        static int DivNumbers(int number)
+        static int DivNumbers(int number, ref int result)
         {
-            int result=1;
-            for(int i=2;i<=number;i++)
+            result += 1;
+            if (number % result == 0 && number >= result)
             {
-                if(number%i==0)
-                {
-                    result*=i;
-                }
+                System.Console.WriteLine(result);
+
+                return DivNumbers(number, ref result);
             }
-            return result*DivNumbers(number)
+
+            return number;
         }
         #endregion
 
