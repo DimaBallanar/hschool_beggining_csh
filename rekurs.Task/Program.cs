@@ -87,14 +87,21 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static int DivNumbers(int number, ref int result)
         {
             result += 1;
-            if (number % result == 0 && number >= result)
+            if (number % result == 0 && number/2 >= result)
             {
                 System.Console.WriteLine(result);
 
                 return DivNumbers(number, ref result);
             }
+            result += 1;
+            if (number % result == 0 && number/2 >= result)
+            {
+                System.Console.WriteLine(result);
 
-            return number;
+                return DivNumbers(number, ref result);
+            }
+            else 
+                        return number;
         }
         #endregion
 
