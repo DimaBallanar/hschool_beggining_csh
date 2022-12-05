@@ -6,6 +6,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
+            // Task1();
+            // Task2();
+            // Task3();
+            Task4();
+        }
+        #region Task1
+
+
+        static void Task1()
+        {
             int number1;
             number1 = 5;
             int number2 = 13;
@@ -31,67 +41,70 @@ namespace MyApp // Note: actual namespace depends on the project name.
             "/" => MethodDivision(number1, number2).ToString(),
             _ => string.Format("No resultations {0}", opr)
         };
-    }
+        #endregion
 
 
-    #region Task2
-    // 2. Написать метод по рассчету средней скорости на участке и выводе сообщения
-    // превысил водитель скорость или нет. Метод должен принимать во сколько
-    // водитель въехал в участок контроля скорости и время во сколько выехал из
-    // участка, в виде HH:MM:SS, длинну учатска контроля скорости и среднюю
-    // допустимую скорость участка
-    // В задаче использовать необязательные парметры, локальные методы
 
-    #endregion
+        #region Task2
+        // 2. Написать метод по рассчету средней скорости на участке и выводе сообщения
+        // превысил водитель скорость или нет. Метод должен принимать во сколько
+        // водитель въехал в участок контроля скорости и время во сколько выехал из
+        // участка, в виде HH:MM:SS, длинну учатска контроля скорости и среднюю
+        // допустимую скорость участка
+        // В задаче использовать необязательные парметры, локальные методы
 
-    #region  Task3
-    // 3. Написать метод увеличению размера массива и заполнения его значениями
-    // В задаче использовать необязательные парметры, локальные методы.
+        #endregion
 
-
-    #endregion
+        #region  Task3
+        // 3. Написать метод увеличению размера массива и заполнения его значениями
+        // В задаче использовать необязательные парметры, локальные методы.
 
 
-    #region  Task4
-    // 4. Написать метод по расчету корней квадратного уравнения с использованием
-    // локального метода 
-
-    static void Korni()
-    {
-        System.Console.WriteLine(" у нас есть квадратное уравнение вида ax^2+bx+с=0");
-        System.Console.WriteLine("введите значение a:");
-        int a = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine("введите значение b:");
-        int b = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine("введите значение c:");
-        int c = Convert.ToInt32(Console.ReadLine());
-        SolveProblem(out int x1, out int x2, out string result);
+        #endregion
 
 
-    }
-    static string SolveProblem(int a, int b, int c, out double x1, out double x2, out string result)
-    {
-        double discriminant = b * b - 4 * a * c;
-        if (discriminant < 0)
+        #region  Task4
+        // 4. Написать метод по расчету корней квадратного уравнения с использованием
+        // локального метода 
+
+        static void Task4()
         {
-            result = "нет корней";
+            System.Console.WriteLine(" у нас есть квадратное уравнение вида ax^2+bx+с=0");
+            System.Console.WriteLine("введите значение a:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("введите значение b:");
+            int b = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("введите значение c:");
+            int c = Convert.ToInt32(Console.ReadLine());
+            SolveProblem(a, b, c, out double x1, out double x2, out string result);
+
+
         }
-        else
+        static string SolveProblem(int a, int b, int c, out double x1, out double x2, out string result)
         {
-            Roots(a, b, c, out x1, out x2);
-            if (x1 == x2)
+            double discriminant = b * b - 4 * a * c;
+            if (discriminant < 0)
             {
+                result = "нет корней";
+            }
+            else
+            {
+                Roots(a, b, c, out x1, out x2);
+                if (x1 == x2)
+                {
+
+                }
+            }
+            void Roots(int a, int b, int c, out double x1, out double x2)
+            {
+                x1 = ((-b + Math.Sqrt(discriminant)) / (2 * a));
+                x2 = ((-b - Math.Sqrt(discriminant)) / (2 * a));
 
             }
-        }
-        void Roots(int a, int b, int c, out double x1, out double x2)
-        {
-            x1 = ((-b + Math.Sqrt(discriminant)) / (2 * a));
-            x2 = ((-b - Math.Sqrt(discriminant)) / (2 * a));
 
         }
 
+
+        #endregion
     }
-
 }
-#endregion
