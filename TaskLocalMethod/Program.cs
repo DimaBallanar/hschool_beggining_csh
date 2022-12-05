@@ -77,7 +77,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             System.Console.WriteLine("введите значение c:");
             int c = Convert.ToInt32(Console.ReadLine());
             SolveProblem(a, b, c, out double x1, out double x2, out string result);
-            System.Console.WriteLine(result, x1, x2);
+            // System.Console.WriteLine(result, x1, x2);
 
         }
         static void SolveProblem(int a, int b, int c, out double x1, out double x2, out string result)
@@ -87,6 +87,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 result = "нет корней";
                 x1 = x2 = 0;
+                System.Console.WriteLine($"{result}");
 
             }
             else
@@ -95,10 +96,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 result = "";
                 if (x1 == x2)
                 {
-                    System.Console.WriteLine($"{result}{x1}");
+                    result = "один корень";
+                    System.Console.WriteLine($"{result}:{x1}");
                 }
                 else
                 {
+                    result = "два корня";
                     System.Console.WriteLine($"{result}: x1={x1}, x2={x2}");
 
                 }
