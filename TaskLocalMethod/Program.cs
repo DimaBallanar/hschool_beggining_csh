@@ -60,19 +60,31 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         System.Console.WriteLine(" у нас есть квадратное уравнение вида ax^2+bx+с=0");
         System.Console.WriteLine("введите значение a:");
-        int a=Convert.ToInt32(Console.ReadLine());
+        int a = Convert.ToInt32(Console.ReadLine());
         System.Console.WriteLine("введите значение b:");
-        int b=Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
         System.Console.WriteLine("введите значение c:");
-        int c=Convert.ToInt32(Console.ReadLine());
-Solve
+        int c = Convert.ToInt32(Console.ReadLine());
+        SolveProblem(out int x1, out int x2, out string result)
 
 
     }
-static void SolveProblem(int a, int b, int c, out int x1, out int x2, out string result)
-{
+    static void SolveProblem(int a, int b, int c, out int x1, out int x2, out string result)
+    {
+        int discriminant = b * b - 4 * a * c;
+        if (discriminant < 0)
+        {
+            result = "нет корней";
+        }
+        else
+        {
+            Roots(a, b, c, out x1, out x2);
+        }
+        static int Roots(int a, int b, int c, out int x1, out int x2)
+        {
 
-}
+        }
+    }
 
 }
 #endregion
