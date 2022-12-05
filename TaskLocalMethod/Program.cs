@@ -54,7 +54,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 #region  Task4
 // 4. Написать метод по расчету корней квадратного уравнения с использованием
-// локального метода
+// локального метода 
+static void Korni()
+{
+    System.Console.WriteLine(" у нас есть квадратное уравнение вида ax^2+bx+с=0");
+}
 
 
 
