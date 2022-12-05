@@ -65,13 +65,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
         int b = Convert.ToInt32(Console.ReadLine());
         System.Console.WriteLine("введите значение c:");
         int c = Convert.ToInt32(Console.ReadLine());
-        SolveProblem(out int x1, out int x2, out string result)
+        SolveProblem(out int x1, out int x2, out string result);
 
 
     }
-    static void SolveProblem(int a, int b, int c, out int x1, out int x2, out string result)
+    static string SolveProblem(int a, int b, int c, out double x1, out double x2, out string result)
     {
-        int discriminant = b * b - 4 * a * c;
+        double discriminant = b * b - 4 * a * c;
         if (discriminant < 0)
         {
             result = "нет корней";
@@ -79,11 +79,18 @@ namespace MyApp // Note: actual namespace depends on the project name.
         else
         {
             Roots(a, b, c, out x1, out x2);
+            if (x1 == x2)
+            {
+
+            }
         }
-        static int Roots(int a, int b, int c, out int x1, out int x2)
+        void Roots(int a, int b, int c, out double x1, out double x2)
         {
+            x1 = ((-b + Math.Sqrt(discriminant)) / (2 * a));
+            x2 = ((-b - Math.Sqrt(discriminant)) / (2 * a));
 
         }
+
     }
 
 }
