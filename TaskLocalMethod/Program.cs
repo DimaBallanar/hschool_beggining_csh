@@ -77,21 +77,29 @@ namespace MyApp // Note: actual namespace depends on the project name.
             System.Console.WriteLine("введите значение c:");
             int c = Convert.ToInt32(Console.ReadLine());
             SolveProblem(a, b, c, out double x1, out double x2, out string result);
-
+            System.Console.WriteLine(result, x1, x2);
 
         }
-        static string SolveProblem(int a, int b, int c, out double x1, out double x2, out string result)
+        static void SolveProblem(int a, int b, int c, out double x1, out double x2, out string result)
         {
             double discriminant = b * b - 4 * a * c;
             if (discriminant < 0)
             {
                 result = "нет корней";
+                x1 = x2 = 0;
+
             }
             else
             {
                 Roots(a, b, c, out x1, out x2);
+                result = "";
                 if (x1 == x2)
                 {
+                    System.Console.WriteLine($"{result}{x1}");
+                }
+                else
+                {
+                    System.Console.WriteLine($"{result}: x1={x1}, x2={x2}");
 
                 }
             }
