@@ -64,20 +64,30 @@ namespace MyApp // Note: actual namespace depends on the project name.
             object[] dataMassiv = { 12, "stroker", 'i' };
             System.Console.WriteLine("на сколько хотите увеличить массив?");
             int p = Convert.ToInt32(Console.ReadLine());
-        }
-        static void ParamMassiv(int p)
-        {
-            if (p == 1)
+
+            void ParamMassiv(int p, object[] dataMassiv)
             {
+                if (p == 1)
+                {
+
+                }
+                else
+                {
+
+                }
+                object[] ResultMassiv(int p, object[] dataMassiv)
+                {
+                    object[] newMass = new object[dataMassiv.Length + p];
+                    Array.Copy(dataMassiv, newMass, dataMassiv.Length);
+                    System.Console.WriteLine("добавьте  значение в Ваш массив");
+                    for (int i = dataMassiv.Length; i < dataMassiv.Length + p; i++)
+                    {
+                        newMass[dataMassiv.Length] = Console.ReadLine();
+                    }
+                }
 
             }
-            else
-            {
-
-            }
-
         }
-
         #endregion
 
 
