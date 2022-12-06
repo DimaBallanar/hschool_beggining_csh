@@ -8,7 +8,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             // Task1();
             // Task2();
-            // Task3();
+            Task3();
             // Task4();
         }
         #region Task1
@@ -64,26 +64,24 @@ namespace MyApp // Note: actual namespace depends on the project name.
             object[] dataMassiv = { 12, "stroker", 'i' };
             System.Console.WriteLine("на сколько хотите увеличить массив?");
             int p = Convert.ToInt32(Console.ReadLine());
-
-            void ParamMassiv(int p, object[] dataMassiv)
+            ParamMassiv(p, ref dataMassiv);
+            System.Console.WriteLine(string.Join(",", dataMassiv));
+            void ParamMassiv(int p, ref object[] dataMassiv)
             {
-                if (p == 1)
-                {
+                ResultMassiv(p, ref dataMassiv);
 
-                }
-                else
-                {
-
-                }
-                object[] ResultMassiv(int p, object[] dataMassiv)
+                object[] ResultMassiv(int p, ref object[] dataMassiv)
                 {
                     object[] newMass = new object[dataMassiv.Length + p];
                     Array.Copy(dataMassiv, newMass, dataMassiv.Length);
-                    System.Console.WriteLine("добавьте  значение в Ваш массив");
+
                     for (int i = dataMassiv.Length; i < dataMassiv.Length + p; i++)
                     {
-                        newMass[dataMassiv.Length] = Console.ReadLine();
+                        System.Console.WriteLine("добавьте  значение в Ваш массив");
+                        newMass[dataMassiv.Length] =Convert.ToString(Console.ReadLine());
                     }
+                    dataMassiv = newMass;
+                    return dataMassiv;
                 }
 
             }
