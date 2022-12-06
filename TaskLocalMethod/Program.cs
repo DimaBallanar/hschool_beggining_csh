@@ -7,8 +7,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             // Task1();
-            // Task2();
-            Task3();
+            Task2();
+            // Task3();
             // Task4();
         }
         #region Task1
@@ -52,10 +52,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // участка, в виде HH:MM:SS, длинну учатска контроля скорости и среднюю
         // допустимую скорость участка
         // В задаче использовать необязательные парметры, локальные методы
+        static void Task2()
+        {
 
+        }
         #endregion
 
         #region  Task3
+
         // 3. Написать метод увеличению размера массива и заполнения его значениями
         // В задаче использовать необязательные парметры, локальные методы.
         static void Task3()
