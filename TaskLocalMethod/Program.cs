@@ -66,19 +66,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int p = Convert.ToInt32(Console.ReadLine());
             ParamMassiv(p, ref dataMassiv);
             System.Console.WriteLine(string.Join(",", dataMassiv));
-            void ParamMassiv(int p, ref object[] dataMassiv)
+            void ParamMassiv(int p, ref object[] dataMassiv, int g = 3)
             {
                 ResultMassiv(p, ref dataMassiv);
 
                 object[] ResultMassiv(int p, ref object[] dataMassiv)
                 {
-                    object[] newMass = new object[dataMassiv.Length + p];
-                    Array.Copy(dataMassiv, newMass, dataMassiv.Length);
+                    object[] newMass = new object[g + p];
+                    Array.Copy(dataMassiv, newMass, g);
 
-                    for (int i = dataMassiv.Length; i < dataMassiv.Length + p; i++)
+                    for (int i = g; i < g + p; i++)
                     {
                         System.Console.WriteLine("добавьте  значение в Ваш массив");
-                        newMass[dataMassiv.Length] =Convert.ToString(Console.ReadLine());
+                        newMass[g] = Convert.ToString(Console.ReadLine());
                     }
                     dataMassiv = newMass;
                     return dataMassiv;
