@@ -54,7 +54,20 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // В задаче использовать необязательные парметры, локальные методы
         static void Task2()
         {
+            System.Console.WriteLine("введите во сколько водитель вьехал на участок в формате HH:MM:SS");
+            string? timeInput = Console.ReadLine();
+            System.Console.WriteLine("введите во сколько водитель выехал с участка в формате HH:MM:SS");
+            string? timeOutput = Console.ReadLine();
 
+
+        }
+        static string Result(string timeInput, string timeOutput, int distance = 10000, int normalSpeed = 25)
+        {
+
+            int TimeCount(ref string time)
+            {
+
+            }
         }
         #endregion
 
