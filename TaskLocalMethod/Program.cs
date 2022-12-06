@@ -9,7 +9,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // Task1();
             // Task2();
             // Task3();
-            Task4();
+            // Task4();
         }
         #region Task1
 
@@ -58,7 +58,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
         #region  Task3
         // 3. Написать метод увеличению размера массива и заполнения его значениями
         // В задаче использовать необязательные парметры, локальные методы.
-
+static void Task3()
+{
+    System.Console.WriteLine("есть массив ,который состоит из (12,stroker,i)");
+    object[] dataMassiv={12,"stroker",'i'};
+}
 
         #endregion
 
