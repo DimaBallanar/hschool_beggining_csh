@@ -331,8 +331,6 @@ namespace RefMethodsHomeWork
         }
 
         #endregion
-
-
     }
 }
 
