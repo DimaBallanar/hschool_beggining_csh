@@ -58,21 +58,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
             string? timeInput = Console.ReadLine();
             System.Console.WriteLine("введите во сколько водитель выехал с участка в формате HH:MM:SS");
             string? timeOutput = Console.ReadLine();
-            
-            System.Console.WriteLine(Result(timeInput,timeOutput));
+
+            System.Console.WriteLine(Result(timeInput, timeOutput));
 
         }
         static string Result(string timeInput, string timeOutput, int distance = 10000, int normalSpeed = 25, int mass = 3)
         {
-            int speedUser = distance / (TimeCount(timeOutput) - TimeCount(timeInput));
+            double speedUser = distance / (TimeCount(timeOutput) - TimeCount(timeInput));
+            // System.Console.WriteLine(speedUser);
             if (speedUser > normalSpeed)
             {
-                string result = "водитель не превысил скорость";
+                double speedCount = (speedUser - normalSpeed) * 3600 / 1000;
+                string result = $"водитель превысил скорость на {speedCount} км/ч ";
                 return result;
             }
             else
             {
-                string result = "водитель  превысил скорость";
+                string result = "водитель не превысил скорость";
                 return result;
             }
 
