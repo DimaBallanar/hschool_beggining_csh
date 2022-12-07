@@ -11,8 +11,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // Task3();
             // Task4();
             // Task5();
-            Task6();
-            // Task7();
+            // Task6();
+            Task7();
         }
         #region Task1
         //     1. Написать метод, рассчитывающий число из ряда Фиббоначчи используя
@@ -198,7 +198,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Task6()
         {
             int num1 = 2;
-            int num2 = 99;
+            int num2 = 98;
             System.Console.WriteLine(KorteghMix(num1, num2));
         }
         static (int, int) KorteghMix(int number1, int number2)
@@ -220,7 +220,32 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // (подстроки). Метод возвращает символ (подстроку), количество вхождений, перое
         // и последнее вхождение в строку. (использовать IndexOf, LastIndexOf, Split и тд
         // запрещено)
-
+static void Task7()
+{
+    System.Console.WriteLine("введите любую строку");
+    string? userInfo=Convert.ToString(Console.ReadLine());
+    System.Console.WriteLine("введите вхождение");
+    string? userCheck=Convert.ToString(Console.ReadLine());
+    if(!string.IsNullOrEmpty(userInfo)&&!string.IsNullOrEmpty(userCheck))
+    {
+System.Console.WriteLine(CustomCount(userInfo,userCheck));
+    }
+    else
+    {
+        System.Console.WriteLine("Error");
+    }
+}
+static(string,int,int,int) CustomCount(string userStroker,string userCheck)
+{
+string showIt=userCheck;
+int count=0;
+int FirstIn=0;
+int LastInt=0;
+for(int i=0;i<userStroker.Length;i++)
+{
+    if()
+}
+}
 
         #endregion
 
