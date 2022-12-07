@@ -87,21 +87,21 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static int DivNumbers(int number, ref int result)
         {
             result += 1;
-            if (number % result == 0 && number/2 >= result)
+            if (number % result == 0 && number / 2 >= result)
             {
                 System.Console.WriteLine(result);
 
                 return DivNumbers(number, ref result);
             }
             result += 1;
-            if (number % result == 0 && number/2 >= result)
+            if (number % result == 0 && number / 2 >= result)
             {
                 System.Console.WriteLine(result);
 
                 return DivNumbers(number, ref result);
             }
-            else 
-                        return number;
+            else
+                return number;
         }
         #endregion
 
@@ -110,19 +110,24 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // 4. Дано натуральное число больше 1 (вводится с клавиатуры). Выведите «Точная
         // степень двойки», если число является точной степенью двойки, или «Не
         // являеться степенью двойки», в противном случае используя рекурсию.
-static void Task4()
-{
-    System.Console.WriteLine("введите натуральное число больше 1");
-    int usNum=Convert.ToInt32(Console.ReadLine());
-string FindTrue(int number)
-{
-    
-    if(number<=2) return "точная степень двойки";
-    number=number/2;
-        return FindTrue
-    )
-}
-}
+        static void Task4()
+        {
+            System.Console.WriteLine("введите натуральное число больше 1");
+            int usNum = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine(FindTrue(usNum));
+            string FindTrue(int number)
+            {
+                if (number >= 2)
+                {
+                    number = number / 2;
+                return FindTrue(number);
+                }
+                if (number == 1) return "точная степень двойки";
+                else return "Не является степенью двойки";
+
+                }
+            }
+        }
 
 
         #endregion
