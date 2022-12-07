@@ -113,8 +113,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Task4()
         {
             System.Console.WriteLine("введите натуральное число больше 1");
-            // int usNum = Convert.ToInt32(Console.ReadLine());
-            int usNum = 8;
+            int usNum = Convert.ToInt32(Console.ReadLine());
+            // int usNum = 8;
             System.Console.WriteLine(FindTrue(usNum));
             string FindTrue(int number)
             {
@@ -123,8 +123,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     number = number / 2;
                     return FindTrue(number);
                 }
+                else if (number == 1)
+                {
+                    return "точная степень двойки";
+                }
                 else return "Не является степенью двойки";
-
                 // if (number == 1) return "точная степень двойки";
                 // else return "Не является степенью двойки";
 
