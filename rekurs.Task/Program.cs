@@ -271,10 +271,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     }
 
                 }
+                else // придумать как подстроку искать в строке(ручная фильтрация)
+                {
+
+                }
             }
             else
             {
-                return (showIt, count, FirstIn, LastInt);
+                return (showIt, countIn, FirstIn, LastInt);
             }
         }
 
