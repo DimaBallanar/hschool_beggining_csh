@@ -110,6 +110,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // 4. Дано натуральное число больше 1 (вводится с клавиатуры). Выведите «Точная
         // степень двойки», если число является точной степенью двойки, или «Не
         // являеться степенью двойки», в противном случае используя рекурсию.
+static void Task4()
+{
+    System.Console.WriteLine("введите натуральное число больше 1");
+    int usNum=Convert.ToInt32(Console.ReadLine());
+string FindTrue(int number)
+{
+    
+    if(number<=2) return "точная степень двойки";
+    number=number/2;
+        return FindTrue
+    )
+}
+}
 
 
         #endregion
