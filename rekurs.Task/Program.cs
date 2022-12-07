@@ -220,32 +220,63 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // (подстроки). Метод возвращает символ (подстроку), количество вхождений, перое
         // и последнее вхождение в строку. (использовать IndexOf, LastIndexOf, Split и тд
         // запрещено)
-static void Task7()
-{
-    System.Console.WriteLine("введите любую строку");
-    string? userInfo=Convert.ToString(Console.ReadLine());
-    System.Console.WriteLine("введите вхождение");
-    string? userCheck=Convert.ToString(Console.ReadLine());
-    if(!string.IsNullOrEmpty(userInfo)&&!string.IsNullOrEmpty(userCheck))
-    {
-System.Console.WriteLine(CustomCount(userInfo,userCheck));
-    }
-    else
-    {
-        System.Console.WriteLine("Error");
-    }
-}
-static(string,int,int,int) CustomCount(string userStroker,string userCheck)
-{
-string showIt=userCheck;
-int count=0;
-int FirstIn=0;
-int LastInt=0;
-for(int i=0;i<userStroker.Length;i++)
-{
-    if()
-}
-}
+        static void Task7()
+        {
+            System.Console.WriteLine("введите любую строку");
+            string? userInfo = Convert.ToString(Console.ReadLine());
+            System.Console.WriteLine("введите вхождение");
+            string? userCheck = Convert.ToString(Console.ReadLine());
+            if (!string.IsNullOrEmpty(userInfo) && !string.IsNullOrEmpty(userCheck))
+            {
+                System.Console.WriteLine(CustomCount(userInfo, userCheck));
+            }
+            else
+            {
+                System.Console.WriteLine("Error");
+            }
+        }
+        static (string, int, int, int) CustomCount(string userStroker, string userCheck)
+        {
+            string showIt = userCheck;
+            int countIn = 0;
+            int FirstIn = 0;
+            int LastInt = 0;
+            int countOut = 0;
+            if (userCheck.Contains(userStroker))
+            {
+                if (userCheck.Length == 1)
+                {
+
+                    for (int i = 0; i < userStroker.Length; i++)
+                    {
+                        if (Convert.ToChar(userCheck) == userStroker[i])
+                        {
+                            countIn += 1;
+                            if (countIn == 1)
+                            {
+                                FirstIn = i;
+                            }
+                        }
+                    }
+                    for (int i = userStroker.Length; i > 0; i--)
+                    {
+                        if (Convert.ToChar(userCheck) == userStroker[i])
+                        {
+                            countOut += 1;
+                            if (countOut == 1)
+                            {
+                                LastInt = i;
+                            }
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                return (showIt, count, FirstIn, LastInt);
+            }
+        }
 
         #endregion
 
