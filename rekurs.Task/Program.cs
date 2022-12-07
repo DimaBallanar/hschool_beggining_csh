@@ -9,8 +9,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // Task1();
             // Task2();
             // Task3();
-            Task4();
-            // Task5();
+            // Task4();
+            Task5();
             // Task6();
             // Task7();
         }
@@ -130,11 +130,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 else return "Не является степенью двойки";
                 // if (number == 1) return "точная степень двойки";
                 // else return "Не является степенью двойки";
-
             }
-
         }
-
 
         #endregion
 
@@ -142,6 +139,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
         #region Task5
         // 5. Написать метод возвращающий индекс максимального и минимального
         // значения массива (два способа используя кортеж и out).
+        static void Task5()
+        {
+            int[] myMassiv=new int[]{1,2,-99,13,31,75,9};
+
+        }
+        static int OutFindMinMax(int[] massiv, out int indexMin, out int indexMax)
+        {
+            int minValue=massiv[0];
+            int maxValue=massiv[0];
+            for(int i=1;i<massiv.Length;i++)
+            {
+                if(massiv[i]<massiv[i-1])
+                {
+                    maxValue=massiv[i-1];
+                }
+                if(massiv[i-1]<massiv[i])
+                {
+                    minValue=massiv[i];
+                }
+            }
+        }
 
         #endregion
 
