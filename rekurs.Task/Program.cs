@@ -120,13 +120,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 if (number >= 2)
                 {
                     number = number / 2;
-                return FindTrue(number);
+                    return FindTrue(number);
                 }
                 if (number == 1) return "точная степень двойки";
                 else return "Не является степенью двойки";
 
-                }
             }
+
         }
 
 
