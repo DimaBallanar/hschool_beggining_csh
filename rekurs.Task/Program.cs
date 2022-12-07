@@ -8,8 +8,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             // Task1();
             // Task2();
-            Task3();
-            // Task4();
+            // Task3();
+            Task4();
             // Task5();
             // Task6();
             // Task7();
@@ -113,17 +113,20 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Task4()
         {
             System.Console.WriteLine("введите натуральное число больше 1");
-            int usNum = Convert.ToInt32(Console.ReadLine());
+            // int usNum = Convert.ToInt32(Console.ReadLine());
+            int usNum = 8;
             System.Console.WriteLine(FindTrue(usNum));
             string FindTrue(int number)
             {
-                if (number >= 2)
+                if (number % 2 == 0)
                 {
                     number = number / 2;
                     return FindTrue(number);
                 }
-                if (number == 1) return "точная степень двойки";
                 else return "Не является степенью двойки";
+
+                // if (number == 1) return "точная степень двойки";
+                // else return "Не является степенью двойки";
 
             }
 
