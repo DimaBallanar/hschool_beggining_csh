@@ -10,8 +10,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // Task2();
             // Task3();
             // Task4();
-            Task5();
-            // Task6();
+            // Task5();
+            Task6();
             // Task7();
         }
         #region Task1
@@ -193,9 +193,25 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         #region Task6
         // 6. На входе 2 числа, написать метод по замене местами чисел в переменных, если
-        // первое число кратно двум, второе не кратно и первое число меньше двух
+        // первое число кратно двум, второе не кратно двум и первое число меньше второго
         // (результат вернуть в виде кортежа)
-
+        static void Task6()
+        {
+            int num1 = 2;
+            int num2 = 99;
+            System.Console.WriteLine(KorteghMix(num1, num2));
+        }
+        static (int, int) KorteghMix(int number1, int number2)
+        {
+            int number3 = number1;
+            int number4 = number2;
+            if (number1 % 2 == 0 && number2 % 2 != 0 && number1 < number2)
+            {
+                number4 = number1;
+                number3 = number2;
+            }
+            return (number3, number4);
+        }
         #endregion
 
 
