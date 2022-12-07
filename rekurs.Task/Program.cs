@@ -141,24 +141,29 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // значения массива (два способа используя кортеж и out).
         static void Task5()
         {
-            int[] myMassiv=new int[]{1,2,-99,13,31,75,9};
-
+            int[] myMassiv = new int[] { 1, 2, -99, 13, 31, 75, 9 };
+            OutFindMinMax(myMassiv, out int indexMin, out int indexMax);
+            System.Console.WriteLine($"{indexMin},{indexMax}");
         }
         static int OutFindMinMax(int[] massiv, out int indexMin, out int indexMax)
         {
-            int minValue=massiv[0];
-            int maxValue=massiv[0];
-            for(int i=1;i<massiv.Length;i++)
+            int minValue = massiv[0];
+            int maxValue = massiv[0];
+            for (int i = 1; i < massiv.Length; i++)
             {
-                if(massiv[i]<massiv[i-1])
+                if (maxValue < massiv[i])
                 {
-                    maxValue=massiv[i-1];
+                    maxValue = massiv[i];
+                    indexMax = i - 1;
                 }
-                if(massiv[i-1]<massiv[i])
+                if (minValue > massiv[i])
                 {
-                    minValue=massiv[i];
+                    minValue = massiv[i];
+                    indexMin = i - 1;
                 }
             }
+            return OutFindMinMax(massiv, out indexMin, out indexMax);
+
         }
 
         #endregion
