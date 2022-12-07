@@ -143,27 +143,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             int[] myMassiv = new int[] { 1, 2, -99, 13, 31, 75, 9 };
             OutFindMinMax(myMassiv, out int indexMin, out int indexMax);
-            System.Console.WriteLine($"{indexMin},{indexMax}");
+            System.Console.WriteLine($"индекс минимального значения-{indexMin},индекс максимального значения-{indexMax}");
         }
-        static int OutFindMinMax(int[] massiv, out int indexMin, out int indexMax)
+        static void OutFindMinMax(int[] massiv, out int indexMin, out int indexMax)
         {
             int minValue = massiv[0];
+            indexMin = 0;
             int maxValue = massiv[0];
+            indexMax = 0;
             for (int i = 1; i < massiv.Length; i++)
             {
                 if (maxValue < massiv[i])
                 {
                     maxValue = massiv[i];
-                    indexMax = i - 1;
+                    indexMax = i + 1;
                 }
                 if (minValue > massiv[i])
                 {
                     minValue = massiv[i];
-                    indexMin = i - 1;
+                    indexMin = i + 1;
                 }
             }
-            return OutFindMinMax(massiv, out indexMin, out indexMax);
-
         }
 
         #endregion
