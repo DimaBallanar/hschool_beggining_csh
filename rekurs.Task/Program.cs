@@ -144,6 +144,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int[] myMassiv = new int[] { 1, 2, -99, 13, 31, 75, 9 };
             OutFindMinMax(myMassiv, out int indexMin, out int indexMax);
             System.Console.WriteLine($"индекс минимального значения-{indexMin},индекс максимального значения-{indexMax}");
+            System.Console.WriteLine(KorteghFound(myMassiv));
         }
         static void OutFindMinMax(int[] massiv, out int indexMin, out int indexMax)
         {
@@ -168,23 +169,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static (int, int) KorteghFound(int[] massiv)
         {
             int minValue = massiv[0];
-            int indexMin = 0;
+            int indexMinK = 0;
             int maxValue = massiv[0];
-            int indexMax = 0;
+            int indexMaxK = 0;
             for (int i = 1; i < massiv.Length; i++)
             {
                 if (maxValue < massiv[i])
                 {
                     maxValue = massiv[i];
-                    indexMax = i + 1;
+                    indexMaxK = i + 1;
                 }
                 if (minValue > massiv[i])
                 {
                     minValue = massiv[i];
-                    indexMin = i + 1;
+                    indexMinK = i + 1;
                 }
             }
-            return(indexMin,indexMax);
+            return (indexMinK, indexMaxK);
         }
 
         #endregion
