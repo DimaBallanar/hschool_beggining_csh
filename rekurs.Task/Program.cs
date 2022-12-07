@@ -165,6 +165,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
             }
         }
+        static (int, int) KorteghFound(int[] massiv)
+        {
+            int minValue = massiv[0];
+            int indexMin = 0;
+            int maxValue = massiv[0];
+            int indexMax = 0;
+            for (int i = 1; i < massiv.Length; i++)
+            {
+                if (maxValue < massiv[i])
+                {
+                    maxValue = massiv[i];
+                    indexMax = i + 1;
+                }
+                if (minValue > massiv[i])
+                {
+                    minValue = massiv[i];
+                    indexMin = i + 1;
+                }
+            }
+            return(indexMin,indexMax);
+        }
 
         #endregion
 
