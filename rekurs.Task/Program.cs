@@ -271,9 +271,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     }
 
                 }
-                else // придумать как подстроку искать в строке(ручная фильтрация)
+                else // придумать как подстроку искать в строке(ручная фильтрация) может рекурсия,так как не знаем глубину массива проверки
                 {
+                    for (int i = 0; i < userCheck.Length; i++)
+                    {
+                        for(int g=0;g<userStroker.Length;g++)
+                        {
+                            if(userCheck[i]==userStroker[g])
+                            {
 
+                            }
+                        }
+
+                    }
                 }
             }
             else
