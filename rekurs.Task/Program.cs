@@ -273,17 +273,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
                 else // придумать как подстроку искать в строке(ручная фильтрация) может рекурсия,так как не знаем глубину массива проверки
                 {
-                    for (int i = 0; i < userCheck.Length; i++)
-                    {
-                        for (int g = 0; g < userStroker.Length; g++)
-                        {
-                            if (userCheck[i] == userStroker[g])
-                            {
-
-                            }
-                        }
-
-                    }
+                    CheckRekurs(userStroker, userCheck);
                 }
             }
             else
@@ -291,21 +281,20 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 return (showIt, countIn, FirstIn, LastInt);
             }
         }
-        static string CheckRekurs(string text, string chekaem)
+        static string CheckRekurs(string text, string chekaem, int k = 0)
         {
-            int g=0;
+
             for (int i = 0; i < chekaem.Length; i++)
             {
-                for (g; g < text.Length; g++)
+                for (int g = 0; g < text.Length; g++)
                 {
                     if (chekaem[i] == text[g])
                     {
                         return CheckRekurs(text, chekaem);
                     }
-                    else 
+                    else
                     {
-                        g+=1;
-                        return CheckRekurs(text, chekaem);
+                        return CheckRekurs(text, chekaem, k + 1);
                     }
                 }
 
