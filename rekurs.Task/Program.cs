@@ -288,15 +288,20 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 for (int g = 0 + k; g < text.Length; g++)
                 {
-                    if (chekaem[i] == text[g])
+                    if (chekaem[i] == text[g]&&k<=text.Length)
                     {
                         i++;
                         g++;
                         return CheckRekurs(text, chekaem);
                     }
-
+                    else if(k<=text.Length)
+                    {
                     return CheckRekurs(text, chekaem, k + 1);
-
+                    }
+                   else
+                   {
+                    return "нет вхождений";
+                   }
                 }
 
             }
