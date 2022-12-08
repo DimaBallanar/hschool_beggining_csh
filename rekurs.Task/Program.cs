@@ -286,16 +286,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             for (int i = 0; i < chekaem.Length; i++)
             {
-                for (int g = 0; g < text.Length; g++)
+                for (int g = 0 + k; g < text.Length; g++)
                 {
                     if (chekaem[i] == text[g])
                     {
+                        i++;
+                        g++;
                         return CheckRekurs(text, chekaem);
                     }
-                    else
-                    {
-                        return CheckRekurs(text, chekaem, k + 1);
-                    }
+
+                    return CheckRekurs(text, chekaem, k + 1);
+
                 }
 
             }
