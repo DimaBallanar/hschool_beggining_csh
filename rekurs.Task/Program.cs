@@ -275,9 +275,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 {
                     for (int i = 0; i < userCheck.Length; i++)
                     {
-                        for(int g=0;g<userStroker.Length;g++)
+                        for (int g = 0; g < userStroker.Length; g++)
                         {
-                            if(userCheck[i]==userStroker[g])
+                            if (userCheck[i] == userStroker[g])
                             {
 
                             }
@@ -291,7 +291,26 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 return (showIt, countIn, FirstIn, LastInt);
             }
         }
+        static string CheckRekurs(string text, string chekaem)
+        {
+            int g=0;
+            for (int i = 0; i < chekaem.Length; i++)
+            {
+                for (g; g < text.Length; g++)
+                {
+                    if (chekaem[i] == text[g])
+                    {
+                        return CheckRekurs(text, chekaem);
+                    }
+                    else 
+                    {
+                        g+=1;
+                        return CheckRekurs(text, chekaem);
+                    }
+                }
 
+            }
+        }
         #endregion
 
     }
