@@ -8,11 +8,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             // Task1();
             // Task2();
-            // Task3();
+            Task3();
             // Task4();
             // Task5();
             // Task6();
-            Task7();
+            // Task7();
         }
         #region Task1
         //     1. Написать метод, рассчитывающий число из ряда Фиббоначчи используя
@@ -223,9 +223,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Task7()
         {
             System.Console.WriteLine("введите любую строку");
-            string? userInfo = Convert.ToString(Console.ReadLine());
+            // string? userInfo = Convert.ToString(Console.ReadLine());
+            string userInfo = "приPVOвет как деPVOла";
             System.Console.WriteLine("введите вхождение");
-            string? userCheck = Convert.ToString(Console.ReadLine());
+            // string? userCheck = Convert.ToString(Console.ReadLine());
+            string userCheck = "PVO";
             if (!string.IsNullOrEmpty(userInfo) && !string.IsNullOrEmpty(userCheck))
             {
                 System.Console.WriteLine(CustomCount(userInfo, userCheck));
@@ -235,76 +237,30 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 System.Console.WriteLine("Error");
             }
         }
-        static (string, int, int, int) CustomCount(string userStroker, string userCheck)
+        static (string, int, int, int) CustomCount(string text, string symbol)
         {
-            string showIt = userCheck;
-            int countIn = 0;
-            int FirstIn = 0;
-            int LastInt = 0;
-            int countOut = 0;
-            if (userCheck.Contains(userStroker))
+            int count = 0;
+            int indexFirst = -1;
+            int indexLast = -1;
+            int LengthSymbol = symbol.Length;
+            for (int i = 0; i <= text.Length - LengthSymbol; i++)
             {
-                if (userCheck.Length == 1)
+                string temp = "";
+                for (int j = i; j <= i + (LengthSymbol - 1); j++)
                 {
-
-                    for (int i = 0; i < userStroker.Length; i++)
-                    {
-                        if (Convert.ToChar(userCheck) == userStroker[i])
-                        {
-                            countIn += 1;
-                            if (countIn == 1)
-                            {
-                                FirstIn = i;
-                            }
-                        }
-                    }
-                    for (int i = userStroker.Length; i > 0; i--)
-                    {
-                        if (Convert.ToChar(userCheck) == userStroker[i])
-                        {
-                            countOut += 1;
-                            if (countOut == 1)
-                            {
-                                LastInt = i;
-                            }
-                        }
-                    }
-
+                    temp += text[j];
                 }
-                else // придумать как подстроку искать в строке(ручная фильтрация) может рекурсия,так как не знаем глубину массива проверки
+                if (temp == symbol)
                 {
-                    CheckRekurs(userStroker, userCheck);
+                    if (indexFirst == -1)
+                    {
+                        indexFirst = i;
+                    }
+                    indexLast = i;
+                    count++;
                 }
             }
-            else
-            {
-                return (showIt, countIn, FirstIn, LastInt);
-            }
-        }
-        static string CheckRekurs(string text, string chekaem, int k = 0)
-        {
-
-            for (int i = 0; i < chekaem.Length; i++)
-            {
-                for (int g = 0 + k; g < text.Length; g++)
-                {
-                    if (chekaem[i] == text[g]&&k<=text.Length)
-                    {
-                        i++;
-                        g++;
-                        return CheckRekurs(text, chekaem);
-                    }
-                    else if(k<=text.Length)
-                    {
-                    return CheckRekurs(text, chekaem, k + 1);
-                    }
-                   else
-                   {
-                    return "нет вхождений";
-                   }
-                }
-
-            }
+            return (symbol, count, indexFirst, indexLast);
         }
         #endregion
 
