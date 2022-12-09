@@ -170,22 +170,31 @@
 
 
 
-int x=1234;
-for(int i=0;i<Convert.ToString(x).Length;i++)
-{
-    if(Convert.ToString(x)[i]%2==0)
-    {
-        System.Console.WriteLine("четное");
-    }
-    else
-    {
-        System.Console.WriteLine("нечетное");
-    }
-}
+int x = 1234;
+char[] mas=x.ToString().ToCharArray();
+System.Console.WriteLine(string.Join(",",mas));
+// for (int i = 0; i < Convert.ToString(x).Length; i++)
+// {
+//     if (Convert.ToString(x)[i] % 2 == 0)
+//     {
+//         System.Console.WriteLine(x.ToString()[i]);
+//         System.Console.WriteLine("четное");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("нечетное");
+//     }
+// }
 
-foreach(int h in Convert.ToString(x))
-{
-   
-    string message=h%2==0?"четное":"нечетное";
-    System.Console.WriteLine(message);
-}
+// foreach (int h in Convert.ToString(x))
+// {
+//     string message = h % 2 == 0 ? "четное" : "нечетное";
+//     System.Console.WriteLine(message);
+// }
+// string y="1";
+// System.Console.WriteLine(y);
+// System.Console.WriteLine(Convert.ToInt32(y));
+
+
+
+
