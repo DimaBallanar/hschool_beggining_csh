@@ -139,26 +139,53 @@
 //     return (symbol, count, indexFirst, indexLast);
 // }
 //indexStart=4, indexEnd=4, [x,x,x,x,55,...], 44
-int BinarySearchIndex(int[] userArray, int numSearch, int indexStart, int indexEnd)
-{
+// int BinarySearchIndex(int[] userArray, int numSearch, int indexStart, int indexEnd)
+// {
 
-    if (indexStart > indexEnd)
-    {
-        return -1;
-    }
-    int middleIndex = (indexEnd + indexStart) / 2;
-    return numSearch == userArray[middleIndex] ? middleIndex :
-     numSearch > userArray[middleIndex] ?
-    BinarySearchIndex(userArray, numSearch, middleIndex + 1, indexEnd) :
-    BinarySearchIndex(userArray, numSearch, indexStart, middleIndex - 1);
+//     if (indexStart > indexEnd)
+//     {
+//         return -1;
+//     }
+//     int middleIndex = (indexEnd + indexStart) / 2;
+//     return numSearch == userArray[middleIndex] ? middleIndex :
+//      numSearch > userArray[middleIndex] ?
+//     BinarySearchIndex(userArray, numSearch, middleIndex + 1, indexEnd) :
+//     BinarySearchIndex(userArray, numSearch, indexStart, middleIndex - 1);
 
-}
+// }
 
-// [0,4] 5 ищем
-int[] userMassiv = { 1, 4, 5, 7, 8, 9, 22, 23, 25, 33, 39, 44, 46, 55, 88, 99 };
-// int[] userMassiv = { 0, 4 };
-int number = Convert.ToInt32(Console.ReadLine());
-int index = BinarySearchIndex(userMassiv, number, 0, userMassiv.Length - 1);
-System.Console.WriteLine(index);
+// // [0,4] 5 ищем
+// int[] userMassiv = { 1, 4, 5, 7, 8, 9, 22, 23, 25, 33, 39, 44, 46, 55, 88, 99 };
+// // int[] userMassiv = { 0, 4 };
+// int number = Convert.ToInt32(Console.ReadLine());
+// int index = BinarySearchIndex(userMassiv, number, 0, userMassiv.Length - 1);
+// System.Console.WriteLine(index);
 
 // System.Console.WriteLine(element);
+
+// Console.WriteLine("Нажмите любую клавишу, а затем Enter");
+// int key1 = Console.Read();
+// Console.WriteLine($"Код нажатой клавиши: {key1}");
+// Console.WriteLine("Символьное представление: " + Convert.ToChar(key1));
+
+
+
+int x=1234;
+for(int i=0;i<Convert.ToString(x).Length;i++)
+{
+    if(Convert.ToString(x)[i]%2==0)
+    {
+        System.Console.WriteLine("четное");
+    }
+    else
+    {
+        System.Console.WriteLine("нечетное");
+    }
+}
+
+foreach(int h in Convert.ToString(x))
+{
+   
+    string message=h%2==0?"четное":"нечетное";
+    System.Console.WriteLine(message);
+}
