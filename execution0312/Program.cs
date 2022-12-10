@@ -101,43 +101,6 @@
 
 
 
-// string? text = Console.ReadLine();
-// string? symbol = Console.ReadLine();
-// if (!string.IsNullOrEmpty(text) && !string.IsNullOrEmpty(symbol))
-// {
-//     Console.WriteLine(MethodAllSearch(text, symbol));
-// }
-// else
-// {
-//     Console.WriteLine("error");
-// }
-
-
-// static (string, int, int, int) MethodAllSearch(string text, string symbol)
-// {
-//     int count = 0;
-//     int indexFirst = -1;
-//     int indexLast = -1;
-//     int LengthSymbol = symbol.Length;
-//     for (int i = 0; i <= text.Length - LengthSymbol; i++)
-//     {
-//         string temp = "";
-//         for (int j = i; j <= i + (LengthSymbol - 1); j++)
-//         {
-//             temp += text[j];
-//         }
-//         if (temp == symbol)
-//         {
-//             if (indexFirst == -1)
-//             {
-//                 indexFirst = i;
-//             }
-//             indexLast = i;
-//             count++;
-//         }
-//     }
-//     return (symbol, count, indexFirst, indexLast);
-// }
 //indexStart=4, indexEnd=4, [x,x,x,x,55,...], 44
 // int BinarySearchIndex(int[] userArray, int numSearch, int indexStart, int indexEnd)
 // {
@@ -170,9 +133,9 @@
 
 
 
-int x = 1234;
-char[] mas=x.ToString().ToCharArray();
-System.Console.WriteLine(string.Join(",",mas));
+// int x = 1234;
+// char[] mas=x.ToString().ToCharArray();
+// System.Console.WriteLine(string.Join(",",mas));
 // for (int i = 0; i < Convert.ToString(x).Length; i++)
 // {
 //     if (Convert.ToString(x)[i] % 2 == 0)
