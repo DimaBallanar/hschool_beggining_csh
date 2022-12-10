@@ -158,6 +158,63 @@
 // System.Console.WriteLine(y);
 // System.Console.WriteLine(Convert.ToInt32(y));
 
+// string text="f";
+// int.TryParse(text,out int num1);
+// System.Console.WriteLine(num1);
+
+// ================================= 10.12.2022=============================================================
+
+
+// Написать метод по подсчёту количества вхождений символов в строку 
+// * вывести все индексы вхождений
+
+string text = "dfjkqfsjfskl;qjqiowewqqndqunqqoiqbdd";
+char search = 'q';
+System.Console.WriteLine(IndexSearch(text, search,out string numbers));
+System.Console.WriteLine(numbers);
 
 
 
+static int IndexSearch(string topolM, char abs,out string numbers)
+{
+    numbers = "";
+    int count = 0;
+    for (int i = 0; i < topolM.Length; i++)
+    {
+        if (abs == topolM[i])
+        {
+            count += 1;
+            numbers+=i+",";
+        //    System.Console.WriteLine(numbers);
+        }
+    }
+
+    return count;
+
+}
+
+// string text="asd";
+// object ret=text;
+
+
+// double num=55.5;
+// int numNew=(int)num;
+
+
+// string array="454";
+// int numerOk=Convert.ToInt32(array);
+// int.TryParse(array, out int newNum);
+// System.Console.WriteLine(newNum);
+
+// условие?вывод если истинно:в противном случае "выводим это"
+// int[] array=new int[4]{1,2,3,4};
+// array[0]=5;
+// System.Console.WriteLine(string.Join(",",array));
+
+
+// static void teas()
+// {
+// string trx="ree";
+//     return;
+// }
+//  System.Console.WriteLine(teas);
