@@ -38,7 +38,7 @@ namespace GameSearch
         static int Randomaizer()
         {
             Random rnd = new Random();
-            int numForSearch = rnd.Next(0, 100);
+            int numForSearch = rnd.Next(0, 1000);
             return numForSearch;
         }
         static void Search(int rnd, out int tryCount)
@@ -79,8 +79,9 @@ namespace GameSearch
             int tryCompNum;
             string computerTries = "попытки компа:";
             int min = 0;
-            int max = 100;
-            for (int i = 0; i <= 101; i++)
+            int max = 1000;
+            int i = 0;
+            for (; ; i++)
             {
 
                 tryCompNum = rand.Next(min, max);
