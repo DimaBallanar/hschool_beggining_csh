@@ -29,7 +29,7 @@ namespace GameSearch
         }
         static void Search(int rnd, out int tryCount)
         {
-            string tries="";
+            string tries="ваши попытки:";
            int userTry = 0;
             tryCount = 0;
             for (int i = 0; i <= 110; i++)
@@ -45,11 +45,13 @@ namespace GameSearch
                 else if (userTry < rnd)
                 {
                     System.Console.WriteLine("загаданное число больше");
+                    System.Console.WriteLine(tries);
 
                 }
                 else
                 {
                     System.Console.WriteLine("загаданное число меньше");
+                    System.Console.WriteLine(tries);
                 }
 
             }
