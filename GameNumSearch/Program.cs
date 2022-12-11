@@ -17,7 +17,7 @@ namespace GameSearch
         {
             System.Console.WriteLine("давайте попробуем отгадать число от 0 до 100");
             int rnd = Randomaizer();
-            System.Console.WriteLine(rnd);
+            // System.Console.WriteLine(rnd);
             Search(rnd, out int tryCount);
             System.Console.WriteLine($"загаданное число {rnd},  вы сделали {tryCount} попыток");
             ComputerSearch(rnd, out int tryCompCount);
@@ -54,6 +54,7 @@ namespace GameSearch
                 tries += userTry + ",";
                 if (userTry == rnd)
                 {
+                    System.Console.WriteLine(tries);
                     break;
                 }
                 else if (userTry < rnd)
@@ -73,7 +74,6 @@ namespace GameSearch
         static void ComputerSearch(int rnd, out int tryCompCount)
         {
             Random rand = new Random();
-            // int numForSearch = rnd.Next(0, 100);
             tryCompCount = 0;
             int tryCompNum;
             string computerTries = "попытки компа:";
@@ -84,19 +84,19 @@ namespace GameSearch
 
                 tryCompNum = rand.Next(min, max);
                 tryCompCount++;
+                computerTries += tryCompNum + ",";
                 if (tryCompNum == rnd)
                 {
+                    System.Console.WriteLine(computerTries);
                     break;
                 }
                 else if (tryCompNum > rnd)
                 {
-                    computerTries += tryCompNum + ",";
                     max = tryCompNum - 1;
                 }
                 else
                 {
                     min = tryCompNum + 1;
-                    computerTries += tryCompNum + ",";
                 }
             }
 
