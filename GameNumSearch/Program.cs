@@ -20,6 +20,20 @@ namespace GameSearch
             System.Console.WriteLine(rnd);
             Search(rnd, out int tryCount);
             System.Console.WriteLine($"загаданное число {rnd},  вы сделали {tryCount} попыток");
+            ComputerSearch(rnd, out int tryCompCount);
+            System.Console.WriteLine($"загаданное число {rnd},  комп сделал {tryCompCount} попыток");
+            if (tryCount > tryCompCount)
+            {
+                System.Console.WriteLine("победа за ИИ");
+            }
+            else if (tryCompCount > tryCount)
+            {
+                System.Console.WriteLine("победил игрок");
+            }
+            else
+            {
+                System.Console.WriteLine("дружеская ничья");
+            }
         }
         static int Randomaizer()
         {
