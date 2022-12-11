@@ -25,10 +25,31 @@ static int Randomaizer()
     int numForSearch=rnd.Next(0,100);
     return numForSearch;
 }
-static int Search(int rnd)
+static int Search(int rnd, out int tryCount)
 {
-    int tryCount=0;
-    System.Console.WriteLine();
+    int userTry=0;
+    tryCount=0;
+    for(int i=0;i<=110;i++)
+    {
+        tryCount++;
+    System.Console.WriteLine("какое число загадал компьютер?");
+    userTry=Convert.ToInt32(Console.ReadLine());
+    if(userTry==rnd)
+    {
+        return userTry;
+    }
+    else if(userTry<rnd)
+    {
+        System.Console.WriteLine("загаданное число больше");
+
+    }
+    else
+    {
+        System.Console.WriteLine("загаданное число меньше");
+    }
+
+    }
+    return userTry;
 }
 
 #endregion
