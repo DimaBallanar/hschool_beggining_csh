@@ -1,12 +1,20 @@
 ﻿using System;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace GameSearch
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Task();
         }
+#region Task
+// игра, в которой загадывается рандомное число от 1 до 100, угадывает компьютер и пользователь,побеждает тот,кто быстрее угадает.
+// добавить подсказки, в виде "ты рядом", "далек от истины" и прочее,чтобы поиск не затянулся.
+// чтобы помочь,также, создать массив, в который будут записываться числа с "попыток", при этом их сразу надо упорядочивать по возрастанию,чтобы не бегать глазами.
+// Аминь!
+
+
+#endregion
     }
 }
