@@ -46,7 +46,8 @@ namespace GameSearch
             string tries = "ваши попытки:";
             int userTry = 0;
             tryCount = 0;
-            for (int i = 0; i <= 110; i++)
+            int i = 0;
+            for (; ; i++)
             {
                 tryCount++;
                 System.Console.WriteLine("какое число загадал компьютер?");
@@ -59,13 +60,13 @@ namespace GameSearch
                 }
                 else if (userTry < rnd)
                 {
-                    System.Console.WriteLine("загаданное число больше");
+                    System.Console.WriteLine("Слишком мало, попробуйте еще раз");
                     System.Console.WriteLine(tries);
 
                 }
                 else
                 {
-                    System.Console.WriteLine("загаданное число меньше");
+                    System.Console.WriteLine("Слишком много, попробуйте еще раз");
                     System.Console.WriteLine(tries);
                 }
 
