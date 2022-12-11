@@ -29,15 +29,15 @@ namespace GameSearch
         }
         static void Search(int rnd, out int tryCount)
         {
-            string tries="ваши попытки:";
-           int userTry = 0;
+            string tries = "ваши попытки:";
+            int userTry = 0;
             tryCount = 0;
             for (int i = 0; i <= 110; i++)
             {
                 tryCount++;
                 System.Console.WriteLine("какое число загадал компьютер?");
                 userTry = Convert.ToInt32(Console.ReadLine());
-                tries+=userTry+",";
+                tries += userTry + ",";
                 if (userTry == rnd)
                 {
                     break;
@@ -56,8 +56,35 @@ namespace GameSearch
 
             }
         }
-        static void ComputerSearch()
+        static void ComputerSearch(int rnd, out int tryCompCount)
         {
+            Random rand = new Random();
+            // int numForSearch = rnd.Next(0, 100);
+            tryCompCount = 0;
+            int tryCompNum;
+            string computerTries = "попытки компа:";
+            int min = 0;
+            int max = 100;
+            for (int i = 0; i <= 101; i++)
+            {
+
+                tryCompNum = rand.Next(min, max);
+                tryCompCount++;
+                if (tryCompNum == rnd)
+                {
+                    break;
+                }
+                else if (tryCompNum > rnd)
+                {
+                    computerTries += tryCompNum + ",";
+                    max = tryCompNum - 1;
+                }
+                else
+                {
+                    min = tryCompNum + 1;
+                    computerTries += tryCompNum + ",";
+                }
+            }
 
         }
 
