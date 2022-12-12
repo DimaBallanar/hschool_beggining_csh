@@ -69,7 +69,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         #region Task3
         // 3. Дано натуральное число больше 1 (вводится с клавиатуры). Выведите все простые
-        // делители этого числа используя рекурсию 
+        // делители этого числа используя рекурсию    
         static void Task3()
         {
             System.Console.WriteLine("введите число больше 1");
