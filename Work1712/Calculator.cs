@@ -2,36 +2,86 @@ namespace TaskHard // Note: actual namespace depends on the project name.
 {
     public class Calculate
     {
-        public double Result;
+        private double Result;
 
         public Calculate()
         {
 
         }
-        public Calculate(double n)
+        public Calculate(double number)
         {
-            Result = n;
+            Result = number;
 
         }
-        public double Summ(double n)
+        private double Summ(double number)
         {
-            Result += n;
+            // double Test=Result=number=10;   
+            Console.Write($"{Result} + {number} = ");
+            Result += number;
+            System.Console.WriteLine(Result);
+            // System.Console.WriteLine($"{Result} + {number} = {Result += number}");
             return Result;
         }
-        public double Defination(double n)
+        private double Defination(double number)
         {
-            Result -= n;
+            Console.Write($"{Result} - {number} = ");
+            Result -= number;
+            System.Console.WriteLine(Result);
             return Result;
         }
-        public double Multiplication(double n)
+        private double Multiplication(double number)
         {
-            Result *= n;
+            Console.Write($"{Result} * {number} = ");
+            Result *= number;
+            System.Console.WriteLine(Result);
             return Result;
         }
-        public double Division(double n)
+        private double Division(double number)
         {
-            Result /= n;
+            Console.Write($"{Result} / {number} = ");
+            Result /= number;
+            System.Console.WriteLine(Result);
             return Result;
+        }
+        public double Search(string symbol, double number)
+        {
+            // if (symbol == "+")
+            // {
+            //     return Summ(number);
+            // }
+            // if (symbol == "-")
+            // {
+            //     return Defination(number);
+            // }
+            // if (symbol == "*")
+            // {
+            //     return Multiplication(number);
+            // }
+            // if (symbol == "/")
+            // {
+            //     return Division(number);
+            // }
+            // return Result;
+
+
+            // switch (symbol)
+            // {
+            //     case "+": return Summ(number);
+            //     case "-": return Defination(number);
+            //     case "*": return Multiplication(number);
+            //     case "/": return Division(number);
+            //     default: return Result;
+            // }
+
+            return symbol switch
+            {
+                "+" => Summ(number),
+                "-" => Defination(number),
+                "*" => Multiplication(number),
+                "/" when number != 0 => Division(number),
+                _ => Result
+            };
+
         }
 
     }
