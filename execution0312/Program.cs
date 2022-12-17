@@ -168,30 +168,30 @@
 // Написать метод по подсчёту количества вхождений символов в строку 
 // * вывести все индексы вхождений
 
-string text = "dfjkqfsjfskl;qjqiowewqqndqunqqoiqbdd";
-char search = 'q';
-System.Console.WriteLine(IndexSearch(text, search,out string numbers));
-System.Console.WriteLine(numbers);
+// string text = "dfjkqfsjfskl;qjqiowewqqndqunqqoiqbdd";
+// char search = 'q';
+// System.Console.WriteLine(IndexSearch(text, search,out string numbers));
+// System.Console.WriteLine(numbers);
 
 
 
-static int IndexSearch(string topolM, char abs,out string numbers)
-{
-    numbers = "";
-    int count = 0;
-    for (int i = 0; i < topolM.Length; i++)
-    {
-        if (abs == topolM[i])
-        {
-            count += 1;
-            numbers+=i+",";
-        //    System.Console.WriteLine(numbers);
-        }
-    }
+// static int IndexSearch(string topolM, char abs,out string numbers)
+// {
+//     numbers = "";
+//     int count = 0;
+//     for (int i = 0; i < topolM.Length; i++)
+//     {
+//         if (abs == topolM[i])
+//         {
+//             count += 1;
+//             numbers+=i+",";
+//         //    System.Console.WriteLine(numbers);
+//         }
+//     }
 
-    return count;
+//     return count;
 
-}
+// }
 
 // string text="asd";
 // object ret=text;
@@ -218,3 +218,18 @@ static int IndexSearch(string topolM, char abs,out string numbers)
 //     return;
 // }
 //  System.Console.WriteLine(teas);
+
+
+
+int[] array = new int[] { 10, 44, 1, 2, 3, 4, 5, 6, 7, 8 };
+int result = 0;
+int checkMin = array[0];
+for (int i = 1; i < array.Length; i++)
+{
+    if (checkMin > array[i])
+    {
+        checkMin = array[i];
+        result=i;
+    }
+}
+System.Console.WriteLine(result);

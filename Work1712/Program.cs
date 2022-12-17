@@ -11,17 +11,17 @@ namespace TaskHard // Note: actual namespace depends on the project name.
             Console.Write("введите число 2:");
             double.TryParse(Console.ReadLine(), out double number2);
 
-            double result = SummDouble(number1, number2);
-            System.Console.WriteLine(result);
+            // double result = SummDouble(number1, number2);
+            // System.Console.WriteLine(result);
 
-            Calculate calculate = new Calculate();
-            result = calculate.Result;
-            System.Console.WriteLine(result);
-            System.Console.WriteLine(calculate.Summ(number2));
-            System.Console.WriteLine(calculate.Defination(number2));
-            System.Console.WriteLine(calculate.Division(number2));
-            System.Console.WriteLine(calculate.Multiplication(number2));
+            Calculate calculate = new Calculate(number1);
 
+
+            // System.Console.WriteLine(result);
+            calculate.Search("+", number2);
+            calculate.Search("*", number2);
+            calculate.Search("-", number2);
+            calculate.Search("/", number2);
 
         }
         static double SummDouble(double n, double m)
