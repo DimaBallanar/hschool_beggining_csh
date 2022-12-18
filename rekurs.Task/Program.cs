@@ -77,7 +77,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int result = 0;
             if (number > 1)
             {
-                System.Console.WriteLine(DivNumber(number, ref result));
+                System.Console.WriteLine(DivNumber(number, result));
             }
             else
             {
@@ -94,7 +94,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 return false;
             }
-            return IsNumSim(num, dif - 1);
+            return DivNumber(num, dif - 1);
         }
         // static int DivNumbers(int number, ref int result)
         // {
