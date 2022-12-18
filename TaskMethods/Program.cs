@@ -2,20 +2,20 @@
 {
     static void Main(string[] args)
     {
-        // Task1();
-        // Task2();
-        // Task3();
-        // Task4();
-        // Task5();
-        // Task6();
-        // Task7();
-        // Task8();
-        // Task9();
-        // Task10();
-        // Task11();
-        // Task12();
-        // Task13();
-        // Task14();
+        Task1();
+        Task2();
+        Task3();
+        Task4();
+        Task5();
+        Task6();
+        Task7();
+        Task8();
+        Task9();
+        Task10();
+        Task11();
+        Task12();
+        Task13();
+        Task14();
         Task15();
 
     }
@@ -53,7 +53,6 @@
             string five = massivText[i];
             string liter = Convert.ToString(five[0]).ToUpper();
             result += liter.ToUpper() + massivText[i].Remove(0, 1) + " ";
-
         }
         return result;
     }
@@ -61,7 +60,6 @@
     {
         System.Console.WriteLine("введите любую строку");
         string? userText = Console.ReadLine().ToLower();
-        // string userText = " hello my little worls";
         System.Console.WriteLine(UpperLvl(userText));
     }
     #endregion
