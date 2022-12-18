@@ -72,19 +72,34 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // делители этого числа используя рекурсию    
         static void Task3()
         {
-            System.Console.WriteLine("введите число больше 1");
+            System.Console.WriteLine("введите число");
             int number = Convert.ToInt32(Console.ReadLine());
-            int result = 0;
-            if (number > 1)
+            NumberDivider(number);
+        }
+        static void NumberDivider(int n)
+        {
+            if (n > 1)
             {
-                System.Console.WriteLine(DivNumber(number, result));
+                NumberAraySimp(2, n);
             }
             else
             {
-                System.Console.WriteLine("ввели число ,меньше заданого по условию");
+                Console.WriteLine("error input");
             }
         }
-        static bool DivNumber(int num, int dif)
+        static int NumberAraySimp(int num, int n)
+        {
+            if (num > n / 2)
+            {
+                return n;
+            }
+            if (n % num == 0 && IsNumSim(num, num / 2))
+            {
+                Console.Write($"{num} ");
+            }
+            return NumberAraySimp(num + 1, n);
+        }
+        static bool IsNumSim(int num, int dif)
         {
             if (dif <= 1)
             {
@@ -94,27 +109,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 return false;
             }
-            return DivNumber(num, dif - 1);
+            return IsNumSim(num, dif - 1);
         }
-        // static int DivNumbers(int number, ref int result)
-        // {
-        //     result += 1;
-        //     if (number % result == 0 && number / 2 >= result)
-        //     {
-        //         System.Console.WriteLine(result);
-
-        //         return DivNumbers(number, ref result);
-        //     }
-        //     result += 1;
-        //     if (number % result == 0 && number / 2 >= result)
-        //     {
-        //         System.Console.WriteLine(result);
-
-        //         return DivNumbers(number, ref result);
-        //     }
-        //     else
-        //         return number;
-        // }
         #endregion
 
 
