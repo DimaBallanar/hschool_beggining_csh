@@ -77,32 +77,44 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int result = 0;
             if (number > 1)
             {
-                System.Console.WriteLine(DivNumbers(number, ref result));
+                System.Console.WriteLine(DivNumber(number, ref result));
             }
             else
             {
                 System.Console.WriteLine("ввели число ,меньше заданого по условию");
             }
         }
-        static int DivNumbers(int number, ref int result)
+        static bool DivNumber(int num, int dif)
         {
-            result += 1;
-            if (number % result == 0 && number / 2 >= result)
+            if (dif <= 1)
             {
-                System.Console.WriteLine(result);
-
-                return DivNumbers(number, ref result);
+                return true;
             }
-            result += 1;
-            if (number % result == 0 && number / 2 >= result)
+            else if (num % dif == 0)
             {
-                System.Console.WriteLine(result);
-
-                return DivNumbers(number, ref result);
+                return false;
             }
-            else
-                return number;
+            return IsNumSim(num, dif - 1);
         }
+        // static int DivNumbers(int number, ref int result)
+        // {
+        //     result += 1;
+        //     if (number % result == 0 && number / 2 >= result)
+        //     {
+        //         System.Console.WriteLine(result);
+
+        //         return DivNumbers(number, ref result);
+        //     }
+        //     result += 1;
+        //     if (number % result == 0 && number / 2 >= result)
+        //     {
+        //         System.Console.WriteLine(result);
+
+        //         return DivNumbers(number, ref result);
+        //     }
+        //     else
+        //         return number;
+        // }
         #endregion
 
 
