@@ -33,6 +33,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static int MethodMultiplication(int number, int number1) => number * number1;
         static int MethodDivision(int number, int number1) => number / number1;
 
+
         static string Switch(int number1, int number2, string opr) => opr switch
         {
             "+" => MethodSum(number1, number2).ToString(),
